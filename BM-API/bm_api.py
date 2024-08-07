@@ -1,7 +1,7 @@
 import json, os, requests, shutil, datetime
 from tqdm import tqdm
 
-class BM_API:
+class BMAPI:
     """
     Get all data from BM Basque Supermarket.
     """
