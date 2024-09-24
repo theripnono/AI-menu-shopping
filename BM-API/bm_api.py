@@ -1,6 +1,9 @@
 import json, os, requests, shutil, datetime
 from tqdm import tqdm
-
+"""
+Puedo sacar los productos de las subcategorias pasando el ID
+https://www.online.bmsupermercados.es/api/rest/V1.0/catalog/product?&orderById=7&categories={id}
+"""
 class BMAPI:
     """
     Get all data from BM Basque Supermarket.
@@ -177,25 +180,27 @@ class BMAPI:
                 all_items.append(r)
         return all_items
     
-    def show_categories(self, subcategories=False):
+    def show_categories(self, details=False):
         """
         Get all categories from BM
 
-        :param ids: if ids=True it shows the ids of the categories
-        :param subcategories: if subcategories = True it shows all the subcatecories
+        :param details: if subcategories = True it shows all the subcatecories
         """
         print(f"These are the main categories ->")
 
-        if not subcategories:
+        if not details:
             for category in self._categories:
                     print(f"- ID: {category['id']} {category['category_name']}")
                  
         else:
-            for category in self.categories:    
-                    print(f"- {category['category_name']}")      
-                    subs = category['subcategories']
-                    for subcategory in subs:    
-                        print(f"ID: {subcategory['subcategory_id']} | Subcategory: {subcategory['subcategory_name']}")
+            categories = self._categories
+            for category in categories:
+                print("____________________________________________________________")
+                print(f"Category: {category['category_name']} || id: {category['id']} has these subcategories: ")
+                print("__________________________________________________________")
+                subcatregories = category['subcategories']
+                for subcategory in subcatregories:    
+                    print(f"{subcategory['subcategory_name']} || id: {subcategory['subcategory_id']}")
   
     def show_discounts(self):
         """
@@ -212,21 +217,6 @@ class BMAPI:
 
         for discounts in discounts_categories:
             print(f"{discounts['subcategory_id']} || {discounts['subcategory_name']}")  
-
-    def show_all_data(self):
-        """
-        Print all the ids (categories and subcategories) from the BM API 
-        """
-        categories = self._categories
-
-        for category in categories:
-            print("____________________________________________________________")
-            print(f"Category: {category['category_name']} || {category['id']} has these subcategories: ")
-            print("__________________________________________________________")
-            subcatregories = category['subcategories']
-            for subcategory in subcatregories:
-                
-                print(f"{subcategory['subcategory_name']} || {subcategory['subcategory_id']}")
             
     def get_discounts(self, food:bool=True)->list[dict]:
 
@@ -460,8 +450,9 @@ class BMAPI:
 
         return products_list
 
-bm = BM_API()
-
+bm = BMAPI()
+categories = bm._categories
+print(bm.show_all_data())
 #bm.show_all_data()
 bm.get_products_by_ids([1245,1472])
 
