@@ -16,6 +16,7 @@ class BMAPI:
     """
 
     def _export_to_json(self, data:list[dict], file_name:str=None)->str:
+
         """
         Converts a list of dictionaries into a JSON-formatted string.
         
@@ -422,25 +423,28 @@ class BMAPI:
             url=f"https://www.online.bmsupermercados.es/api/rest/V1.0/catalog/product?&orderById=7&categories={id}"
             response = requests.get(url)
                 
-    
             if response.status_code == 200:
                 data = response.json()
 
                 if data['totalCount']>0:
+
                     products = data['products']
                     name=products[0]['categories'][0]['name'].lower().strip()
-                    for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=True):
-                            r ={}
 
+                    for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=True):
+                            r = {}
+                            product_subcategory = product['categories'][0]['name']
                             product_id = product['id']
                             product_ean =  product['ean']
                             product_name = product['productData']['name']
                             product_seo = product['productData']['seo']
 
-                            r['product_data'] = {'product_id':product_id,
-                                                'product_ean':product_ean,
-                                                'product_seo': product_seo,
-                                                'product_name':product_name}
+                            r[product_subcategory] = {
+                                                    'product_id':product_id,
+                                                    'product_ean':product_ean,
+                                                    'product_seo': product_seo,
+                                                    'product_name':product_name
+                                                    }
 
                             products_list.append(r)
 
@@ -451,10 +455,7 @@ class BMAPI:
         return products_list
 
 bm = BMAPI()
-categories = bm._categories
-print(bm.show_all_data())
-#bm.show_all_data()
-bm.get_products_by_ids([1245,1472])
+bm.get_products_by_ids([2549,2214])
+print(bm.show_categories(details=True))
 
-#productos = bm.get_products_by_category('Frescos')
 
