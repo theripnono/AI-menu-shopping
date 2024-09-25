@@ -4,7 +4,28 @@
             "product_id": 4490,
             "product_ean": "8414516001185",
             "product_seo": "ensalada-gourmet-175-g",
-            "product_name": "Ensalada gourmet 175 g"
+            "product_name": "Ensalada gourmet 175 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.97,
+                        "centUnitAmount": 11.26
+                    }
+                },
+                {
+                    "id": "OFFER_PRICE",
+                    "value": {
+                        "centAmount": 1.65,
+                        "centUnitAmount": 9.43
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.97,
+            "product_price_centUnitAmount": 1.97,
+            "product_offer_price_centAmount": 9.43,
+            "product_offer_price_centUnitAmount": 9.43
         }
     },
     {
@@ -12,7 +33,28 @@
             "product_id": 11832,
             "product_ean": "8414516090615",
             "product_seo": "brotes-gourmet-100-g",
-            "product_name": "Brotes Gourmet 100 g"
+            "product_name": "Brotes Gourmet 100 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.97,
+                        "centUnitAmount": 19.7
+                    }
+                },
+                {
+                    "id": "OFFER_PRICE",
+                    "value": {
+                        "centAmount": 1.85,
+                        "centUnitAmount": 18.5
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.97,
+            "product_price_centUnitAmount": 1.97,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -20,7 +62,21 @@
             "product_id": 4421,
             "product_ean": "8436045732118",
             "product_seo": "lechuga-iceberg-500-g-aprox",
-            "product_name": "Lechuga iceberg (500 g aprox)"
+            "product_name": "Lechuga iceberg (500 g aprox)",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.09,
+                        "centUnitAmount": 2.18
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.09,
+            "product_price_centUnitAmount": 1.09,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -28,7 +84,21 @@
             "product_id": 4423,
             "product_ean": "8423230042107",
             "product_seo": "cogollos-de-lechuga-2-unidades-200-g-aprox",
-            "product_name": "Cogollos de lechuga 2 unidades 200 g aprox"
+            "product_name": "Cogollos de lechuga 2 unidades 200 g aprox",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.15,
+                        "centUnitAmount": 5.75
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.15,
+            "product_price_centUnitAmount": 1.15,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -36,7 +106,21 @@
             "product_id": 4424,
             "product_ean": "8423230044446",
             "product_seo": "corazon-de-lechuga-baby-especial-400-g-aprox",
-            "product_name": "Coraz\u00f3n de lechuga baby especial (400 g aprox)"
+            "product_name": "Coraz\u00f3n de lechuga baby especial (400 g aprox)",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.99,
+                        "centUnitAmount": 4.98
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.99,
+            "product_price_centUnitAmount": 1.99,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -44,7 +128,21 @@
             "product_id": 4426,
             "product_ean": "8437016651025",
             "product_seo": "lechuga-de-caserio",
-            "product_name": "Lechuga de caser\u00edo"
+            "product_name": "Lechuga de caser\u00edo",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.49,
+                        "centUnitAmount": 2.98
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.49,
+            "product_price_centUnitAmount": 1.49,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -52,7 +150,21 @@
             "product_id": 4486,
             "product_ean": "8414516001017",
             "product_seo": "lechuga-iceberg-250-g",
-            "product_name": "Lechuga iceberg 250 g"
+            "product_name": "Lechuga iceberg 250 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.72,
+                        "centUnitAmount": 6.88
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.72,
+            "product_price_centUnitAmount": 1.72,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -60,7 +172,21 @@
             "product_id": 4491,
             "product_ean": "8414516060588",
             "product_seo": "brotes-deluxe-100-g",
-            "product_name": "Brotes deluxe 100 g"
+            "product_name": "Brotes deluxe 100 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.91,
+                        "centUnitAmount": 19.1
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.91,
+            "product_price_centUnitAmount": 1.91,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -68,7 +194,21 @@
             "product_id": 4493,
             "product_ean": "8414516001222",
             "product_seo": "rucula-100-g",
-            "product_name": "R\u00facula 100 g"
+            "product_name": "R\u00facula 100 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 2.01,
+                        "centUnitAmount": 25.13
+                    }
+                }
+            ],
+            "product_price_centAmount": 2.01,
+            "product_price_centUnitAmount": 2.01,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -76,7 +216,21 @@
             "product_id": 4495,
             "product_ean": "8428949003401",
             "product_seo": "lechuga-en-bolsa-140-g",
-            "product_name": "Lechuga en bolsa 140 g"
+            "product_name": "Lechuga en bolsa 140 g",
+            "product_brand": "Eusko Label",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.81,
+                        "centUnitAmount": 12.93
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.81,
+            "product_price_centUnitAmount": 1.81,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -84,7 +238,21 @@
             "product_id": 4496,
             "product_ean": "8422414012776",
             "product_seo": "cuatro-estaciones-250-g",
-            "product_name": "Cuatro estaciones 250 g"
+            "product_name": "Cuatro estaciones 250 g",
+            "product_brand": "BM",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 0.76,
+                        "centUnitAmount": 3.04
+                    }
+                }
+            ],
+            "product_price_centAmount": 0.76,
+            "product_price_centUnitAmount": 0.76,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -92,7 +260,21 @@
             "product_id": 4499,
             "product_ean": "8414516104732",
             "product_seo": "corazon-de-escarola-150-g",
-            "product_name": "Coraz\u00f3n de escarola 150 g"
+            "product_name": "Coraz\u00f3n de escarola 150 g",
+            "product_brand": "Selecta",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.34,
+                        "centUnitAmount": 8.93
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.34,
+            "product_price_centUnitAmount": 1.34,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -100,7 +282,21 @@
             "product_id": 4503,
             "product_ean": "8414516145544",
             "product_seo": "gourmet-mediterranea-150-g",
-            "product_name": "Gourmet mediterr\u00e1nea 150 g"
+            "product_name": "Gourmet mediterr\u00e1nea 150 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.97,
+                        "centUnitAmount": 13.13
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.97,
+            "product_price_centUnitAmount": 1.97,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -108,7 +304,21 @@
             "product_id": 4504,
             "product_ean": "8414516058462",
             "product_seo": "duo-canonigos-rucula-100-g",
-            "product_name": "D\u00fao can\u00f3nigos-r\u00facula 100 g"
+            "product_name": "D\u00fao can\u00f3nigos-r\u00facula 100 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.91,
+                        "centUnitAmount": 19.1
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.91,
+            "product_price_centUnitAmount": 1.91,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -116,7 +326,21 @@
             "product_id": 7630,
             "product_ean": "8421022900000",
             "product_seo": "endibia-bandeja-450-g-aprox",
-            "product_name": "Endibia bandeja (450 g aprox)"
+            "product_name": "Endibia bandeja (450 g aprox)",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 2.15,
+                        "centUnitAmount": 4.78
+                    }
+                }
+            ],
+            "product_price_centAmount": 2.15,
+            "product_price_centUnitAmount": 2.15,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -124,7 +348,21 @@
             "product_id": 7635,
             "product_ean": "8422414012769",
             "product_seo": "ensalda-gourmet-175-g",
-            "product_name": "Ensalda gourmet 175 g"
+            "product_name": "Ensalda gourmet 175 g",
+            "product_brand": "BM",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.29,
+                        "centUnitAmount": 7.37
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.29,
+            "product_price_centUnitAmount": 1.29,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -132,7 +370,21 @@
             "product_id": 9959,
             "product_ean": "8436045732514",
             "product_seo": "lechugas-vivas-entre-300-500-g",
-            "product_name": "Lechugas vivas (entre 300/500 g)"
+            "product_name": "Lechugas vivas (entre 300/500 g)",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.99,
+                        "centUnitAmount": 1.99
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.99,
+            "product_price_centUnitAmount": 1.99,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -140,7 +392,21 @@
             "product_id": 11914,
             "product_ean": "8414516001796",
             "product_seo": "brotes-classic-100-g",
-            "product_name": "Brotes classic 100 g"
+            "product_name": "Brotes classic 100 g",
+            "product_brand": "Florette",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.91,
+                        "centUnitAmount": 19.1
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.91,
+            "product_price_centUnitAmount": 1.91,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -148,7 +414,21 @@
             "product_id": 12298,
             "product_ean": "8422414012745",
             "product_seo": "ensalada-mezclum-selecta-150-g",
-            "product_name": "Ensalada Mezclum Selecta 150 g"
+            "product_name": "Ensalada Mezclum Selecta 150 g",
+            "product_brand": "BM",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 1.14,
+                        "centUnitAmount": 7.6
+                    }
+                }
+            ],
+            "product_price_centAmount": 1.14,
+            "product_price_centUnitAmount": 1.14,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
@@ -156,111 +436,475 @@
             "product_id": 16632,
             "product_ean": "8414516001123",
             "product_seo": "canonigos-125-g",
-            "product_name": "Can\u00f3nigos 125 g"
+            "product_name": "Can\u00f3nigos 125 g",
+            "product_brand": "                                                  ",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 2.01,
+                        "centUnitAmount": 16.08
+                    }
+                }
+            ],
+            "product_price_centAmount": 2.01,
+            "product_price_centUnitAmount": 2.01,
+            "product_offer_price_centAmount": 18.5,
+            "product_offer_price_centUnitAmount": 18.5
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 4400,
-            "product_ean": "8436032706870",
-            "product_seo": "zanahoria-bolsa-500-g",
-            "product_name": "Zanahoria bolsa 500 g"
+        "Whisky y bourbon": {
+            "product_id": 3685,
+            "product_ean": "5000267014203",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Johnnie Walker",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 15.99,
+                        "centUnitAmount": 22.84
+                    }
+                },
+                {
+                    "id": "OFFER_PRICE",
+                    "value": {
+                        "centAmount": 14.99,
+                        "centUnitAmount": 21.41
+                    }
+                }
+            ],
+            "product_price_centAmount": 15.99,
+            "product_price_centUnitAmount": 15.99,
+            "product_offer_price_centAmount": 21.41,
+            "product_offer_price_centUnitAmount": 21.41
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 4401,
-            "product_ean": "8437018900428",
-            "product_seo": "zanahoria-rama-bolsa-1-kg-aprox",
-            "product_name": "Zanahoria rama bolsa (1 kg aprox)"
+        "Whisky y bourbon": {
+            "product_id": 9867,
+            "product_ean": "8410490261560",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Sir Edward's",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 11.09,
+                        "centUnitAmount": 15.85
+                    }
+                }
+            ],
+            "product_price_centAmount": 11.09,
+            "product_price_centUnitAmount": 11.09,
+            "product_offer_price_centAmount": 21.41,
+            "product_offer_price_centUnitAmount": 21.41
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 4402,
-            "product_ean": "8436032706863",
-            "product_seo": "zanahoria-bolsa-1-kg",
-            "product_name": "Zanahoria bolsa 1 kg"
+        "Whisky y bourbon": {
+            "product_id": 12648,
+            "product_ean": "5010504100095",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Cutty Sark",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 12.35,
+                        "centUnitAmount": 17.64
+                    }
+                }
+            ],
+            "product_price_centAmount": 12.35,
+            "product_price_centUnitAmount": 12.35,
+            "product_offer_price_centAmount": 21.41,
+            "product_offer_price_centUnitAmount": 21.41
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 4410,
-            "product_ean": "8413567031042",
-            "product_seo": "maiz-cocido-en-bandeja-400-g-aprox",
-            "product_name": "Ma\u00edz cocido en bandeja (400 g aprox)"
+        "Whisky y bourbon": {
+            "product_id": 22258,
+            "product_ean": "5000299628249",
+            "product_seo": "whisky-20-07-l",
+            "product_name": "Whisky 20\u00ba 0,7 L",
+            "product_brand": "Ballantines",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 14.35,
+                        "centUnitAmount": 20.5
+                    }
+                },
+                {
+                    "id": "OFFER_PRICE",
+                    "value": {
+                        "centAmount": 13.95,
+                        "centUnitAmount": 19.93
+                    }
+                }
+            ],
+            "product_price_centAmount": 14.35,
+            "product_price_centUnitAmount": 14.35,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 4412,
-            "product_ean": "8413567021050",
-            "product_seo": "remolacha-cocida-bandeja-500-g-aprox",
-            "product_name": "Remolacha cocida bandeja (500 g aprox)"
+        "Whisky y bourbon": {
+            "product_id": 3683,
+            "product_ean": "5000267102573",
+            "product_seo": "whisky-malta-12-anos-07-l",
+            "product_name": "Whisky malta 12 a\u00f1os 0,7 l",
+            "product_brand": "Cardhu",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 38.99,
+                        "centUnitAmount": 55.7
+                    }
+                }
+            ],
+            "product_price_centAmount": 38.99,
+            "product_price_centUnitAmount": 38.99,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 4479,
-            "product_ean": "8436046500648",
-            "product_seo": "zanahoria-ecologica-bandeja-600-g-aprox",
-            "product_name": "Zanahoria ecol\u00f3gica bandeja (600 g aprox)"
+        "Whisky y bourbon": {
+            "product_id": 3684,
+            "product_ean": "80432402931",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Chivas Regal",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 30.49,
+                        "centUnitAmount": 43.55
+                    }
+                }
+            ],
+            "product_price_centAmount": 30.49,
+            "product_price_centUnitAmount": 30.49,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 7627,
-            "product_ean": "8423230065120",
-            "product_seo": "rabanitos-200-g",
-            "product_name": "Rabanitos 200 g"
+        "Whisky y bourbon": {
+            "product_id": 3686,
+            "product_ean": "5000299606292",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Ballantines",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 13.95,
+                        "centUnitAmount": 19.93
+                    }
+                }
+            ],
+            "product_price_centAmount": 13.95,
+            "product_price_centUnitAmount": 13.95,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 8733,
-            "product_ean": "8436032706313",
-            "product_seo": "puerros-bandeja-500-g",
-            "product_name": "Puerros Bandeja 500 g"
+        "Whisky y bourbon": {
+            "product_id": 3687,
+            "product_ean": "5000277000906",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Dewar's",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 14.89,
+                        "centUnitAmount": 21.28
+                    }
+                }
+            ],
+            "product_price_centAmount": 14.89,
+            "product_price_centUnitAmount": 14.89,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Br\u00f3coli, col y coliflor": {
-            "product_id": 11862,
-            "product_ean": "8414516076497",
-            "product_seo": "brocoli-coliflor-zanah-para-microondas-275-g",
-            "product_name": "Brocoli-coliflor-zanah para microondas 275 g"
+        "Whisky y bourbon": {
+            "product_id": 3688,
+            "product_ean": "5010103800945",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "JB",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 13.49,
+                        "centUnitAmount": 19.27
+                    }
+                }
+            ],
+            "product_price_centAmount": 13.49,
+            "product_price_centUnitAmount": 13.49,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 16733,
-            "product_ean": "8480012013540",
-            "product_seo": "zanahoria-baby-400-g",
-            "product_name": "Zanahoria baby 400 g"
+        "Whisky y bourbon": {
+            "product_id": 3690,
+            "product_ean": "8410854023452",
+            "product_seo": "whisky-5-anos-07-l",
+            "product_name": "Whisky 5 a\u00f1os 0,7 l",
+            "product_brand": "DYC",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 10.5,
+                        "centUnitAmount": 15.0
+                    }
+                }
+            ],
+            "product_price_centAmount": 10.5,
+            "product_price_centUnitAmount": 10.5,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 20224,
-            "product_ean": "8436046503229",
-            "product_seo": "jengibre-ecologico-bandeja-200-g-aprox",
-            "product_name": "Jengibre ecol\u00f3gico bandeja (200 g aprox)"
+        "Whisky y bourbon": {
+            "product_id": 3692,
+            "product_ean": "5099873090473",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Jack Daniels",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 23.25,
+                        "centUnitAmount": 33.21
+                    }
+                }
+            ],
+            "product_price_centAmount": 23.25,
+            "product_price_centUnitAmount": 23.25,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 22905,
-            "product_ean": "8436032706245",
-            "product_seo": "nabos-en-bandeja",
-            "product_name": "Nabos en bandeja"
+        "Whisky y bourbon": {
+            "product_id": 3693,
+            "product_ean": "5000299606308",
+            "product_seo": "whisky-1-l",
+            "product_name": "Whisky 1 l",
+            "product_brand": "Ballantines",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 19.35,
+                        "centUnitAmount": 19.35
+                    }
+                }
+            ],
+            "product_price_centAmount": 19.35,
+            "product_price_centUnitAmount": 19.35,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     },
     {
-        "Zanahorias, puerros y otras ra\u00edces": {
-            "product_id": 24406,
-            "product_ean": "8424570999908",
-            "product_seo": "puerro-mazo-3-unidades",
-            "product_name": "Puerro mazo 3 unidades"
+        "Whisky y bourbon": {
+            "product_id": 3694,
+            "product_ean": "5010103940610",
+            "product_seo": "whisky-malta-07l",
+            "product_name": "Whisky malta 0,7l",
+            "product_brand": "Knockando",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 37.0,
+                        "centUnitAmount": 52.86
+                    }
+                }
+            ],
+            "product_price_centAmount": 37.0,
+            "product_price_centUnitAmount": 37.0,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 3695,
+            "product_ean": "8412449100258",
+            "product_seo": "whisky-blended-07-l",
+            "product_name": "Whisky blended 0,7 l",
+            "product_brand": "Old Crowns",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 6.99,
+                        "centUnitAmount": 9.99
+                    }
+                }
+            ],
+            "product_price_centAmount": 6.99,
+            "product_price_centUnitAmount": 6.99,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 9865,
+            "product_ean": "5000267024202",
+            "product_seo": "whisky-black-label-07-l",
+            "product_name": "Whisky black label 0,7 l",
+            "product_brand": "Johnnie Walker",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 29.99,
+                        "centUnitAmount": 42.84
+                    }
+                }
+            ],
+            "product_price_centAmount": 29.99,
+            "product_price_centUnitAmount": 29.99,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 9866,
+            "product_ean": "5010752000307",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "William Lawson's",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 10.89,
+                        "centUnitAmount": 15.56
+                    }
+                }
+            ],
+            "product_price_centAmount": 10.89,
+            "product_price_centUnitAmount": 10.89,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 9872,
+            "product_ean": "5000299101100",
+            "product_seo": "bourbon-07-l",
+            "product_name": "Bourbon 0,7 l",
+            "product_brand": "Four Roses",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 18.19,
+                        "centUnitAmount": 25.98
+                    }
+                }
+            ],
+            "product_price_centAmount": 18.19,
+            "product_price_centUnitAmount": 18.19,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 10037,
+            "product_ean": "5011007021054",
+            "product_seo": "whisky-07-l",
+            "product_name": "Whisky 0,7 l",
+            "product_brand": "Jameson",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 19.85,
+                        "centUnitAmount": 28.36
+                    }
+                }
+            ],
+            "product_price_centAmount": 19.85,
+            "product_price_centUnitAmount": 19.85,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 10806,
+            "product_ean": "5010327000176",
+            "product_seo": "whisky-de-12-anos-07-l",
+            "product_name": "Whisky de 12 a\u00f1os 0,7 l",
+            "product_brand": "Glenfiddich",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 41.4,
+                        "centUnitAmount": 59.14
+                    }
+                }
+            ],
+            "product_price_centAmount": 41.4,
+            "product_price_centUnitAmount": 41.4,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
+        }
+    },
+    {
+        "Whisky y bourbon": {
+            "product_id": 11874,
+            "product_ean": "8480012020586",
+            "product_seo": "whisky-escoces-07-l",
+            "product_name": "Whisky escoc\u00e9s 0,7 l",
+            "product_brand": "Brown Deer",
+            "product_price": [
+                {
+                    "id": "PRICE",
+                    "value": {
+                        "centAmount": 6.0,
+                        "centUnitAmount": 8.57
+                    }
+                }
+            ],
+            "product_price_centAmount": 6.0,
+            "product_price_centUnitAmount": 6.0,
+            "product_offer_price_centAmount": 19.93,
+            "product_offer_price_centUnitAmount": 19.93
         }
     }
 ]

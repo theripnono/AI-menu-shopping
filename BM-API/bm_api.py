@@ -1,4 +1,4 @@
-import json, os, requests, shutil, datetime
+import json,  requests
 from tqdm import tqdm
 """
 Puedo sacar los productos de las subcategorias pasando el ID
@@ -198,7 +198,7 @@ class BMAPI:
             for category in categories:
                 print("____________________________________________________________")
                 print(f"Category: {category['category_name']} || id: {category['id']} has these subcategories: ")
-                print("__________________________________________________________")
+                print("------------------------------------------------------------")
                 subcatregories = category['subcategories']
                 for subcategory in subcatregories:    
                     print(f"{subcategory['subcategory_name']} || id: {subcategory['subcategory_id']}")
@@ -417,7 +417,8 @@ class BMAPI:
         :export: If True export into JSON file
         return: list of dictionaries containing subcategories info
         """
-        products_list=[] 
+        products_list=[]
+        product_metadata_list=[]
 
         for id in ids:
             url=f"https://www.online.bmsupermercados.es/api/rest/V1.0/catalog/product?&orderById=7&categories={id}"
@@ -433,29 +434,111 @@ class BMAPI:
 
                     for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=True):
                             r = {}
+                            
                             product_subcategory = product['categories'][0]['name']
                             product_id = product['id']
                             product_ean =  product['ean']
                             product_name = product['productData']['name']
                             product_seo = product['productData']['seo']
+                            product_brand = product['productData']['brand']['name']
+
+                            """
+                            
+                            product_prices [0:
+                                             {'id': 'PRICE',
+                                            'value': {'centAmount': 1.97, 'centUnitAmount': 11.26}},
+                                            1: {'id': 'OFFER_PRICE',
+                                              'value': {'centAmount': 1.65, 'centUnitAmount': 9.43}}]
+                            
+                            """
+                            # product_prices = product['priceData']['prices'] # 
+
+                            # segmented price data
+                            product_price = product['priceData']['prices']
+                            product_price_centAmount = product['priceData']['prices'][0]['value']['centAmount']
+                            product_price_centUnitAmount = product['priceData']['prices'][0]['value']['centAmount']
+                            
+                            # if had offer
+                            if len(product['priceData']['prices'])>1:
+                                product_offer_price_centAmount = product['priceData']['prices'][1]['value']['centUnitAmount']
+                                product_offer_price_centUnitAmount = product['priceData']['prices'][1]['value']['centUnitAmount']
 
                             r[product_subcategory] = {
                                                     'product_id':product_id,
                                                     'product_ean':product_ean,
                                                     'product_seo': product_seo,
-                                                    'product_name':product_name
+                                                    'product_name':product_name,
+                                                    'product_brand':product_brand,
+                                                    'product_price':product_price,
+                                                    'product_price_centAmount':product_price_centAmount,
+                                                    'product_price_centUnitAmount':product_price_centUnitAmount,
+                                                    'product_offer_price_centAmount':product_offer_price_centAmount,
+                                                    'product_offer_price_centUnitAmount':product_offer_price_centUnitAmount
                                                     }
 
                             products_list.append(r)
-
+                            product_metadata_list.append(product)
+                            
                     print("All data downloaded successfully!")
         if export:     
             self._export_to_json(products_list, 'output_ids')
-
+            self._export_to_json(product_metadata_list,'metadata_output')
         return products_list
 
+
+    def inMemory_categories(self)->list[dict]:
+
+        categories = self._categories
+
+        result = {}
+        for category in categories:
+            
+            sub=[]
+
+            category_name = category['category_name']
+            subcatregories = category['subcategories']
+            for subcategory in subcatregories:
+                sub.append({subcategory['subcategory_name']:subcategory['subcategory_id']})
+            result[category_name] = sub
+
+        return result
+    
 bm = BMAPI()
-bm.get_products_by_ids([2549,2214])
-print(bm.show_categories(details=True))
+#bm.get_products_by_ids([2549,2214], export=False)
+
+# get a dict with all the ids info:
+categories_ids = bm.inMemory_categories()
+items_to_exclude = ['Ofertas','Cuidado del hogar', 'Bebé', 'Cuidado personal', 'Mascotas']
+
+# tmp Delete items for easier handling 
+for excluded_item in items_to_exclude:
+    del categories_ids[excluded_item]
+
+# Get list of all the id's subcategories of BM (Some ids are excluded items)
+lproduct_by_ids = []
+for category in categories_ids:
+    print('Añadiendo todas las subcategorias de las categorias: ', category)
+    subcategories = categories_ids[category]
+    for subcategory in subcategories:
+        for key in subcategory:
+            value = subcategory[key]
+        lproduct_by_ids.append(value)
+ 
+bm.get_products_by_ids([2549,1778], export=True)
+
+def export_context(categories_dict:list[dict]):
+
+    """
+    This is the context that will be used in the template for the llm
+    It contains all the categories avaible for generating the recepies 
+    """
+
+    output = ""
+    for key, value in categories_dict.items():
+        output += f"subcategorias: {value}\n"
+
+    with open('subcategorias.txt', "w", encoding="utf-8") as file:
+        file.write(output)
 
 
+#export_context(categories_ids)
