@@ -366,47 +366,6 @@ class BMAPI:
             self._export_to_json(products_list, category_name)
         return products_list
     
-    def get_products_by_id(self, id:int, export=True)->list[dict]:
-
-        """
-        Get all items from one id
-        :param id: Id of the category/subcategory
-        :export: If True export into JSON file
-        return: list of dictionaries containing subcategories info
-        """
-
-        url=f"https://www.online.bmsupermercados.es/api/rest/V1.0/catalog/product?&orderById=7&categories={id}"
-        response = requests.get(url)
-            
-        products_list=[] 
-
-        if response.status_code == 200:
-            data = response.json()
-
-            if data['totalCount']>0:
-                products = data['products']
-                name=products[0]['categories'][0]['name'].lower().strip()
-                for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=True):
-                        r ={}
-
-                        product_id = product['id']
-                        product_ean =  product['ean']
-                        product_name = product['productData']['name']
-                        product_seo = product['productData']['seo']
-
-                        r['product_data'] = {'product_id':product_id,
-                                            'product_ean':product_ean,
-                                            'product_seo': product_seo,
-                                            'product_name':product_name}
-
-                        products_list.append(r)
-
-                print("All data downloaded successfully!")
-
-            if export:    
-                self._export_to_json(products_list, name)
-
-            return products_list
 
     def get_products_by_ids(self, ids:list[int], export=True)->list[dict]:
 
@@ -421,6 +380,7 @@ class BMAPI:
         product_metadata_list=[]
 
         for id in ids:
+            self.control_ids([id])
             url=f"https://www.online.bmsupermercados.es/api/rest/V1.0/catalog/product?&orderById=7&categories={id}"
             response = requests.get(url)
                 
@@ -433,6 +393,7 @@ class BMAPI:
                     name=products[0]['categories'][0]['name'].lower().strip()
 
                     for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=True):
+                            
                             r = {}
                             
                             product_subcategory = product['categories'][0]['name']
@@ -457,9 +418,11 @@ class BMAPI:
                             product_price = product['priceData']['prices']
                             product_price_centAmount = product['priceData']['prices'][0]['value']['centAmount']
                             product_price_centUnitAmount = product['priceData']['prices'][0]['value']['centAmount']
-                            
+                            product_offer_price_centAmount = None
+                            product_offer_price_centUnitAmount = None
                             # if had offer
-                            if len(product['priceData']['prices'])>1:
+                            if len(product['priceData']['prices']) > 1:
+
                                 product_offer_price_centAmount = product['priceData']['prices'][1]['value']['centUnitAmount']
                                 product_offer_price_centUnitAmount = product['priceData']['prices'][1]['value']['centUnitAmount']
 
@@ -474,7 +437,7 @@ class BMAPI:
                                                     'product_price_centUnitAmount':product_price_centUnitAmount,
                                                     'product_offer_price_centAmount':product_offer_price_centAmount,
                                                     'product_offer_price_centUnitAmount':product_offer_price_centUnitAmount
-                                                    }
+                                                }
 
                             products_list.append(r)
                             product_metadata_list.append(product)
@@ -485,6 +448,35 @@ class BMAPI:
             self._export_to_json(product_metadata_list,'metadata_output')
         return products_list
 
+    def control_ids(self, new_ids: list = None) -> list:
+        
+        """
+        Controls the usage of ids. If a list of new_ids is provided, it appends them to the file.
+        If no list is provided, it reads the ids from the file and returns them.
+
+        Args:
+            new_ids (list): A list of new ids to append to the file. If None, the function reads the ids from the file.
+
+        Returns:
+            list: The updated list of ids from the file.
+        """
+        
+        file_path = 'logs_ids.txt'
+
+        # If new ids are provided, append them to the file
+        if new_ids:
+            with open(file_path, "a", encoding="utf-8") as file:  # "a" for append mode
+                file.write(','.join(map(str, new_ids)) + ',')  # Append new ids followed by a comma
+
+        # Read the existing ids from the file
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                content = file.read().strip(',')
+                existing_ids = content.split(',') if content else []
+        except FileNotFoundError:
+            existing_ids = []
+
+        return existing_ids  # Return the updated list
 
     def inMemory_categories(self)->list[dict]:
 
@@ -524,7 +516,9 @@ for category in categories_ids:
             value = subcategory[key]
         lproduct_by_ids.append(value)
  
-bm.get_products_by_ids([2549,1778], export=True)
+bm.get_products_by_ids(lproduct_by_ids, export=True)
+
+   
 
 def export_context(categories_dict:list[dict]):
 
