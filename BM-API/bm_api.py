@@ -30,7 +30,7 @@ class BMAPI:
             file_name="output"
         try:
             # Convert the list of dictionaries to a JSON string
-            with open(f'{file_name}.json', 'w') as file:
+            with open(f'{file_name}.json', 'w', encoding='utf-8') as file:
                 json.dump(data, file, indent=4)
             print('Succesfuly exported to JSON!')
         
