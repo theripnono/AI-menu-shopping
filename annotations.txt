@@ -1,0 +1,33 @@
+
+Some subcategories are modified for a better llm context
+
+eg:    
+    {'Lentejas': 1658},
+        |
+        |
+        |------>{'Cocidas': 4141}
+        |------>{'Secas': 4142}
+    
+    {'Alubias': 1655},
+        |
+        |
+        |------>{'Cocidas': 4141}
+        |------>{'Secas': 4142}
+
+    {'Garbanzos': 1656}, 
+        |
+        |
+        |------>{'Cocidas': 4141}
+        |------>{'Secas': 4142}
+
+Try: Legumbre seca or Legumbe cocidas
+
+Same case with Aceitunas subcategories
+    Add: "Aceituna" to  
+
+        |    {'Rellenas': 1977},
+Aceituna|    {'Con hueso': 2502},
+        |    {'Sin hueso': 1978},
+        |    {'Negras': 1976},
+
+
