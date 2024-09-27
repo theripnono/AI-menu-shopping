@@ -31,7 +31,7 @@ class BMAPI:
         try:
             # Convert the list of dictionaries to a JSON string
             with open(f'{file_name}.json', 'w', encoding='utf-8') as file:
-                json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4, ensure_ascii=False)
             print('Succesfuly exported to JSON!')
         
         except TypeError as e:
@@ -308,7 +308,7 @@ class BMAPI:
             print("All discount items are downloaded")   
             return offers_list
 
-    def get_products_by_category(self, category_name:str, export=True)->list[dict]:
+    def get_products_by_category_name(self, category_name:str, export=True)->list[dict]:
         """
         Get the items filtered by category
         e.g:
@@ -392,7 +392,7 @@ class BMAPI:
                     products = data['products']
                     name=products[0]['categories'][0]['name'].lower().strip()
 
-                    for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=True):
+                    for product in tqdm(products, desc=f'Downloading products: {name}...: ', leave=False):
                             
                             r = {}
                             
@@ -445,6 +445,8 @@ class BMAPI:
                     print("All data downloaded successfully!")
         if export:     
             self._export_to_json(products_list, 'output_ids')
+
+            # Export all data 
             self._export_to_json(product_metadata_list,'metadata_output')
         return products_list
 
@@ -509,14 +511,14 @@ for excluded_item in items_to_exclude:
 # Get list of all the id's subcategories of BM (Some ids are excluded items)
 lproduct_by_ids = []
 for category in categories_ids:
-    print('Añadiendo todas las subcategorias de las categorias: ', category)
+    # print('Añadiendo todas las subcategorias de las categorias: ', category)
     subcategories = categories_ids[category]
     for subcategory in subcategories:
         for key in subcategory:
             value = subcategory[key]
         lproduct_by_ids.append(value)
  
-bm.get_products_by_ids(lproduct_by_ids, export=True)
+#bm.get_products_by_ids(lproduct_by_ids, export=True)
 
    
 
@@ -536,3 +538,4 @@ def export_context(categories_dict:list[dict]):
 
 
 #export_context(categories_ids)
+
