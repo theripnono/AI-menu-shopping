@@ -65,32 +65,37 @@ def export_json(df:object)->object:
     print("recipes files was sucesfully generated")
     return recetas_json
 
-try:
-    with GraphDatabase.driver(URI, auth=AUTH) as driver:
-        driver.verify_connectivity()
+def main():
+    try:
+        with GraphDatabase.driver(URI, auth=AUTH) as driver:
+            driver.verify_connectivity()
 
-        records_df = driver.execute_query(
-            "UNWIND $recipes as receta "
-            "UNWIND receta.ingredientes as ingrediente "
-            "MATCH (c:Category {category: ingrediente.categoria})--(p:Product) "
-            "RETURN p.product_name as name, "
-            "p.product_brand as brand, "
-            "p.product_price_centAmount as price,"
-            "receta.receta as receta,"
-            "ingrediente.qty as cantidad,"
-            "ingrediente.unit as unit"
-                    
-            , recipes=recipes
-            , database_="neo4j"
-            , result_transformer_=neo4j.Result.to_df
-        )
-      
-except Exception as e:
-    print('Oups! something goes wrong, please check: ')
-    print({e})
+            records_df = driver.execute_query(
+                "UNWIND $recipes as receta "
+                "UNWIND receta.ingredientes as ingrediente "
+                "MATCH (c:Category {category: ingrediente.categoria})--(p:Product) "
+                "RETURN p.product_name as name, "
+                "p.product_brand as brand, "
+                "p.product_price_centAmount as price,"
+                "receta.receta as receta,"
+                "ingrediente.qty as cantidad,"
+                "ingrediente.unit as unit"
+                        
+                , recipes=recipes
+                , database_="neo4j"
+                , result_transformer_=neo4j.Result.to_df
+            )
+        
+    except Exception as e:
+        print('Oups! something goes wrong, please check: ')
+        print({e})
 
 
-json_export = export_json(records_df)
+    json_export = export_json(records_df)
 
-with open('exported_data.json', 'w', encoding='utf-8') as file:
-    json.dump(json_export, file, indent=4, ensure_ascii=False)
+    with open('exported_data.json', 'w', encoding='utf-8') as file:
+        json.dump(json_export, file, indent=4, ensure_ascii=False)
+
+
+if __name__=="__main__":
+    main()
