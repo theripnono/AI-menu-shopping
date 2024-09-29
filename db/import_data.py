@@ -1,8 +1,13 @@
 from neo4j import GraphDatabase
+from dotenv import dotenv_values
 import json
+import ast
 
-URI = "bolt://localhost:7999"
-AUTH = ("neo4j", "adminadmin")
+
+config = dotenv_values("./.conf")
+
+URI = config['URI']
+AUTH = ast.literal_eval(config['AUTH'])
 
 def load_into_graph(nodes:list[dict]):
 

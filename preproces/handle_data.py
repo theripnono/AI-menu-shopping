@@ -42,9 +42,8 @@ def rename_keys_in_list(data_list: list, new_key: str, old_key: str) -> list:
 
 
 # File paths
-input_file = 'raw_output_ids.json'
-output_file = 'clean_output_ids.json'
-
+input_file = 'preproces/raw_output_ids.json'
+output_file = 'preproces/clean_output_ids.json'
 
 # Read the JSON file
 with open(input_file, 'r', encoding='utf-8') as file:
@@ -60,7 +59,7 @@ clean_data = clean_items(data, items_to_delete)
 
 renamed_data = rename_keys_in_list(clean_data,'Legumbres secas','Secas')
 renamed_data = rename_keys_in_list(renamed_data,'Legumbres cocidas','Cocidas')
-renamed_data =  rename_keys_in_list(renamed_data,'Aceitunas rellenas','Rellenas')
+renamed_data = rename_keys_in_list(renamed_data,'Aceitunas rellenas','Rellenas')
 renamed_data = rename_keys_in_list(renamed_data,'Aceitunas rellenas','Rellenas')
 renamed_data = rename_keys_in_list(renamed_data,'Aceitunas con hueso','Con hueso')
 renamed_data = rename_keys_in_list(renamed_data,'Aceitunas sin hueso ','Sin hueso')
