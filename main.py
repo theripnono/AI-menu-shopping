@@ -10,18 +10,20 @@ config = dotenv_values(".conf")
 URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
 
-#recipes = generate_recipes()
+recipes = generate_recipes('hazme una receta vegetariana')
 
-recipes =[
-            {'receta': 'Tortilla de patatas',
-            'ingredientes': [
-                {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
-                {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
-                {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
-                {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
-            ]
-            }
-        ]
+
+# For testing
+#recipes =[
+#            {'receta': 'Tortilla de patatas',
+#            'ingredientes': [
+#                {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
+#                {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
+#                {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
+#                {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
+#            ]
+#            }
+#        ]
 
 
 def export_json(df:object)->object:
@@ -38,29 +40,29 @@ def export_json(df:object)->object:
        6  Cebolla ecológica en malla (1 kg aprox)             ...  ...         1    unidad
        7                Cebolla tubo (1 kg aprox)             ...  ...         1    unida
     """
-    # Agrupar el DataFrame por 'receta'
+
     recetas_json = []
+
+    # group by recipes
     grouped = df.groupby('receta')
-     # Iterar sobre los grupos
     for receta, group in grouped:
         receta_dict = {
             'receta': receta,
             'ingredientes': []
         }
 
-        # Iterar sobre cada fila del grupo
         for _, row in group.iterrows():
             ingrediente = {
                 'name': row['name'],
-                'brand': row['brand'],
+                'brand': row['brand'].strip(),
                 'cantidad': row['cantidad'],
-                'unit': row['unit']
+                'unit': row['unit'],
+                'price':row['price']
             }
             receta_dict['ingredientes'].append(ingrediente)
-        
-        # Añadir el diccionario de la receta a la lista final
+    
         recetas_json.append(receta_dict)
-
+    print("recipes files was sucesfully generated")
     return recetas_json
 
 try:
@@ -88,4 +90,7 @@ except Exception as e:
     print({e})
 
 
-export_json(records_df)
+json_export = export_json(records_df)
+
+with open('exported_data.json', 'w', encoding='utf-8') as file:
+    json.dump(json_export, file, indent=4, ensure_ascii=False)

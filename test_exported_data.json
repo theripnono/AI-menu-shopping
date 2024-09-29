@@ -1,0 +1,355 @@
+[
+    {
+        "receta": "Tortilla de patatas",
+        "ingredientes": [
+            {
+                "name": "Huevos L docena",
+                "brand": "Gorrotxategi",
+                "cantidad": 4,
+                "unit": "unidades"
+            },
+            {
+                "name": "Huevos L de suelo docena",
+                "brand": "Dagu",
+                "cantidad": 4,
+                "unit": "unidades"
+            },
+            {
+                "name": "Huevos L 1/2 docena",
+                "brand": "BM",
+                "cantidad": 4,
+                "unit": "unidades"
+            },
+            {
+                "name": "Huevos L 1/2 docena",
+                "brand": "Gorrotxategi",
+                "cantidad": 4,
+                "unit": "unidades"
+            },
+            {
+                "name": "Huevos euskolabel decena",
+                "brand": "Eusko Label",
+                "cantidad": 4,
+                "unit": "unidades"
+            },
+            {
+                "name": "Huevos L docena",
+                "brand": "BM",
+                "cantidad": 4,
+                "unit": "unidades"
+            },
+            {
+                "name": "Cebolla ecológica en malla (1 kg aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolla tubo (1 kg aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Ajo ecológico en bandeja (200 g aprox)",
+                "brand": "Buti",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolla blanca dulce",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolleta dulce 500 g",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolla para guarnición (500 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Ajos blancos 250 g",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Chalotas (250 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Ajos secos (500 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Ajos morados malla (200 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolla dulce a granel unidad (350 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Ajo negro",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolla roja (700 g aprox)",
+                "brand": "Buti",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Cebolla dulce (700 g aprox)",
+                "brand": "Buti",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Ajos frescos en  bandeja (100 g aprox)",
+                "brand": "",
+                "cantidad": 1,
+                "unit": "unidad"
+            },
+            {
+                "name": "Aceite de oliva virgen extra 1 l",
+                "brand": "Carbonell",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                "brand": "Urzante",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                "brand": "Lectus",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra 1 l",
+                "brand": "Maestros de Hojiblanca",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
+                "brand": "Trujal Almazara",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite ecológico virgen extra 0,5 l",
+                "brand": "Románico",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra 0,75 l",
+                "brand": "Urzante",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
+                "brand": "Trujal Almazara",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra spray 200 ml",
+                "brand": "Carbonell",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra 1 l",
+                "brand": "Kel",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen 1 l",
+                "brand": "Coosur",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite D.O. Sierra Segura 0,5 l",
+                "brand": "Fuenroble",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
+                "brand": "Maestros de Hojiblanca",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite arroniz de tudela 1 l",
+                "brand": "Trujal Almazara",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen picual 1 l",
+                "brand": "Urzante",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite virgen extra 1 l",
+                "brand": "Cazorla",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra 250 ml",
+                "brand": "Urzante",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                "brand": "Finca Almarech",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite de oliva virgen extra Tudela 1 l",
+                "brand": "Trujal Almazara",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Aceite virgen extra 0,5 l",
+                "brand": "Equidad",
+                "cantidad": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "Sal fina 1 kg",
+                "brand": "BM",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal marina yodada 1 kg",
+                "brand": "Diat Radisson",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal para hornear 2 kg",
+                "brand": "Sal Costa",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Flor de sal 125 g",
+                "brand": "Añana",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Bicarbonato sódico 250 g",
+                "brand": "Ducros",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal mineral 500 g",
+                "brand": "Añana",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal rosa del Himalaya",
+                "brand": "Ducros",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal gruesa 1 kg",
+                "brand": "BM",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal marina gruesa 1 kg",
+                "brand": "Bueno",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal de fruta 150 g",
+                "brand": "Sal Costa",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal marina en escamas 125 g",
+                "brand": "Maldon",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal blanca mediterránea 90 g",
+                "brand": "Ducros",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Bicarbonato 150 g",
+                "brand": "El Tigre",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal gruesa 2 kg",
+                "brand": "BM",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal yodada 1 kg",
+                "brand": "Salsil",
+                "cantidad": 1,
+                "unit": "pizca"
+            },
+            {
+                "name": "Sal ahumada 125 g",
+                "brand": "Maldon",
+                "cantidad": 1,
+                "unit": "pizca"
+            }
+        ]
+    }
+]

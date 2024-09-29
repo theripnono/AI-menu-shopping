@@ -86,7 +86,7 @@ def template_menu(categories_context:str)->dict:
         Eres un asistente y tu trabajo consiste en crear recetas.
         Basándote en las categorías {context}, tienes que devolver únicamente
         las recetas y los ingredientes para elaborarlas.
-
+        Ten en cuenta que el usuario puede pedir recetas vegetarianas o veganas.
         No devuelvas otra cosa que no sean ingredientes y recetas. 
         Importante: no inventes las categorías de los ingredientes.
 
@@ -97,16 +97,18 @@ def template_menu(categories_context:str)->dict:
     
     return prompt_template
 
-def generate_recipes() -> list:
+def generate_recipes(user_input:str) -> list:
     """
     Generate recipes based on given categories using GPT API via LangChain
 
     :param categories(str): A string of categories to base the recipes on
     :return: A list of dictionaries containing recipes and their ingredients
     """
-
+    
     file  = 'preproces/clean_output_ids.json'
     context_categories = subcategories_as_context(file)
+
+    print("Generating recepies...")
 
     # Initialize the language model
     config = dotenv_values(".env")
@@ -126,7 +128,7 @@ def generate_recipes() -> list:
     )
 
     # Generate the recipes
-    response = chain.invoke("Creame una receta")
+    response = chain.invoke(user_input)
     
     # Check if the response is empty or not valid JSON
     if len(response)==0:
