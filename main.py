@@ -12,16 +12,16 @@ AUTH = ast.literal_eval(config['AUTH'])
 
 
 # For testing
-#recipes =[
-#            {'receta': 'Tortilla de patatas',
-#            'ingredientes': [
-#                {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
-#                {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
-#                {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
-#                {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
-#            ]
-#            }
-#        ]
+recipes =[
+            {'receta': 'Tortilla de patatas',
+            'ingredientes': [
+                {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
+                {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
+                {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
+                {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
+            ]
+            }
+        ]
 
 
 def export_json(df:object)->object:
@@ -65,8 +65,9 @@ def export_json(df:object)->object:
 
 def main(user_input):
     
-    recipes = generate_recipes(user_input)
-
+    #recipes = generate_recipes(user_input)
+    recipes
+    
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
@@ -86,16 +87,18 @@ def main(user_input):
                 , database_="neo4j"
                 , result_transformer_=neo4j.Result.to_df
             )
-        
+
+        json_export = export_json(records_df)
+
+        with open('exported_data.json', 'w', encoding='utf-8') as file:
+            json.dump(json_export, file, indent=4, ensure_ascii=False)
+
     except Exception as e:
         print('Oups! something goes wrong, please check: ')
         print({e})
 
 
-    json_export = export_json(records_df)
-
-    with open('exported_data.json', 'w', encoding='utf-8') as file:
-        json.dump(json_export, file, indent=4, ensure_ascii=False)
+    
 
 
 if __name__=="__main__":
