@@ -76,7 +76,7 @@ def load_into_graph(nodes:list[dict]):
         print({e})
 
 
-def import_data(file:str)->list[dict]:
+def import_file(file:str)->list[dict]:
     
     # Read the JSON file
     with open(file, 'r', encoding='utf-8') as file:
@@ -85,6 +85,6 @@ def import_data(file:str)->list[dict]:
     return data
 
 input_file = './clean_output_ids.json'
-nodes = import_data(input_file) 
+nodes = import_file(input_file) 
 load_into_graph(nodes)
 
