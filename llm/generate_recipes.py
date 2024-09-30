@@ -97,7 +97,7 @@ def template_menu(categories_context:str)->dict:
     
     return prompt_template
 
-def generate_recipes(user_input:str) -> list:
+def _generate_recipes(user_input:str) -> list:
     """
     Generate recipes based on given categories using GPT API via LangChain
 
@@ -138,7 +138,7 @@ def generate_recipes(user_input:str) -> list:
         print("Generating response again, plaise wait...")
         tries=0
         while tries <= 5:
-            response=generate_recipes()
+            response=_generate_recipes()
             if len(response)>0:
                 break
             tries +=1
