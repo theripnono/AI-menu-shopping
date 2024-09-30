@@ -143,10 +143,9 @@ def generate_recipes(user_input:str) -> list:
                 break
             tries +=1
             if tries==5:
-                print("Reached the maximum number of attempts")
+                print("Maximum number of attempts reached...")
     
     return response
 
-#result = generate_recipes()
 
 
