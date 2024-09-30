@@ -10,8 +10,6 @@ config = dotenv_values(".conf")
 URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
 
-recipes = generate_recipes('hazme una receta vegetariana')
-
 
 # For testing
 #recipes =[
@@ -29,7 +27,7 @@ recipes = generate_recipes('hazme una receta vegetariana')
 def export_json(df:object)->object:
 
     """
-    df estructure example:
+    df input estructure example:
                                             name            brand  ...  cantidad      unit
        0                          Huevos L docena    Gorrotxategi  ...         4  unidades
        1                 Huevos L de suelo docena            Dagu  ...         4  unidades
@@ -65,7 +63,10 @@ def export_json(df:object)->object:
     print("recipes files was sucesfully generated")
     return recetas_json
 
-def main():
+def main(user_input):
+    
+    recipes = generate_recipes(user_input)
+
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
@@ -98,4 +99,5 @@ def main():
 
 
 if __name__=="__main__":
-    main()
+
+    main('hazme una receta vegetariana')
