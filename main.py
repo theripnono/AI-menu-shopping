@@ -1,4 +1,4 @@
-from llm.generate_recipes import generate_recipes
+from llm.generate_recipes import GenerateRecipes
 from neo4j import GraphDatabase
 import neo4j
 from dotenv import dotenv_values
@@ -64,16 +64,15 @@ def export_json(df:object)->object:
     return recetas_json
 
 def main(user_input):
-    
-    #recipes = generate_recipes(user_input)
-    recipes
-    
+
+    recipe_obj = GenerateRecipes()
+    response_recipes = recipe_obj.generate(user_input)
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
 
             records_df = driver.execute_query(
-                "UNWIND $recipes as receta "
+                "UNWIND $response_recipes as receta "
                 "UNWIND receta.ingredientes as ingrediente "
                 "MATCH (c:Category {category: ingrediente.categoria})--(p:Product) "
                 "RETURN p.product_name as name, "
@@ -83,7 +82,7 @@ def main(user_input):
                 "ingrediente.qty as cantidad,"
                 "ingrediente.unit as unit"
                         
-                , recipes=recipes
+                , recipes=response_recipes
                 , database_="neo4j"
                 , result_transformer_=neo4j.Result.to_df
             )
@@ -96,9 +95,6 @@ def main(user_input):
     except Exception as e:
         print('Oups! something goes wrong, please check: ')
         print({e})
-
-
-    
 
 
 if __name__=="__main__":
