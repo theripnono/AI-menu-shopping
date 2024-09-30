@@ -65,9 +65,8 @@ def export_json(df:object)->object:
 
 def main(user_input):
 
-    response_recipes = GenerateRecipes(user_input)
-    recipes
-
+    recipe_obj = GenerateRecipes()
+    response_recipes = recipe_obj.generate(user_input)
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
