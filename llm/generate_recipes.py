@@ -65,12 +65,13 @@ class GenerateRecipes():
                     {{ 
                     "receta": "nombre de la receta", 
                     "ingredientes": [
-                        {{
+                        {{  "ingrediente": Nombre del ingrediente",
                             "categoria": "Nombre de la categoria",
                             "qty": Cantidad,
                             "unit": "Unidad de medida"
                         }},
                         {{
+                            "ingrediente": Nombre del ingrediente",
                             "categoria": "Nombre de la categoria",
                             "qty": Cantidad,
                             "unit": "Unidad de medida"
