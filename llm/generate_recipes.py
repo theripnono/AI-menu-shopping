@@ -33,7 +33,7 @@ Ouput structure:
 
 """
 class GenerateRecipes():
-      
+    
     def subcategories_as_context(self, input_file:str)->list[str]:
         
         """

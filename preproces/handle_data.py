@@ -65,7 +65,6 @@ renamed_data = rename_keys_in_list(renamed_data,'Aceitunas con hueso','Con hueso
 renamed_data = rename_keys_in_list(renamed_data,'Aceitunas sin hueso ','Sin hueso')
 renamed_data = rename_keys_in_list(renamed_data,'Aceitunas negras','Negras')
 
-
 clean_data =  renamed_data
 
 with open(output_file, 'w', encoding='utf-8') as file:

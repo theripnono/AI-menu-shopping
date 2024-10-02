@@ -1,17 +1,28 @@
-import os,sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import os
+import sys
 
+# Add the project root to the Python path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(project_root)
+
+
+from llm.generate_recipes import GenerateRecipes
+from flask_cors import CORS
 from flask import Flask
-from llm.generate_recipes import _generate_recipes
 from neo4j import GraphDatabase
 import neo4j
 
 
+from flask import Flask, jsonify
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello-World!</p>"
+@app.route('/api/data', methods=['GET'])
+def get_data():
+    data = {"message": "Hello from Flask!"}
+    return jsonify(data)
 
-def printa():
-    return "<p>printa algo</p>"
+if __name__ == '__main__':
+    app.run(debug=True)
