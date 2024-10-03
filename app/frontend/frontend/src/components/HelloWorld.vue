@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <h1>{{ message }} hola</h1>
+    <h1>{{ message }}</h1>
 
     <div>
       <textarea v-model="userText" placeholder="Enter your text here" rows="4" cols="50"></textarea>
       <button @click="submitText">Generate Recipes</button>
-      <p v-if="serverResponse">{{ serverResponse }}</p>
-      <p v-else>Loading...</p>
+      <div>
+        <p v-if="serverResponse">{{ serverResponse }}</p>
+        <p v-else>Loading...</p>
+      </div>
     </div>
   </div>
 </template>
@@ -26,7 +28,7 @@ export default {
     // Make a GET request to your Flask server
     axios.get('http://localhost:5000')
       .then(response => {
-        console.log(response.data.message)
+        
         this.message = response.data.message;
       })
       .catch(error => {
@@ -37,7 +39,7 @@ export default {
     submitText() {
       axios.post('http://localhost:5000/api/submit-text', { text: this.userText })
         .then(response => {
-          console.log(response.data.message)
+         
           this.serverResponse = response.data.message; // Corrected here
         })
         .catch(error => {

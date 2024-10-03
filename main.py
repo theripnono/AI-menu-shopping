@@ -10,6 +10,11 @@ config = dotenv_values(".conf")
 URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
 
+"""
+
+Probar en local sin serv ni app
+"""
+
 
 # For testing
 recipes =[

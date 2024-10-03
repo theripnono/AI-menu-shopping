@@ -31,14 +31,31 @@ def generate_response():
         return jsonify({}), 200
 
     data = request.json
+    
     user_text = data.get('text', '').strip()
+
+    #generate_recipes = GenerateRecipes()
+    #recipes_json =  generate_recipes.generate(user_text)
+    
+    # For testing
+    recipes_json =[
+                {'receta': 'Tortilla de patatas',
+                'ingredientes': [
+                    {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
+                    {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
+                    {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
+                    {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
+                ]
+                }
+            ]
+
 
      # Check if user_text is empty and respond accordingly
     if not user_text:
         return jsonify({"error": "No text provided"}), 400
     
     # Process user_text using your logic here
-    recipes = {"message": f"Generated recipes for: {user_text}"}
+    recipes = {"message": f"{recipes_json}"}
     return jsonify(recipes)
 
 if __name__ == '__main__':
