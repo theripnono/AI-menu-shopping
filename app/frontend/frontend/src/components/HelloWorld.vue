@@ -5,9 +5,12 @@
     <div>
       <textarea v-model="userText" placeholder="Enter your text here" rows="4" cols="50"></textarea>
       <button @click="submitText">Generate Recipes</button>
-      <div>
+      <div v-if="isLoading">
+        <p>Loading...</p>
+        <div class="spinner"></div> 
+      </div>
+      <div v-else>
         <p v-if="serverResponse">{{ serverResponse }}</p>
-        <p v-else>Loading...</p>
       </div>
     </div>
   </div>
@@ -22,6 +25,7 @@ export default {
       message: '',
       userText: '',
       serverResponse: '',
+      isLoading: false,
     };
   },
   mounted() {
@@ -37,13 +41,19 @@ export default {
   },
   methods: {
     submitText() {
+      this.isLoading = true; // Iniciar el estado de carga
+      this.serverResponse = ''; // Limpiar respuesta previa
+
+      
       axios.post('http://localhost:5000/api/submit-text', { text: this.userText })
         .then(response => {
          
           this.serverResponse = response.data.message; // Corrected here
+          this.isLoading = false;
         })
         .catch(error => {
           console.error('Error:', error);
+          this.isLoading = false; 
         });
     }
   }
@@ -55,5 +65,18 @@ textarea {
   width: 100%;
   margin-bottom: 10px;
   padding: 8px;
+}
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
