@@ -17,45 +17,42 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
 export default {
-  data() {
-    return {
-      message: '',
-      userText: '',
-      serverResponse: '',
-      isLoading: false,
-    };
-  },
-  mounted() {
-    // Make a GET request to your Flask server
-    axios.get('http://localhost:5000')
-      .then(response => {
-        
-        this.message = response.data.message;
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  },
-  methods: {
-    submitText() {
-      this.isLoading = true; // Iniciar el estado de carga
-      this.serverResponse = ''; // Limpiar respuesta previa
+  setup() {
+    const message = ref('');
+    const userText = ref('');
+    const serverResponse = ref('');
+    const isLoading = ref(false);
 
-      
-      axios.post('http://localhost:5000/api/submit-text', { text: this.userText })
+    onMounted(() => {
+      axios.get('http://localhost:5000')
         .then(response => {
-         
-          this.serverResponse = response.data.message; // Corrected here
-          this.isLoading = false;
+          message.value = response.data.message;
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    });
+
+    const submitText = () => {
+      isLoading.value = true;
+      serverResponse.value = ''; // Limpiar respuesta previa
+
+      axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
+        .then(response => {
+          serverResponse.value = response.data.message;
+          isLoading.value = false;
         })
         .catch(error => {
           console.error('Error:', error);
-          this.isLoading = false; 
+          isLoading.value = false;
         });
-    }
+    };
+
+    return { message, userText, serverResponse, isLoading, submitText };
   }
 };
 </script>
@@ -66,6 +63,7 @@ textarea {
   margin-bottom: 10px;
   padding: 8px;
 }
+
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
   border-left-color: #000;
