@@ -5,24 +5,41 @@ import sys
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(project_root)
 
+from flask import Flask, jsonify,request
+from flask_cors import CORS
 
 from llm.generate_recipes import GenerateRecipes
-from flask_cors import CORS
-from flask import Flask
 from neo4j import GraphDatabase
 import neo4j
 
 
-from flask import Flask, jsonify
-from flask_cors import CORS
+
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
+#CORS(app)  # Enable CORS for all routes
 
-@app.route('/api/data', methods=['GET'])
-def get_data():
-    data = {"message": "Hello from Flask!"}
+
+@app.route('/', methods=['GET'])
+def index():
+    data = {"message": "Recipes Generator!"}
     return jsonify(data)
+
+@app.route('/api/submit-text', methods=['POST', 'OPTIONS'])
+def generate_response():
+    if request.method == 'OPTIONS':
+        return jsonify({}), 200
+
+    data = request.json
+    user_text = data.get('text', '').strip()
+
+     # Check if user_text is empty and respond accordingly
+    if not user_text:
+        return jsonify({"error": "No text provided"}), 400
+    
+    # Process user_text using your logic here
+    recipes = {"message": f"Generated recipes for: {user_text}"}
+    return jsonify(recipes)
 
 if __name__ == '__main__':
     app.run(debug=True)
