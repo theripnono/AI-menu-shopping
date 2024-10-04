@@ -1,0 +1,561 @@
+[
+    {
+        "receta": "Ensalada de quinoa y aguacate",
+        "ingredientes": {
+            "Quinoa": {
+                "nombre": "Quinoa",
+                "quantity": 200,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Quinoa bio 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 5.95
+                    },
+                    {
+                        "product_name": "Avena cocida 2x125 g",
+                        "product_brand": "Brillante",
+                        "price": 1.55
+                    },
+                    {
+                        "product_name": "Semilla de chía 250 g",
+                        "product_brand": "Eliges Eco",
+                        "price": 1.85
+                    },
+                    {
+                        "product_name": "Cous cous 2x125 g",
+                        "product_brand": "Brillante",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Cous cous 500 g",
+                        "product_brand": "Gallo",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Quinoa 2x125 g",
+                        "product_brand": "Brillante",
+                        "price": 1.56
+                    },
+                    {
+                        "product_name": "Quinoa 250 g",
+                        "product_brand": "Sos",
+                        "price": 1.9
+                    }
+                ]
+            },
+            "Aguacate": {
+                "nombre": "Aguacate",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Mango Selecta de Malaga",
+                        "product_brand": "Selecta",
+                        "price": 4.49
+                    },
+                    {
+                        "product_name": "Piña Selecta unidad (2,2 kg aprox)",
+                        "product_brand": "Selecta",
+                        "price": 2.49
+                    },
+                    {
+                        "product_name": "Mango bandeja (600 g aprox)",
+                        "product_brand": "",
+                        "price": 2.79
+                    },
+                    {
+                        "product_name": "Chirimoya a granel",
+                        "product_brand": "",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Aguacate a granel unidad (250 g aprox)",
+                        "product_brand": "",
+                        "price": 5.95
+                    },
+                    {
+                        "product_name": "Aguacate Bandeja (2 unidades)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Granada a granel (300 g aprox./unidad)",
+                        "product_brand": "",
+                        "price": 3.45
+                    },
+                    {
+                        "product_name": "Guacamole 200 g",
+                        "product_brand": "",
+                        "price": 1.89
+                    },
+                    {
+                        "product_name": "Higo Brevas",
+                        "product_brand": "",
+                        "price": 6.95
+                    },
+                    {
+                        "product_name": "Plátano embolsado Selecta",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Pitahaya",
+                        "product_brand": "",
+                        "price": 10.95
+                    },
+                    {
+                        "product_name": "Piña maduración especial (pieza 2,2 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.49
+                    },
+                    {
+                        "product_name": "Piña entera pelada 420 g",
+                        "product_brand": "",
+                        "price": 3.35
+                    },
+                    {
+                        "product_name": "Papayón unidad (1,5 kg aprox)",
+                        "product_brand": "",
+                        "price": 5.49
+                    },
+                    {
+                        "product_name": "Piña madurada en planta y transportada en avión",
+                        "product_brand": "",
+                        "price": 4.99
+                    },
+                    {
+                        "product_name": "Piña troceada 150g",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Piña cortada 500 g",
+                        "product_brand": "",
+                        "price": 3.19
+                    },
+                    {
+                        "product_name": "Coco en trocitos",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Kiwi unidad (150 g aprox)",
+                        "product_brand": "Zespri",
+                        "price": 5.99
+                    },
+                    {
+                        "product_name": "Kiwi amarillo sungold unidad (150 g aprox)",
+                        "product_brand": "Zespri",
+                        "price": 6.99
+                    }
+                ]
+            },
+            "Tomate": {
+                "nombre": "Tomate",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Tomate natural rallado 250 g",
+                        "product_brand": "Chovi",
+                        "price": 2.69
+                    },
+                    {
+                        "product_name": "Tomate primera a granel (200 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Tomate cherry pera (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Tomate rallado con aceite (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.79
+                    },
+                    {
+                        "product_name": "Pepino corto a granel (150 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Tomate Natural Tumaca 200 g",
+                        "product_brand": "",
+                        "price": 1.79
+                    },
+                    {
+                        "product_name": "Tomate rallado natural (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Tomate Cherry Rama 500 g",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Tomate en rama a granel (150 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 2.39
+                    },
+                    {
+                        "product_name": "Tomate pera granel (125 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Tomate de caserío Primera",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Tomate cherry bandeja (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
+                    },
+                    {
+                        "product_name": "Cherry pera kumato 250 g",
+                        "product_brand": "",
+                        "price": 1.99
+                    }
+                ]
+            },
+            "Lechuga": {
+                "nombre": "Lechuga",
+                "quantity": 100,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Corazón de escarola 150 g",
+                        "product_brand": "Selecta",
+                        "price": 1.34
+                    },
+                    {
+                        "product_name": "Ensalda gourmet 175 g",
+                        "product_brand": "BM",
+                        "price": 1.29
+                    },
+                    {
+                        "product_name": "Brotes deluxe 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91
+                    },
+                    {
+                        "product_name": "Corazón de lechuga baby especial (400 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Canónigos 125 g",
+                        "product_brand": "",
+                        "price": 2.01
+                    },
+                    {
+                        "product_name": "Brotes classic 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91
+                    },
+                    {
+                        "product_name": "Endibia bandeja (450 g aprox)",
+                        "product_brand": "",
+                        "price": 2.15
+                    },
+                    {
+                        "product_name": "Ensalada Mezclum Selecta 150 g",
+                        "product_brand": "BM",
+                        "price": 1.14
+                    },
+                    {
+                        "product_name": "Lechuga iceberg 250 g",
+                        "product_brand": "Florette",
+                        "price": 1.72
+                    },
+                    {
+                        "product_name": "Lechugas vivas (entre 300/500 g)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Lechuga en bolsa 140 g",
+                        "product_brand": "Eusko Label",
+                        "price": 1.81
+                    },
+                    {
+                        "product_name": "Cogollos de lechuga 2 unidades 200 g aprox",
+                        "product_brand": "",
+                        "price": 1.15
+                    },
+                    {
+                        "product_name": "Dúo canónigos-rúcula 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91
+                    },
+                    {
+                        "product_name": "Cuatro estaciones 250 g",
+                        "product_brand": "BM",
+                        "price": 0.76
+                    },
+                    {
+                        "product_name": "Gourmet mediterránea 150 g",
+                        "product_brand": "Florette",
+                        "price": 1.97
+                    },
+                    {
+                        "product_name": "Lechuga iceberg (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.09
+                    },
+                    {
+                        "product_name": "Rúcula 100 g",
+                        "product_brand": "Florette",
+                        "price": 2.01
+                    },
+                    {
+                        "product_name": "Ensalada gourmet 175 g",
+                        "product_brand": "Florette",
+                        "price": 1.97
+                    }
+                ]
+            },
+            "Aceite de oliva virgen extra": {
+                "nombre": "Aceite de oliva virgen extra",
+                "quantity": 2,
+                "unit": "cucharadas",
+                "productos": [
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.79
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                        "product_brand": "Lectus",
+                        "price": 6.62
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 13.9
+                    },
+                    {
+                        "product_name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite ecológico virgen extra 0,5 l",
+                        "product_brand": "Románico",
+                        "price": 8.53
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 0,75 l",
+                        "product_brand": "Urzante",
+                        "price": 9.04
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra spray 200 ml",
+                        "product_brand": "Carbonell",
+                        "price": 4.18
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Kel",
+                        "price": 13.81
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 1 l",
+                        "product_brand": "Coosur",
+                        "price": 13.81
+                    },
+                    {
+                        "product_name": "Aceite D.O. Sierra Segura 0,5 l",
+                        "product_brand": "Fuenroble",
+                        "price": 13.79
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 7.61
+                    },
+                    {
+                        "product_name": "Aceite arroniz de tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen picual 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 1 l",
+                        "product_brand": "Cazorla",
+                        "price": 11.67
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 250 ml",
+                        "product_brand": "Urzante",
+                        "price": 3.61
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                        "product_brand": "Finca Almarech",
+                        "price": 8.18
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra Tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 0,5 l",
+                        "product_brand": "Equidad",
+                        "price": 8.48
+                    }
+                ]
+            },
+            "Vinagre balsámico": {
+                "nombre": "Vinagre balsámico",
+                "quantity": 1,
+                "unit": "cucharada",
+                "productos": [
+                    {
+                        "product_name": "Crema de vinagre al Pedro Ximénez 275 ml",
+                        "product_brand": "Carbonell",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Crema balsámica de módena 250 ml",
+                        "product_brand": "BM",
+                        "price": 1.75
+                    },
+                    {
+                        "product_name": "Vinagre balsámico de Módena 250 ml",
+                        "product_brand": "Acetaria",
+                        "price": 1.95
+                    },
+                    {
+                        "product_name": "Vinagre balsámico blanco 250 ml",
+                        "product_brand": "Borges",
+                        "price": 2.55
+                    },
+                    {
+                        "product_name": "Vinagre balsámico de módena 500 ml",
+                        "product_brand": "BM",
+                        "price": 2.45
+                    },
+                    {
+                        "product_name": "Vinagre balsámico de módena 250 ml",
+                        "product_brand": "Borges",
+                        "price": 2.25
+                    },
+                    {
+                        "product_name": "Crema balsámica de módena 250 g",
+                        "product_brand": "Borges",
+                        "price": 3.49
+                    }
+                ]
+            },
+            "Sal": {
+                "nombre": "Sal",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Sal fina 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
+                    },
+                    {
+                        "product_name": "Sal marina yodada 1 kg",
+                        "product_brand": "Diat Radisson",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Sal para hornear 2 kg",
+                        "product_brand": "Sal Costa",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Flor de sal 125 g",
+                        "product_brand": "Añana",
+                        "price": 4.45
+                    },
+                    {
+                        "product_name": "Bicarbonato sódico 250 g",
+                        "product_brand": "Ducros",
+                        "price": 2.29
+                    },
+                    {
+                        "product_name": "Sal mineral 500 g",
+                        "product_brand": "Añana",
+                        "price": 4.89
+                    },
+                    {
+                        "product_name": "Sal rosa del Himalaya",
+                        "product_brand": "Ducros",
+                        "price": 2.79
+                    },
+                    {
+                        "product_name": "Sal gruesa 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
+                    },
+                    {
+                        "product_name": "Sal marina gruesa 1 kg",
+                        "product_brand": "Bueno",
+                        "price": 1.19
+                    },
+                    {
+                        "product_name": "Sal de fruta 150 g",
+                        "product_brand": "Sal Costa",
+                        "price": 3.5
+                    },
+                    {
+                        "product_name": "Sal marina en escamas 125 g",
+                        "product_brand": "Maldon",
+                        "price": 3.25
+                    },
+                    {
+                        "product_name": "Sal blanca mediterránea 90 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
+                    },
+                    {
+                        "product_name": "Bicarbonato 150 g",
+                        "product_brand": "El Tigre",
+                        "price": 0.99
+                    },
+                    {
+                        "product_name": "Sal gruesa 2 kg",
+                        "product_brand": "BM",
+                        "price": 1.1
+                    },
+                    {
+                        "product_name": "Sal yodada 1 kg",
+                        "product_brand": "Salsil",
+                        "price": 1.59
+                    },
+                    {
+                        "product_name": "Sal ahumada 125 g",
+                        "product_brand": "Maldon",
+                        "price": 4.3
+                    }
+                ]
+            }
+        }
+    }
+]

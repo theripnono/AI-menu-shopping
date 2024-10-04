@@ -1,5 +1,8 @@
 import os
 import sys
+import json
+from .search_products import procces_recipes
+
 
 # Add the project root to the Python path
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -8,22 +11,21 @@ sys.path.append(project_root)
 from flask import Flask, jsonify,request
 from flask_cors import CORS
 
-from llm.generate_recipes import GenerateRecipes
-from neo4j import GraphDatabase
-import neo4j
-
-
-
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 #CORS(app)  # Enable CORS for all routes
 
+def test_neo4j():
+    with open('exported_data.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    return data
 
 @app.route('/', methods=['GET'])
 def index():
-    data = {"message": "Recipes Generator!"}
+    data = {"message": "Generador de Recetas"}
     return jsonify(data)
+
 
 @app.route('/api/submit-text', methods=['POST', 'OPTIONS'])
 def generate_response():
@@ -34,28 +36,20 @@ def generate_response():
     
     user_text = data.get('text', '').strip()
 
-    #generate_recipes = GenerateRecipes()
-    #recipes_json =  generate_recipes.generate(user_text)
+    
+    #recipes_json =  procces_recipes(user_text)
     
     # For testing
-    #
     # That is the respond I'm waiting for
-    recipes_json = [
-                    {'receta': 'Tortilla de patatas',
-                    'ingredientes': [
-                    {'ingrediente':'Huevos','categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
-                    {'ingrediente':'Cebolla', 'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
-                    {'ingrediente':'Aceite','categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
-                    {'ingrediente':'Sal','categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
-                    ]
-                },
-            ]
+    recipes_json = test_neo4j()
 
-     # Check if user_text is empty and respond accordingly
+    # Check if user_text is empty and respond accordingly
     if not user_text:
         return jsonify({"error": "No text provided"}), 400
     
     # Process user_text using your logic here
+    print(recipes_json)
+
     recipes = {"message": recipes_json}
     return jsonify(recipes)
 
