@@ -2,7 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
-<template>
+<template>  
       <HelloWorld/>
 </template>
 
@@ -11,7 +11,5 @@ import HelloWorld from './components/HelloWorld.vue'
 header {
   line-height: 1.5;
 }
-
-
 
 </style>
