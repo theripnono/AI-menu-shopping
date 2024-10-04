@@ -5,26 +5,35 @@
     <div>
       <textarea v-model="userText" placeholder="Enter your text here" rows="4" cols="50"></textarea>
       <button @click="submitText">Generate Recipes</button>
+
       <div v-if="isLoading">
         <p>Loading...</p>
         <div class="spinner"></div> 
       </div>
-      <div v-else>
-        <p v-if="serverResponse">{{ serverResponse }}</p>
+
+      <div v-else-if="serverResponse && serverResponse.length > 0">
+        <div v-for="(recipe, index) in serverResponse" :key="index">
+          <h2>Recipe: {{ recipe.receta }}</h2>
+          <ul>
+            <li v-for="(ingrediente, index) in recipe.ingredientes" :key="index">
+              {{ ingrediente.ingrediente }} - {{ ingrediente.qty }} {{ ingrediente.unit }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, toRaw } from 'vue';
 import axios from 'axios';
 
 export default {
   setup() {
     const message = ref('');
     const userText = ref('');
-    const serverResponse = ref('');
+    const serverResponse = ref({});
     const isLoading = ref(false);
 
     onMounted(() => {
@@ -39,11 +48,24 @@ export default {
 
     const submitText = () => {
       isLoading.value = true;
-      serverResponse.value = ''; // Limpiar respuesta previa
-
+      serverResponse.value = null; // Clean previous response
+      
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
+          
           serverResponse.value = response.data.message;
+  
+
+        //   jsn_response.value = (toRaw(serverResponse.value));
+          
+        //   jsn_response.forEach((recipe) => {
+        //   console.log(recipe.receta);
+        //   recipe.ingredientes.forEach(ingredient => {
+        //   console.log(`${ingredient.ingrediente} - ${ingredient.qty} ${ingredient.unit}`);
+        //   });
+        // }); 
+
+
           isLoading.value = false;
         })
         .catch(error => {

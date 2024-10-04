@@ -38,24 +38,25 @@ def generate_response():
     #recipes_json =  generate_recipes.generate(user_text)
     
     # For testing
-    recipes_json =[
-                {'receta': 'Tortilla de patatas',
-                'ingredientes': [
-                    {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
-                    {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
-                    {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
-                    {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
-                ]
-                }
+    #
+    # That is the respond I'm waiting for
+    recipes_json = [
+                    {'receta': 'Tortilla de patatas',
+                    'ingredientes': [
+                    {'ingrediente':'Huevos','categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
+                    {'ingrediente':'Cebolla', 'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
+                    {'ingrediente':'Aceite','categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
+                    {'ingrediente':'Sal','categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
+                    ]
+                },
             ]
-
 
      # Check if user_text is empty and respond accordingly
     if not user_text:
         return jsonify({"error": "No text provided"}), 400
     
     # Process user_text using your logic here
-    recipes = {"message": f"{recipes_json}"}
+    recipes = {"message": recipes_json}
     return jsonify(recipes)
 
 if __name__ == '__main__':
