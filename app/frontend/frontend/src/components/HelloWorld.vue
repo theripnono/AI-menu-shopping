@@ -3,10 +3,15 @@
     <v-main>
       <h1>{{ message }}</h1>
       <div>
-        <p><strong>Asistente de compra de supermercado BM con IA</strong></p>
+        <p><strong>Asistente de compra de Supermercado BM con IA</strong></p>
       </div>
       <div>
-        <v-textarea class="fixed-text" variant="solo" v-model="userText" placeholder="¿Qué te apetece que comamos esta semana?" ></v-textarea>
+        <v-textarea 
+          class="fixed-text" 
+          variant="solo" 
+          v-model="userText" 
+          placeholder="¿Qué te apetece que comamos esta semana?" 
+        ></v-textarea>
         <v-btn style="margin-top: 20px;" @click="submitText">Generate Recipes</v-btn>
 
         <div v-if="isLoading">
@@ -18,7 +23,7 @@
           <div v-for="(recipe, index) in serverResponse" :key="index">
             <div style="margin-top: 20px;">
               <h2>¿Qué te parece una {{ recipe.receta }}?</h2>
-              <v-btn @click="toggleIngredients(index)" style="margin-top: 20px;">
+              <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
                 {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
               </v-btn>
             </div>
@@ -50,7 +55,7 @@
                               <h3>{{ producto.product_name }}</h3>
                               <p>{{ producto.product_brand }}</p>
                               <p>{{ producto.price }}€</p>
-                              <v-btn @click="handleProductClick(producto)" color="primary">
+                              <v-btn @click="addCartProduct(producto)" color="primary">
                                 Add to Cart
                               </v-btn>
                             </v-col>
@@ -64,14 +69,32 @@
             </v-row>
           </div>
         </div>
+
+        <!-- Sección para mostrar el carrito -->
+        <div>
+          <h2>Productos del Carrito</h2>
+          <v-list>
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in cartItems" :key="index">
+                <v-list-item-content>
+                  <v-list-item-title>{{ item.product.product_name }} (x{{ item.quantity }})</v-list-item-title>
+                  <v-list-item-subtitle>{{ item.product.product_brand }}</v-list-item-subtitle>
+                  <v-list-item-subtitle>Precio: {{ (item.product.price * item.quantity).toFixed(2) }}€</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+          <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>
+        </div>
       </div>
+      
     </v-main>
   </v-app>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue';
-import { VApp, VMain, VBtn, VCarousel, VCard, VCardTitle, VCardText, VCarouselItem, VSheet, VRow, VCol } from 'vuetify/components';
+import { VApp, VMain, VBtn, VCarousel, VCard, VCardTitle, VCardText, VCarouselItem, VSheet, VRow, VCol, VList, VListItem } from 'vuetify/components';
 import axios from 'axios';
 
 export default {
@@ -80,6 +103,8 @@ export default {
     const userText = ref('');
     const serverResponse = ref([]);
     const isLoading = ref(false);
+    const cartItems = ref([]);
+    const cartTotal = ref(0);
 
     // Estado para controlar la visibilidad de los productos
     const showProducts = ref({});
@@ -127,7 +152,24 @@ export default {
       showIngredients.value[recipeIndex] = !showIngredients.value[recipeIndex];
     };
 
-    return { message, userText, serverResponse, isLoading, submitText, showProducts, toggleProducts, showIngredients, toggleIngredients };
+    const addCartProduct = (producto) => {
+      const existingProduct = cartItems.value.find(item => item.product.product_name === producto.product_name);
+      if (existingProduct) {
+        // If the product already exists, increase the quantity
+        existingProduct.quantity += 1;
+        } else {
+        // If it's a new product, add it to the cart with quantity 1
+        cartItems.value.push({ product: producto, quantity: 1 });
+        }
+   
+      cartTotal.value = Math.round((cartTotal.value + producto.price + Number.EPSILON) * 100) / 100
+      console.log('Producto añadido al carrito:', producto);
+    };
+
+    return { message, userText, serverResponse, isLoading,
+            submitText, showProducts,cartTotal,
+            toggleProducts, showIngredients,
+            toggleIngredients, addCartProduct, cartItems };
   }
 };
 </script>
@@ -140,7 +182,6 @@ textarea {
 }
 .fixed-textarea {
   height: 100px; /* Fixed height */
-  
   overflow-y: auto; /* Enables vertical scrolling */
 }
 .spinner {
