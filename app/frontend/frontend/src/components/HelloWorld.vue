@@ -1,77 +1,81 @@
 <template>
-  <v-app>
-    <v-main>
+  <v-app class="full-width-app">
+    <v-main class="full-width-app">
       <h1>{{ message }}</h1>
       <div>
         <p><strong>Asistente de compra de Supermercado BM con IA</strong></p>
       </div>
-      <div>
-        <v-textarea 
-          class="fixed-text" 
-          variant="solo" 
-          v-model="userText" 
-          placeholder="¿Qué te apetece que comamos esta semana?" 
-        ></v-textarea>
-        <v-btn style="margin-top: 20px;" @click="submitText">Generate Recipes</v-btn>
+      
+      <v-row>
+        <!-- Sección para generar recetas -->
+        <v-col cols="12" md="8">
+          <v-textarea 
+            class="fixed-text" 
+            variant="solo" 
+            v-model="userText" 
+            placeholder="¿Qué te apetece que comamos esta semana?" 
+          ></v-textarea>
+          <v-btn style="margin-top: 20px;" @click="submitText">Generate Recipes</v-btn>
 
-        <div v-if="isLoading">
-          <h2>Qué te parece si cocinamos...</h2>
-          <v-progress-circular color="primary" indeterminate></v-progress-circular>
-        </div>
-
-        <div v-else-if="serverResponse.length > 0">
-          <div v-for="(recipe, index) in serverResponse" :key="index">
-            <div style="margin-top: 20px;">
-              <h2>¿Qué te parece una {{ recipe.receta }}?</h2>
-              <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
-                {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
-              </v-btn>
-            </div>
-
-            <v-row v-if="showIngredients[index]">
-              <v-col
-                v-for="(ingrediente, ingKey) in recipe.ingredientes"
-                :key="ingKey"
-                cols="6"
-              >
-                <v-card class="mb-2">
-                  <v-card-title>{{ ingrediente.nombre }}</v-card-title>
-                  <v-card-subtitle>Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}</v-card-subtitle>
-                  <v-card-text>
-                    <v-btn @click="toggleProducts(index, ingKey)" class="mb-2">
-                      {{ showProducts[index] && showProducts[index][ingKey] ? 'Ocultar' : 'Mostrar' }} Products
-                    </v-btn>
-
-                    <v-carousel
-                      v-if="showProducts[index] && showProducts[index][ingKey]"
-                      height="200"
-                      show-arrows="hover"
-                      hide-delimiter-background
-                    >
-                      <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
-                        <v-sheet height="100%" tile>
-                          <v-row class="fill-height" align="center" justify="center">
-                            <v-col cols="12" class="text-center">
-                              <h3>{{ producto.product_name }}</h3>
-                              <p>{{ producto.product_brand }}</p>
-                              <p>{{ producto.price }}€</p>
-                              <v-btn @click="addCartProduct(producto)" color="primary">
-                                Add to Cart
-                              </v-btn>
-                            </v-col>
-                          </v-row>
-                        </v-sheet>
-                      </v-carousel-item>
-                    </v-carousel>
-                  </v-card-text>
-                </v-card>
-              </v-col>
-            </v-row>
+          <div v-if="isLoading">
+            <h2>Qué te parece si cocinamos...</h2>
+            <v-progress-circular color="primary" indeterminate></v-progress-circular>
           </div>
-        </div>
 
-        <!-- Sección para mostrar el carrito -->
-        <div>
+          <div v-else-if="serverResponse.length > 0">
+            <div v-for="(recipe, index) in serverResponse" :key="index">
+              <div style="margin-top: 20px;">
+                <h2>¿Qué te parece una {{ recipe.receta }}?</h2>
+                <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
+                  {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
+                </v-btn>
+              </div>
+
+              <v-row v-if="showIngredients[index]">
+                <v-col
+                  v-for="(ingrediente, ingKey) in recipe.ingredientes"
+                  :key="ingKey"
+                  cols="6"
+                >
+                  <v-card class="mb-2">
+                    <v-card-title>{{ ingrediente.nombre }}</v-card-title>
+                    <v-card-subtitle>Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}</v-card-subtitle>
+                    <v-card-text>
+                      <v-btn @click="toggleProducts(index, ingKey)" class="mb-2">
+                        {{ showProducts[index] && showProducts[index][ingKey] ? 'Ocultar' : 'Mostrar' }} Products
+                      </v-btn>
+
+                      <v-carousel
+                        v-if="showProducts[index] && showProducts[index][ingKey]"
+                        height="200"
+                        show-arrows="hover"
+                        hide-delimiter-background
+                      >
+                        <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
+                          <v-sheet height="100%" tile>
+                            <v-row class="fill-height" align="center" justify="center">
+                              <v-col cols="12" class="text-center">
+                                <h3>{{ producto.product_name }}</h3>
+                                <p>{{ producto.product_brand }}</p>
+                                <p>{{ producto.price }}€</p>
+                                <v-btn @click="addCartProduct(producto)" color="primary">
+                                  Add to Cart
+                                </v-btn>
+                              </v-col>
+                            </v-row>
+                          </v-sheet>
+                        </v-carousel-item>
+                      </v-carousel>
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </div>
+          </div>
+        </v-col>
+
+        <!-- Sección para mostrar el carrito en la derecha -->
+        <v-col cols="12" md="4">
           <h2>Productos del Carrito</h2>
           <v-list>
             <v-list-item-group>
@@ -85,9 +89,8 @@
             </v-list-item-group>
           </v-list>
           <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>
-        </div>
-      </div>
-      
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
