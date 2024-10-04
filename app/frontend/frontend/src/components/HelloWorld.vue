@@ -1,24 +1,30 @@
 <template>
   <div id="app">
     <h1>{{ message }}</h1>
-
+    <div>
+      <p>Asistente de compra de supermercado</p>
+    </div>
     <div>
       <textarea v-model="userText" placeholder="Enter your text here" rows="4" cols="50"></textarea>
       <button @click="submitText">Generate Recipes</button>
 
       <div v-if="isLoading">
-        <p>Loading...</p>
+        <h2>Qué te parece si cocinamos...</h2>
         <div class="spinner"></div> 
       </div>
 
       <div v-else-if="serverResponse && serverResponse.length > 0">
-        <div v-for="(recipe, index) in serverResponse" :key="index">
-          <h2>Recipe: {{ recipe.receta }}</h2>
-          <ul>
-            <li v-for="(ingrediente, index) in recipe.ingredientes" :key="index">
-              {{ ingrediente.ingrediente }} - {{ ingrediente.qty }} {{ ingrediente.unit }}
-            </li>
+      <div v-for="(recipe, index) in serverResponse" :key="index">
+        <h2>{{ recipe.receta }}</h2>
+        <div v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
+          <h3>{{ ingrediente.nombre }}</h3> <!-- Nombre del ingrediente -->
+          <ul>    
+            <li v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
+              {{ producto.product_name }} - {{ producto.product_brand }} 
+              - {{ producto.price }}€
+            </li> 
           </ul>
+        </div>
         </div>
       </div>
     </div>
@@ -26,7 +32,7 @@
 </template>
 
 <script>
-import { ref, onMounted, toRaw } from 'vue';
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
 export default {
@@ -54,17 +60,6 @@ export default {
         .then(response => {
           
           serverResponse.value = response.data.message;
-  
-
-        //   jsn_response.value = (toRaw(serverResponse.value));
-          
-        //   jsn_response.forEach((recipe) => {
-        //   console.log(recipe.receta);
-        //   recipe.ingredientes.forEach(ingredient => {
-        //   console.log(`${ingredient.ingrediente} - ${ingredient.qty} ${ingredient.unit}`);
-        //   });
-        // }); 
-
 
           isLoading.value = false;
         })
