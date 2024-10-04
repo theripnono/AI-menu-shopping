@@ -11,7 +11,10 @@
 
         <div v-if="isLoading">
           <h2>Qué te parece si cocinamos...</h2>
-          <div class="spinner"></div>
+          <v-progress-circular
+            color="primary"
+            indeterminate
+          ></v-progress-circular>
         </div>
 
         <div v-else-if="serverResponse.length > 0">
@@ -25,7 +28,7 @@
                 {{ showProducts[index] && showProducts[index][ingKey] ? 'Hide' : 'Show' }} Products
               </v-btn>
 
-              <v-carousel v-if="showProducts[index] && showProducts[index][ingKey]" hide-delimiters show-arrows="hover">
+             <v-carousel v-if="showProducts[index] && showProducts[index][ingKey]" hide-delimiters show-arrows="hover">
             <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
               <v-sheet height="100%" tile>
                 <v-row class="fill-height" align="center" justify="center">
