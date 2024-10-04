@@ -51,20 +51,32 @@ def export_json(df:object)->object:
     for receta, group in grouped:
         receta_dict = {
             'receta': receta,
-            'ingredientes': []
+            'ingredientes': {}
         }
-
+        
+        # Agrupar por ingrediente dentro de cada receta
         for _, row in group.iterrows():
-            ingrediente = {
-                'name': row['name'],
-                'brand': row['brand'].strip(),
-                'cantidad': row['cantidad'],
-                'unit': row['unit'],
-                'price':row['price']
+            ingrediente = row['ingrediente']
+            
+            # Crear el diccionario del ingrediente si no existe
+            if ingrediente not in receta_dict['ingredientes']:
+                receta_dict['ingredientes'][ingrediente] = {
+                    'nombre': ingrediente,
+                    'productos': []
+                }
+            
+            # Añadir el producto a la lista de productos
+            producto_info = {
+                'product_name': row['name'],
+                'product_brand': row['brand'],
+                'price': row['price'],
+                'quantity': row['cantidad'],
+                'unit': row['unit']
             }
-            receta_dict['ingredientes'].append(ingrediente)
-    
+            receta_dict['ingredientes'][ingrediente]['productos'].append(producto_info)
+        
         recetas_json.append(receta_dict)
+
     print("recipes files was sucesfully generated")
     return recetas_json
 
@@ -72,6 +84,7 @@ def main(user_input):
 
     recipe_obj = GenerateRecipes()
     response_recipes = recipe_obj.generate(user_input)
+    print(response_recipes)
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
@@ -84,10 +97,11 @@ def main(user_input):
                 "p.product_brand as brand, "
                 "p.product_price_centAmount as price,"
                 "receta.receta as receta,"
+                "ingrediente.ingrediente as ingrediente,"
                 "ingrediente.qty as cantidad,"
                 "ingrediente.unit as unit"
                         
-                , recipes=response_recipes
+                , response_recipes=response_recipes
                 , database_="neo4j"
                 , result_transformer_=neo4j.Result.to_df
             )

@@ -1,4 +1,5 @@
 import json
+
 from dotenv import dotenv_values
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
@@ -98,7 +99,7 @@ class GenerateRecipes():
         
         return prompt_template
 
-    def generate(self, user_input:str) -> list:
+    def generate(self, user_input:str) -> list[dict]:
         """
         Generate recipes based on given categories using GPT API via LangChain
 
@@ -106,10 +107,10 @@ class GenerateRecipes():
         :return: A list of dictionaries containing recipes and their ingredients
         """
         
-        file  = 'preproces/clean_output_ids.json'
-        context_categories = self.subcategories_as_context(file)
+        #TODO ocultar el path
+        file  = 'clean_output_ids.json'
 
-        print("Generating recepies...")
+        context_categories = self.subcategories_as_context(file)
 
         # Initialize the language model
         config = dotenv_values(".env")
@@ -128,6 +129,7 @@ class GenerateRecipes():
             | json_parser
         )
 
+        print("Generating recepies...")
         # Generate the recipes
         response = chain.invoke(user_input)
         
