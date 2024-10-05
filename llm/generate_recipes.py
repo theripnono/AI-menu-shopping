@@ -88,14 +88,17 @@ class GenerateRecipes():
             Eres un asistente y tu trabajo consiste en crear recetas.
             Basándote en las categorías {context}, tienes que devolver únicamente
             las recetas y los ingredientes para elaborarlas.
-            Ten en cuenta que el usuario puede pedir recetas vegetarianas o veganas.
+            
+            El usuario ha solicitado recetas de: {user_input}
+            Asegúrate de que las recetas estén relacionadas con esta solicitud.
+            
             No devuelvas otra cosa que no sean ingredientes y recetas. 
             Importante: no inventes las categorías de los ingredientes.
 
             La respuesta tiene que llevar el siguiente formato en forma de lista de diccionarios:
             
             {export}
-        """.format(context=categories_context, export=export)
+        """.format(context=categories_context, export=export, user_input="{user_input}")
         
         return prompt_template
 
@@ -122,7 +125,7 @@ class GenerateRecipes():
 
         # Create the chain
         chain = (
-            {"context": RunnablePassthrough()}
+            {"user_input": RunnablePassthrough()}
             | prompt_template
             | llm
             | StrOutputParser()

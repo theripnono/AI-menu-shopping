@@ -1,1479 +1,2181 @@
 [
     {
-        "receta": "Ensalada de aguacate y tomate",
+        "receta": "Conejo al horno",
         "ingredientes": {
-            "Aguacate": {
-                "nombre": "Aguacate",
+            "Conejo": {
+                "nombre": "Conejo",
+                "quantity": 1,
+                "unit": "unidad",
                 "productos": [
                     {
-                        "name": "Mango Selecta de Malaga",
-                        "brand": "Selecta",
-                        "price": 4.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Chuletillas de conejo bandeja (450 g aprox)",
+                        "product_brand": "",
+                        "price": 16.95
                     },
                     {
-                        "name": "Piña Selecta unidad (2,2 kg aprox)",
-                        "brand": "Selecta",
-                        "price": 2.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Muslo de conejo bandeja (700 g aprox)",
+                        "product_brand": "",
+                        "price": 11.95
                     },
                     {
-                        "name": "Mango bandeja (600 g aprox)",
-                        "brand": "",
-                        "price": 2.79,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Conejo a granel (entero 1,4 kg aprox)",
+                        "product_brand": "",
+                        "price": 8.49
                     },
                     {
-                        "name": "Chirimoya a granel",
-                        "brand": "",
-                        "price": 3.95,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Paletilla de conejo bandeja (400 g aprox)",
+                        "product_brand": "",
+                        "price": 16.95
                     },
                     {
-                        "name": "Aguacate a granel unidad (250 g aprox)",
-                        "brand": "",
-                        "price": 5.95,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ternuras de conejo bandeja (310 g aprox)",
+                        "product_brand": "",
+                        "price": 6.95
                     },
                     {
-                        "name": "Aguacate Bandeja (2 unidades)",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Costilla de conejo bandeja (600 g aprox)",
+                        "product_brand": "",
+                        "price": 8.5
                     },
                     {
-                        "name": "Granada a granel (300 g aprox./unidad)",
-                        "brand": "",
-                        "price": 3.45,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Guacamole 200 g",
-                        "brand": "",
-                        "price": 1.89,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Higo Brevas",
-                        "brand": "",
-                        "price": 6.95,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Plátano embolsado Selecta",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Pitahaya",
-                        "brand": "",
-                        "price": 10.95,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Piña maduración especial (pieza 2,2 kg aprox)",
-                        "brand": "",
-                        "price": 2.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Piña entera pelada 420 g",
-                        "brand": "",
-                        "price": 3.35,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Papayón unidad (1,5 kg aprox)",
-                        "brand": "",
-                        "price": 5.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Piña madurada en planta y transportada en avión",
-                        "brand": "",
-                        "price": 4.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Piña troceada 150g",
-                        "brand": "",
-                        "price": 1.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Piña cortada 500 g",
-                        "brand": "",
-                        "price": 3.19,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Coco en trocitos",
-                        "brand": "",
-                        "price": 1.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Kiwi unidad (150 g aprox)",
-                        "brand": "Zespri",
-                        "price": 5.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Kiwi amarillo sungold unidad (150 g aprox)",
-                        "brand": "Zespri",
-                        "price": 6.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Conejo Bertako (pieza 1,5 kg aprox)",
+                        "product_brand": "",
+                        "price": 8.95
                     }
                 ]
             },
-            "Tomate": {
-                "nombre": "Tomate",
+            "Patatas": {
+                "nombre": "Patatas",
+                "quantity": 4,
+                "unit": "unidades",
                 "productos": [
                     {
-                        "name": "Tomate natural rallado 250 g",
-                        "brand": "Chovi",
-                        "price": 2.69,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Patata ecológica bolsa (2 kg aprox)",
+                        "product_brand": "",
+                        "price": 4.75
                     },
                     {
-                        "name": "Tomate primera a granel (200 g aprox unidad)",
-                        "brand": "",
-                        "price": 3.95,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Patata para freir bolsa 2,5 kg",
+                        "product_brand": "",
+                        "price": 4.99
                     },
                     {
-                        "name": "Tomate cherry pera (250 g aprox)",
-                        "brand": "",
-                        "price": 1.69,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Patata granel unidad (240 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     },
                     {
-                        "name": "Tomate rallado con aceite (200 g aprox)",
-                        "brand": "",
-                        "price": 1.79,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Patata bolsa (2,5 kg aprox)",
+                        "product_brand": "Eusko Label",
+                        "price": 4.99
                     },
                     {
-                        "name": "Pepino corto a granel (150 g aprox unidad)",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Patatas de microondas 400 g",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Tomate Natural Tumaca 200 g",
-                        "brand": "",
-                        "price": 1.79,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Boniato unidad (450 g aprox)",
+                        "product_brand": "",
+                        "price": 2.99
                     },
                     {
-                        "name": "Tomate rallado natural (200 g aprox)",
-                        "brand": "",
-                        "price": 1.69,
-                        "cantidad": 2,
-                        "unit": "unidad"
+                        "product_name": "Bolsa de patatas 3 Kg",
+                        "product_brand": "",
+                        "price": 5.45
                     },
                     {
-                        "name": "Tomate Cherry Rama 500 g",
-                        "brand": "",
-                        "price": 2.99,
-                        "cantidad": 2,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Tomate en rama a granel (150 g aprox unidad)",
-                        "brand": "",
-                        "price": 2.39,
-                        "cantidad": 2,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Tomate pera granel (125 g aprox unidad)",
-                        "brand": "",
-                        "price": 2.99,
-                        "cantidad": 2,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Tomate de caserío Primera",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 2,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Tomate cherry bandeja (250 g aprox)",
-                        "brand": "",
-                        "price": 1.39,
-                        "cantidad": 2,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Cherry pera kumato 250 g",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 2,
-                        "unit": "unidad"
-                    }
-                ]
-            },
-            "Lechuga": {
-                "nombre": "Lechuga",
-                "productos": [
-                    {
-                        "name": "Corazón de escarola 150 g",
-                        "brand": "Selecta",
-                        "price": 1.34,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Ensalda gourmet 175 g",
-                        "brand": "BM",
-                        "price": 1.29,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Brotes deluxe 100 g",
-                        "brand": "Florette",
-                        "price": 1.91,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Corazón de lechuga baby especial (400 g aprox)",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Canónigos 125 g",
-                        "brand": "",
-                        "price": 2.01,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Brotes classic 100 g",
-                        "brand": "Florette",
-                        "price": 1.91,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Endibia bandeja (450 g aprox)",
-                        "brand": "",
-                        "price": 2.15,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Ensalada Mezclum Selecta 150 g",
-                        "brand": "BM",
-                        "price": 1.14,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Lechuga iceberg 250 g",
-                        "brand": "Florette",
-                        "price": 1.72,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Lechugas vivas (entre 300/500 g)",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Lechuga en bolsa 140 g",
-                        "brand": "Eusko Label",
-                        "price": 1.81,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Cogollos de lechuga 2 unidades 200 g aprox",
-                        "brand": "",
-                        "price": 1.15,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Dúo canónigos-rúcula 100 g",
-                        "brand": "Florette",
-                        "price": 1.91,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Cuatro estaciones 250 g",
-                        "brand": "BM",
-                        "price": 0.76,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Gourmet mediterránea 150 g",
-                        "brand": "Florette",
-                        "price": 1.97,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Lechuga iceberg (500 g aprox)",
-                        "brand": "",
-                        "price": 1.09,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Rúcula 100 g",
-                        "brand": "Florette",
-                        "price": 2.01,
-                        "cantidad": 1,
-                        "unit": "unidad"
-                    },
-                    {
-                        "name": "Ensalada gourmet 175 g",
-                        "brand": "Florette",
-                        "price": 1.97,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Boniato para microondas 400 g",
+                        "product_brand": "",
+                        "price": 1.79
                     }
                 ]
             },
             "Cebolla": {
                 "nombre": "Cebolla",
+                "quantity": 1,
+                "unit": "unidad",
                 "productos": [
                     {
-                        "name": "Cebolla ecológica en malla (1 kg aprox)",
-                        "brand": "",
-                        "price": 2.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla ecológica en malla (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99
                     },
                     {
-                        "name": "Cebolla tubo (1 kg aprox)",
-                        "brand": "",
-                        "price": 1.85,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla tubo (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.85
                     },
                     {
-                        "name": "Ajo ecológico en bandeja (200 g aprox)",
-                        "brand": "Buti",
-                        "price": 2.25,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ajo ecológico en bandeja (200 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 2.25
                     },
                     {
-                        "name": "Cebolla blanca dulce",
-                        "brand": "",
-                        "price": 1.39,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla blanca dulce",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Cebolleta dulce 500 g",
-                        "brand": "",
-                        "price": 2.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolleta dulce 500 g",
+                        "product_brand": "",
+                        "price": 2.49
                     },
                     {
-                        "name": "Cebolla para guarnición (500 g aprox)",
-                        "brand": "",
-                        "price": 1.69,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla para guarnición (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
                     },
                     {
-                        "name": "Ajos blancos 250 g",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ajos blancos 250 g",
+                        "product_brand": "",
+                        "price": 1.99
                     },
                     {
-                        "name": "Chalotas (250 g aprox)",
-                        "brand": "",
-                        "price": 1.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Chalotas (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
                     },
                     {
-                        "name": "Atado de cebolletas 3 cabezas (600 g aprox)",
-                        "brand": "",
-                        "price": 1.49,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
                     },
                     {
-                        "name": "Ajos secos (500 g aprox)",
-                        "brand": "",
-                        "price": 3.95,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ajos secos (500 g aprox)",
+                        "product_brand": "",
+                        "price": 3.95
                     },
                     {
-                        "name": "Ajos morados malla (200 g aprox)",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ajos morados malla (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     },
                     {
-                        "name": "Cebolla dulce a granel unidad (350 g aprox)",
-                        "brand": "",
-                        "price": 2.59,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla dulce a granel unidad (350 g aprox)",
+                        "product_brand": "",
+                        "price": 2.59
                     },
                     {
-                        "name": "Ajo negro",
-                        "brand": "",
-                        "price": 4.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ajo negro",
+                        "product_brand": "",
+                        "price": 4.99
                     },
                     {
-                        "name": "Cebolla roja (700 g aprox)",
-                        "brand": "Buti",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla roja (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
                     },
                     {
-                        "name": "Cebolla dulce (700 g aprox)",
-                        "brand": "Buti",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Cebolla dulce (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
                     },
                     {
-                        "name": "Ajos frescos en  bandeja (100 g aprox)",
-                        "brand": "",
-                        "price": 1.99,
-                        "cantidad": 1,
-                        "unit": "unidad"
+                        "product_name": "Ajos frescos en  bandeja (100 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     }
                 ]
             },
-            "Aceite de oliva virgen": {
-                "nombre": "Aceite de oliva virgen",
+            "Ajo": {
+                "nombre": "Ajo",
+                "quantity": 2,
+                "unit": "dientes",
                 "productos": [
                     {
-                        "name": "Aceite de oliva virgen extra 1 l",
-                        "brand": "Carbonell",
-                        "price": 13.79,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla ecológica en malla (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99
                     },
                     {
-                        "name": "Aceite de oliva virgen extra hojiblanca 1 l",
-                        "brand": "Urzante",
-                        "price": 9.51,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla tubo (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.85
                     },
                     {
-                        "name": "Aceite de arbequina D.O. Rioja 0,5 l",
-                        "brand": "Lectus",
-                        "price": 6.62,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Ajo ecológico en bandeja (200 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 2.25
                     },
                     {
-                        "name": "Aceite de oliva virgen extra 1 l",
-                        "brand": "Maestros de Hojiblanca",
-                        "price": 13.9,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla blanca dulce",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolleta dulce 500 g",
+                        "product_brand": "",
+                        "price": 2.49
                     },
                     {
-                        "name": "Aceite ecológico virgen extra 0,5 l",
-                        "brand": "Románico",
-                        "price": 8.53,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla para guarnición (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
                     },
                     {
-                        "name": "Aceite de oliva virgen extra 0,75 l",
-                        "brand": "Urzante",
-                        "price": 9.04,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Ajos blancos 250 g",
+                        "product_brand": "",
+                        "price": 1.99
                     },
                     {
-                        "name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Chalotas (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
                     },
                     {
-                        "name": "Aceite de oliva virgen extra spray 200 ml",
-                        "brand": "Carbonell",
-                        "price": 4.18,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
                     },
                     {
-                        "name": "Aceite de oliva virgen extra 1 l",
-                        "brand": "Kel",
-                        "price": 13.81,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Ajos secos (500 g aprox)",
+                        "product_brand": "",
+                        "price": 3.95
                     },
                     {
-                        "name": "Aceite de oliva virgen 1 l",
-                        "brand": "Coosur",
-                        "price": 13.81,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Ajos morados malla (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     },
                     {
-                        "name": "Aceite D.O. Sierra Segura 0,5 l",
-                        "brand": "Fuenroble",
-                        "price": 13.79,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla dulce a granel unidad (350 g aprox)",
+                        "product_brand": "",
+                        "price": 2.59
                     },
                     {
-                        "name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
-                        "brand": "Maestros de Hojiblanca",
-                        "price": 7.61,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Ajo negro",
+                        "product_brand": "",
+                        "price": 4.99
                     },
                     {
-                        "name": "Aceite arroniz de tudela 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla roja (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
                     },
                     {
-                        "name": "Aceite de oliva virgen picual 1 l",
-                        "brand": "Urzante",
-                        "price": 9.51,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Cebolla dulce (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
                     },
                     {
-                        "name": "Aceite virgen extra 1 l",
-                        "brand": "Cazorla",
-                        "price": 11.67,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra 250 ml",
-                        "brand": "Urzante",
-                        "price": 3.61,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra aberquina 0,5 l",
-                        "brand": "Finca Almarech",
-                        "price": 8.18,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra Tudela 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite virgen extra 0,5 l",
-                        "brand": "Equidad",
-                        "price": 8.48,
-                        "cantidad": 2,
-                        "unit": "cucharadas"
+                        "product_name": "Ajos frescos en  bandeja (100 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     }
                 ]
             },
-            "Vinagre balsámico": {
-                "nombre": "Vinagre balsámico",
+            "Tomillo": {
+                "nombre": "Tomillo",
+                "quantity": 1,
+                "unit": "ramita",
                 "productos": [
                     {
-                        "name": "Crema de vinagre al Pedro Ximénez 275 ml",
-                        "brand": "Carbonell",
-                        "price": 2.99,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Hierbabuena bandeja (20 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Crema balsámica de módena 250 ml",
-                        "brand": "BM",
-                        "price": 1.75,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Frasco hierbabuena 13 g",
+                        "product_brand": "Ducros",
+                        "price": 2.15
                     },
                     {
-                        "name": "Vinagre balsámico de Módena 250 ml",
-                        "brand": "Acetaria",
-                        "price": 1.95,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Hinojo",
+                        "product_brand": "",
+                        "price": 2.25
                     },
                     {
-                        "name": "Vinagre balsámico blanco 250 ml",
-                        "brand": "Borges",
-                        "price": 2.55,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Cebollino en bandeja (20 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Vinagre balsámico de módena 500 ml",
-                        "brand": "BM",
-                        "price": 2.45,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Albahaca en bandeja (20 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Vinagre balsámico de módena 250 ml",
-                        "brand": "Borges",
-                        "price": 2.25,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Perejil barqueta (50 g aprox)",
+                        "product_brand": "",
+                        "price": 1.09
                     },
                     {
-                        "name": "Crema balsámica de módena 250 g",
-                        "brand": "Borges",
-                        "price": 3.49,
-                        "cantidad": 1,
-                        "unit": "cucharada"
+                        "product_name": "Cilantro en bandeja (20 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
+                    }
+                ]
+            },
+            "Aceite de oliva": {
+                "nombre": "Aceite de oliva",
+                "quantity": 2,
+                "unit": "cucharadas",
+                "productos": [
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.79
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                        "product_brand": "Lectus",
+                        "price": 6.62
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 13.9
+                    },
+                    {
+                        "product_name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite ecológico virgen extra 0,5 l",
+                        "product_brand": "Románico",
+                        "price": 8.53
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 0,75 l",
+                        "product_brand": "Urzante",
+                        "price": 9.04
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra spray 200 ml",
+                        "product_brand": "Carbonell",
+                        "price": 4.18
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Kel",
+                        "price": 13.81
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 1 l",
+                        "product_brand": "Coosur",
+                        "price": 13.81
+                    },
+                    {
+                        "product_name": "Aceite D.O. Sierra Segura 0,5 l",
+                        "product_brand": "Fuenroble",
+                        "price": 13.79
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 7.61
+                    },
+                    {
+                        "product_name": "Aceite arroniz de tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen picual 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 1 l",
+                        "product_brand": "Cazorla",
+                        "price": 11.67
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 250 ml",
+                        "product_brand": "Urzante",
+                        "price": 3.61
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                        "product_brand": "Finca Almarech",
+                        "price": 8.18
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra Tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 0,5 l",
+                        "product_brand": "Equidad",
+                        "price": 8.48
                     }
                 ]
             },
             "Sal": {
                 "nombre": "Sal",
+                "quantity": 1,
+                "unit": "pizca",
                 "productos": [
                     {
-                        "name": "Sal fina 1 kg",
-                        "brand": "BM",
-                        "price": 0.35,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal fina 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
                     },
                     {
-                        "name": "Sal marina yodada 1 kg",
-                        "brand": "Diat Radisson",
-                        "price": 1.49,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal marina yodada 1 kg",
+                        "product_brand": "Diat Radisson",
+                        "price": 1.49
                     },
                     {
-                        "name": "Sal para hornear 2 kg",
-                        "brand": "Sal Costa",
-                        "price": 2.35,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal para hornear 2 kg",
+                        "product_brand": "Sal Costa",
+                        "price": 2.35
                     },
                     {
-                        "name": "Flor de sal 125 g",
-                        "brand": "Añana",
-                        "price": 4.45,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Flor de sal 125 g",
+                        "product_brand": "Añana",
+                        "price": 4.45
                     },
                     {
-                        "name": "Bicarbonato sódico 250 g",
-                        "brand": "Ducros",
-                        "price": 2.29,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Bicarbonato sódico 250 g",
+                        "product_brand": "Ducros",
+                        "price": 2.29
                     },
                     {
-                        "name": "Sal mineral 500 g",
-                        "brand": "Añana",
-                        "price": 4.89,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal mineral 500 g",
+                        "product_brand": "Añana",
+                        "price": 4.89
                     },
                     {
-                        "name": "Sal rosa del Himalaya",
-                        "brand": "Ducros",
-                        "price": 2.79,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal rosa del Himalaya",
+                        "product_brand": "Ducros",
+                        "price": 2.79
                     },
                     {
-                        "name": "Sal gruesa 1 kg",
-                        "brand": "BM",
-                        "price": 0.35,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal gruesa 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
                     },
                     {
-                        "name": "Sal marina gruesa 1 kg",
-                        "brand": "Bueno",
-                        "price": 1.19,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal marina gruesa 1 kg",
+                        "product_brand": "Bueno",
+                        "price": 1.19
                     },
                     {
-                        "name": "Sal de fruta 150 g",
-                        "brand": "Sal Costa",
-                        "price": 3.5,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal de fruta 150 g",
+                        "product_brand": "Sal Costa",
+                        "price": 3.5
                     },
                     {
-                        "name": "Sal marina en escamas 125 g",
-                        "brand": "Maldon",
-                        "price": 3.25,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal marina en escamas 125 g",
+                        "product_brand": "Maldon",
+                        "price": 3.25
                     },
                     {
-                        "name": "Sal blanca mediterránea 90 g",
-                        "brand": "Ducros",
-                        "price": 2.85,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal blanca mediterránea 90 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
                     },
                     {
-                        "name": "Bicarbonato 150 g",
-                        "brand": "El Tigre",
-                        "price": 0.99,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Bicarbonato 150 g",
+                        "product_brand": "El Tigre",
+                        "price": 0.99
                     },
                     {
-                        "name": "Sal gruesa 2 kg",
-                        "brand": "BM",
-                        "price": 1.1,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal gruesa 2 kg",
+                        "product_brand": "BM",
+                        "price": 1.1
                     },
                     {
-                        "name": "Sal yodada 1 kg",
-                        "brand": "Salsil",
-                        "price": 1.59,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal yodada 1 kg",
+                        "product_brand": "Salsil",
+                        "price": 1.59
                     },
                     {
-                        "name": "Sal ahumada 125 g",
-                        "brand": "Maldon",
-                        "price": 4.3,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal ahumada 125 g",
+                        "product_brand": "Maldon",
+                        "price": 4.3
+                    }
+                ]
+            },
+            "Pimienta": {
+                "nombre": "Pimienta",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Pimienta negra machacada",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo 45 g",
+                        "product_brand": "BM",
+                        "price": 1.31
+                    },
+                    {
+                        "product_name": "Aros de guindilla",
+                        "product_brand": "Ducros",
+                        "price": 4.1
+                    },
+                    {
+                        "product_name": "Molinillo gigante de mix de pimientas en frasco",
+                        "product_brand": "Carmencita",
+                        "price": 9.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo",
+                        "product_brand": "Ducros",
+                        "price": 4.64
+                    },
+                    {
+                        "product_name": "Pimienta blanca molida",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta cayena molida",
+                        "product_brand": "Ducros",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Frasco pimienta negra y roja 45 g",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta negra entera",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta steak molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Pimienta blanca molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molida 40 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
+                    },
+                    {
+                        "product_name": "Molinillo gigante de pimienta negra en frasco",
+                        "product_brand": "Carmencita",
+                        "price": 9.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Pimienta cayena entera 11 g",
+                        "product_brand": "Ducros",
+                        "price": 2.35
                     }
                 ]
             }
         }
     },
     {
-        "receta": "Pasta al pesto",
+        "receta": "Estofado de ternera",
         "ingredientes": {
-            "Espaguetis": {
-                "nombre": "Espaguetis",
+            "Ternera": {
+                "nombre": "Ternera",
+                "quantity": 500,
+                "unit": "gramos",
                 "productos": [
                     {
-                        "name": "Espagueti nº 5 500 g",
-                        "brand": "Barilla",
-                        "price": 1.69,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Rabo de ternera bandeja (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 13.9
                     },
                     {
-                        "name": "Espaguetis tagliatelle 500 g",
-                        "brand": "Garofalo",
-                        "price": 2.8,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Ternasco lechal para guiso (200 g aprox)",
+                        "product_brand": "",
+                        "price": 11.99
                     },
                     {
-                        "name": "Espaguetis al huevo 500 g",
-                        "brand": "Eliges",
-                        "price": 1.35,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Entrecot añojo al corte (200 g aprox)",
+                        "product_brand": "",
+                        "price": 29.9
                     },
                     {
-                        "name": "Tallarín nº 13 500 g",
-                        "brand": "Barilla",
-                        "price": 1.69,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Huesos de ternera (400 g aprox)",
+                        "product_brand": "",
+                        "price": 3.99
                     },
                     {
-                        "name": "Espagueti integral 500 g",
-                        "brand": "Barilla",
-                        "price": 1.99,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Carpaccio 110 g",
+                        "product_brand": "",
+                        "price": 3.75
                     },
                     {
-                        "name": "Espagueti integral ecológico 500 g",
-                        "brand": "Orgranic",
-                        "price": 2.1,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Hígado de ternera (filete 200 g aprox)",
+                        "product_brand": "",
+                        "price": 8.79
                     },
                     {
-                        "name": "Espagueti integral 400 g",
-                        "brand": "Gallo",
-                        "price": 1.8,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Filete espaldilla de añojo (200 g aprox)",
+                        "product_brand": "",
+                        "price": 16.95
                     },
                     {
-                        "name": "Espagueti 3 minutos 400 g",
-                        "brand": "Gallo Pasta Fina",
-                        "price": 1.32,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Filete de añojo para empanar (200 g aprox)",
+                        "product_brand": "",
+                        "price": 18.5
                     },
                     {
-                        "name": "Espaguetis lunghi 500 g",
-                        "brand": "Garofalo",
-                        "price": 2.8,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Chuleta deshuesada añojo (250 g aprox)",
+                        "product_brand": "",
+                        "price": 16.75
                     },
                     {
-                        "name": "Espagueti 500 g",
-                        "brand": "BM",
-                        "price": 0.79,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Filete de redondo añojo (100 g aprox)",
+                        "product_brand": "",
+                        "price": 19.99
                     },
                     {
-                        "name": "Tallarín 450 g",
-                        "brand": "Gallo",
-                        "price": 1.33,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Filete de babilla de añojo (250 g aprox)",
+                        "product_brand": "",
+                        "price": 23.25
                     },
                     {
-                        "name": "Tallarín 500 g",
-                        "brand": "BM",
-                        "price": 0.79,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Solomillo añojo al corte (150 g aprox)",
+                        "product_brand": "",
+                        "price": 43.99
                     },
                     {
-                        "name": "Pasta Mafalda Corta 500 g",
-                        "brand": "Garofalo",
-                        "price": 1.7,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Costillar de añojo (250 g aprox)",
+                        "product_brand": "",
+                        "price": 12.95
                     },
                     {
-                        "name": "Espagueti de maíz sin gluten 400g",
-                        "brand": "Gallo",
-                        "price": 2.15,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Coja / zancarrón de añojo (250 g aprox)",
+                        "product_brand": "",
+                        "price": 16.56
                     },
                     {
-                        "name": "Espaguetis 900 g",
-                        "brand": "Gallo",
-                        "price": 2.59,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Carne añojo guisar (indicar si picada 200 g aprox)",
+                        "product_brand": "",
+                        "price": 15.95
                     },
                     {
-                        "name": "Spaghetti, 500 g",
-                        "brand": "Garofalo",
-                        "price": 1.7,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Chuleta de añojo (250 g aprox)",
+                        "product_brand": "",
+                        "price": 26.75
                     },
                     {
-                        "name": "Pasta Casarecce 500 g",
-                        "brand": "Garofalo",
-                        "price": 1.7,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Lengua de ternera fresca (1,5 kg aprox)",
+                        "product_brand": "",
+                        "price": 9.9
                     },
                     {
-                        "name": "Spaghettini al huevo 450 g",
-                        "brand": "Gallo",
-                        "price": 1.69,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Cadera de añojo (150 g aprox)",
+                        "product_brand": "",
+                        "price": 23.25
                     },
                     {
-                        "name": "Espagueti nº3 450 g",
-                        "brand": "Gallo",
-                        "price": 1.33,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Filete de tapa de añojo (400 g aprox)",
+                        "product_brand": "",
+                        "price": 20.96
                     },
                     {
-                        "name": "Maccheroni al huevo 450 g",
-                        "brand": "Gallo",
-                        "price": 1.69,
-                        "cantidad": 200,
-                        "unit": "gramos"
+                        "product_name": "Carrilleras de ternera (500 g aprox)",
+                        "product_brand": "",
+                        "price": 16.98
                     }
                 ]
             },
-            "Albahaca fresca": {
-                "nombre": "Albahaca fresca",
+            "Patatas": {
+                "nombre": "Patatas",
+                "quantity": 4,
+                "unit": "unidades",
                 "productos": [
                     {
-                        "name": "Hierbabuena bandeja (20 g aprox)",
-                        "brand": "",
-                        "price": 1.39,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Patata ecológica bolsa (2 kg aprox)",
+                        "product_brand": "",
+                        "price": 4.75
                     },
                     {
-                        "name": "Frasco hierbabuena 13 g",
-                        "brand": "Ducros",
-                        "price": 2.15,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Patata para freir bolsa 2,5 kg",
+                        "product_brand": "",
+                        "price": 4.99
                     },
                     {
-                        "name": "Hinojo",
-                        "brand": "",
-                        "price": 2.25,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Patata granel unidad (240 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     },
                     {
-                        "name": "Cebollino en bandeja (20 g aprox)",
-                        "brand": "",
-                        "price": 1.39,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Patata bolsa (2,5 kg aprox)",
+                        "product_brand": "Eusko Label",
+                        "price": 4.99
                     },
                     {
-                        "name": "Albahaca en bandeja (20 g aprox)",
-                        "brand": "",
-                        "price": 1.39,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Patatas de microondas 400 g",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Perejil barqueta (50 g aprox)",
-                        "brand": "",
-                        "price": 1.09,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Boniato unidad (450 g aprox)",
+                        "product_brand": "",
+                        "price": 2.99
                     },
                     {
-                        "name": "Cilantro en bandeja (20 g aprox)",
-                        "brand": "",
-                        "price": 1.39,
-                        "cantidad": 1,
-                        "unit": "manojo"
+                        "product_name": "Bolsa de patatas 3 Kg",
+                        "product_brand": "",
+                        "price": 5.45
+                    },
+                    {
+                        "product_name": "Boniato para microondas 400 g",
+                        "product_brand": "",
+                        "price": 1.79
+                    }
+                ]
+            },
+            "Zanahorias": {
+                "nombre": "Zanahorias",
+                "quantity": 2,
+                "unit": "unidades",
+                "productos": [
+                    {
+                        "product_name": "Puerros Bandeja 500 g",
+                        "product_brand": "",
+                        "price": 2.79
+                    },
+                    {
+                        "product_name": "Jengibre ecológico bandeja (200 g aprox)",
+                        "product_brand": "",
+                        "price": 2.45
+                    },
+                    {
+                        "product_name": "Zanahoria bolsa 500 g",
+                        "product_brand": "",
+                        "price": 0.89
+                    },
+                    {
+                        "product_name": "Puerro mazo 3 unidades",
+                        "product_brand": "",
+                        "price": 1.95
+                    },
+                    {
+                        "product_name": "Maíz cocido en bandeja (400 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Remolacha cocida bandeja (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
+                    },
+                    {
+                        "product_name": "Zanahoria rama bolsa (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Rabanitos 200 g",
+                        "product_brand": "",
+                        "price": 1.45
+                    },
+                    {
+                        "product_name": "Zanahoria baby 400 g",
+                        "product_brand": "Eliges",
+                        "price": 1.09
+                    },
+                    {
+                        "product_name": "Zanahoria bolsa 1 kg",
+                        "product_brand": "",
+                        "price": 1.09
+                    },
+                    {
+                        "product_name": "Zanahoria ecológica bandeja (600 g aprox)",
+                        "product_brand": "",
+                        "price": 2.35
+                    }
+                ]
+            },
+            "Cebolla": {
+                "nombre": "Cebolla",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Cebolla ecológica en malla (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Cebolla tubo (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.85
+                    },
+                    {
+                        "product_name": "Ajo ecológico en bandeja (200 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 2.25
+                    },
+                    {
+                        "product_name": "Cebolla blanca dulce",
+                        "product_brand": "",
+                        "price": 1.39
+                    },
+                    {
+                        "product_name": "Cebolleta dulce 500 g",
+                        "product_brand": "",
+                        "price": 2.49
+                    },
+                    {
+                        "product_name": "Cebolla para guarnición (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Ajos blancos 250 g",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Chalotas (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Ajos secos (500 g aprox)",
+                        "product_brand": "",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Ajos morados malla (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cebolla dulce a granel unidad (350 g aprox)",
+                        "product_brand": "",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Ajo negro",
+                        "product_brand": "",
+                        "price": 4.99
+                    },
+                    {
+                        "product_name": "Cebolla roja (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cebolla dulce (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Ajos frescos en  bandeja (100 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     }
                 ]
             },
             "Ajo": {
                 "nombre": "Ajo",
+                "quantity": 2,
+                "unit": "dientes",
                 "productos": [
                     {
-                        "name": "Ajo en láminas 100 g",
-                        "brand": "Ducros",
-                        "price": 2.55,
-                        "cantidad": 2,
-                        "unit": "dientes"
+                        "product_name": "Cebolla ecológica en malla (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99
                     },
                     {
-                        "name": "Ajo 290 g",
-                        "brand": "Ducros",
-                        "price": 6.89,
-                        "cantidad": 2,
-                        "unit": "dientes"
+                        "product_name": "Cebolla tubo (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.85
                     },
                     {
-                        "name": "Sal de ajo 70 g",
-                        "brand": "Ducros",
-                        "price": 2.8,
-                        "cantidad": 2,
-                        "unit": "dientes"
+                        "product_name": "Ajo ecológico en bandeja (200 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 2.25
                     },
                     {
-                        "name": "Ajo picado 52 g",
-                        "brand": "Ducros",
-                        "price": 2.78,
-                        "cantidad": 2,
-                        "unit": "dientes"
+                        "product_name": "Cebolla blanca dulce",
+                        "product_brand": "",
+                        "price": 1.39
                     },
                     {
-                        "name": "Ajo molinillo 75 g",
-                        "brand": "Ducros",
-                        "price": 3.99,
-                        "cantidad": 2,
-                        "unit": "dientes"
+                        "product_name": "Cebolleta dulce 500 g",
+                        "product_brand": "",
+                        "price": 2.49
                     },
                     {
-                        "name": "Ajo en polvo 58 g",
-                        "brand": "Ducros",
-                        "price": 2.55,
-                        "cantidad": 2,
-                        "unit": "dientes"
+                        "product_name": "Cebolla para guarnición (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Ajos blancos 250 g",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Chalotas (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Ajos secos (500 g aprox)",
+                        "product_brand": "",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Ajos morados malla (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cebolla dulce a granel unidad (350 g aprox)",
+                        "product_brand": "",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Ajo negro",
+                        "product_brand": "",
+                        "price": 4.99
+                    },
+                    {
+                        "product_name": "Cebolla roja (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cebolla dulce (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Ajos frescos en  bandeja (100 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
                     }
                 ]
             },
-            "Piñones": {
-                "nombre": "Piñones",
+            "Caldo de carne": {
+                "nombre": "Caldo de carne",
+                "quantity": 500,
+                "unit": "ml",
                 "productos": [
                     {
-                        "name": "Nuez sin cascara 100 g",
-                        "brand": "BM",
-                        "price": 1.25,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de pescado natural 1 l",
+                        "product_brand": "Aneto",
+                        "price": 4.5
                     },
                     {
-                        "name": "Nuez pecana 150g",
-                        "brand": "BM +",
-                        "price": 4.65,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo para paella natural 1 l",
+                        "product_brand": "Aneto",
+                        "price": 5.25
                     },
                     {
-                        "name": "Nuez pelada 250 g",
-                        "brand": "BM +",
-                        "price": 4.99,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo casero de cocido 1 l",
+                        "product_brand": "Gallina Blanca",
+                        "price": 2.2
                     },
                     {
-                        "name": "Nuez de macadamia tostada 100 g",
-                        "brand": "BM",
-                        "price": 2.7,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo puchero brik 1 l",
+                        "product_brand": "Aneto",
+                        "price": 4.5
                     },
                     {
-                        "name": "Piñones",
-                        "brand": "Ducros",
-                        "price": 6.19,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de pollo natural 1 l",
+                        "product_brand": "Aneto",
+                        "price": 3.95
                     },
                     {
-                        "name": "Nuez francesa a granel (200 gr aprox)",
-                        "brand": "Frutos secos Granel",
-                        "price": 5.29,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo casero de pescado 1 l",
+                        "product_brand": "Gallina Blanca",
+                        "price": 2.2
                     },
                     {
-                        "name": "Nuez pelada en tarrina 200 g",
-                        "brand": "Importaco",
-                        "price": 3.95,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Sopa de pollo con fideos 80 g",
+                        "product_brand": "Eliges",
+                        "price": 0.65
                     },
                     {
-                        "name": "Nuez pelada 150 g",
-                        "brand": "Prunita",
-                        "price": 1.99,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de pollo 12 pastillas",
+                        "product_brand": "BM",
+                        "price": 0.75
                     },
                     {
-                        "name": "Nueces en grano 130 g",
-                        "brand": "Pizarro",
-                        "price": 3.49,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de verduras 1 l",
+                        "product_brand": "Aneto",
+                        "price": 3.95
                     },
                     {
-                        "name": "Nuez del país 500 g",
-                        "brand": "Goiherri",
-                        "price": 4.69,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de pollo 1 l",
+                        "product_brand": "BM",
+                        "price": 0.7
                     },
                     {
-                        "name": "Nueces 500 g",
-                        "brand": "Finca La Noguera",
-                        "price": 4.32,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de carne natural 1 l",
+                        "product_brand": "Aneto",
+                        "price": 4.5
                     },
                     {
-                        "name": "Nuez 130 g",
-                        "brand": "Borges",
-                        "price": 2.79,
-                        "cantidad": 30,
-                        "unit": "gramos"
+                        "product_name": "Caldo de pollo 1 l",
+                        "product_brand": "BM",
+                        "price": 1.2
+                    },
+                    {
+                        "product_name": "Caldo de pollo natural bajo en sal 1 l",
+                        "product_brand": "Aneto",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Caldo de cocido 1 l",
+                        "product_brand": "BM",
+                        "price": 0.9
+                    },
+                    {
+                        "product_name": "Caldo de pollo 500 ml",
+                        "product_brand": "Aneto",
+                        "price": 2.62
+                    },
+                    {
+                        "product_name": "Caldo de verduras 500 ml",
+                        "product_brand": "Aneto",
+                        "price": 2.62
+                    },
+                    {
+                        "product_name": "Caldo de carne 12 pastillas",
+                        "product_brand": "BM",
+                        "price": 0.85
+                    },
+                    {
+                        "product_name": "Caldo fumet de pescado 1 l",
+                        "product_brand": "Gallina Blanca",
+                        "price": 3.49
+                    },
+                    {
+                        "product_name": "Caldo verduras ecológico 1 l",
+                        "product_brand": "Aneto",
+                        "price": 5.25
+                    },
+                    {
+                        "product_name": "Caldo pollo ecológico 1 l",
+                        "product_brand": "Aneto",
+                        "price": 5.25
+                    },
+                    {
+                        "product_name": "Caldo de jamón natural 1 l",
+                        "product_brand": "Aneto",
+                        "price": 3.95
                     }
                 ]
             },
-            "Queso parmesano rallado": {
-                "nombre": "Queso parmesano rallado",
+            "Aceite de oliva": {
+                "nombre": "Aceite de oliva",
+                "quantity": 2,
+                "unit": "cucharadas",
                 "productos": [
                     {
-                        "name": "Queso provolone con orégano 180 g",
-                        "brand": "Ferrarini",
-                        "price": 3.13,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.79
                     },
                     {
-                        "name": "Queso parmesano al corte",
-                        "brand": "Ferrarini",
-                        "price": 29.9,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
                     },
                     {
-                        "name": "Mozzarella de bufala 125 g",
-                        "brand": "Ferrarini",
-                        "price": 2.79,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                        "product_brand": "Lectus",
+                        "price": 6.62
                     },
                     {
-                        "name": "Mozzarela fresca 125 g",
-                        "brand": "Boconccino",
-                        "price": 0.95,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 13.9
                     },
                     {
-                        "name": "Queso Parmesano Rallado 60 g",
-                        "brand": "Ferrarini",
-                        "price": 1.95,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
                     },
                     {
-                        "name": "Queso provolone al corte",
-                        "brand": "Ferrarini",
-                        "price": 16.9,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite ecológico virgen extra 0,5 l",
+                        "product_brand": "Románico",
+                        "price": 8.53
                     },
                     {
-                        "name": "Mozzarella mini 150 g",
-                        "brand": "Galbani",
-                        "price": 2.99,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de oliva virgen extra 0,75 l",
+                        "product_brand": "Urzante",
+                        "price": 9.04
                     },
                     {
-                        "name": "Queso mascarpone 250 g",
-                        "brand": "Mila",
-                        "price": 2.99,
-                        "cantidad": 50,
-                        "unit": "gramos"
+                        "product_name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
                     },
                     {
-                        "name": "Queso mozzarella 100 g",
-                        "brand": "Galbani",
-                        "price": 1.0,
-                        "cantidad": 50,
-                        "unit": "gramos"
-                    }
-                ]
-            },
-            "Aceite de oliva virgen extra": {
-                "nombre": "Aceite de oliva virgen extra",
-                "productos": [
-                    {
-                        "name": "Aceite de oliva virgen extra 1 l",
-                        "brand": "Carbonell",
-                        "price": 13.79,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen extra spray 200 ml",
+                        "product_brand": "Carbonell",
+                        "price": 4.18
                     },
                     {
-                        "name": "Aceite de oliva virgen extra hojiblanca 1 l",
-                        "brand": "Urzante",
-                        "price": 9.51,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Kel",
+                        "price": 13.81
                     },
                     {
-                        "name": "Aceite de arbequina D.O. Rioja 0,5 l",
-                        "brand": "Lectus",
-                        "price": 6.62,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen 1 l",
+                        "product_brand": "Coosur",
+                        "price": 13.81
                     },
                     {
-                        "name": "Aceite de oliva virgen extra 1 l",
-                        "brand": "Maestros de Hojiblanca",
-                        "price": 13.9,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite D.O. Sierra Segura 0,5 l",
+                        "product_brand": "Fuenroble",
+                        "price": 13.79
                     },
                     {
-                        "name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 7.61
                     },
                     {
-                        "name": "Aceite ecológico virgen extra 0,5 l",
-                        "brand": "Románico",
-                        "price": 8.53,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite arroniz de tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
                     },
                     {
-                        "name": "Aceite de oliva virgen extra 0,75 l",
-                        "brand": "Urzante",
-                        "price": 9.04,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen picual 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
                     },
                     {
-                        "name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite virgen extra 1 l",
+                        "product_brand": "Cazorla",
+                        "price": 11.67
                     },
                     {
-                        "name": "Aceite de oliva virgen extra spray 200 ml",
-                        "brand": "Carbonell",
-                        "price": 4.18,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen extra 250 ml",
+                        "product_brand": "Urzante",
+                        "price": 3.61
                     },
                     {
-                        "name": "Aceite de oliva virgen extra 1 l",
-                        "brand": "Kel",
-                        "price": 13.81,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                        "product_brand": "Finca Almarech",
+                        "price": 8.18
                     },
                     {
-                        "name": "Aceite de oliva virgen 1 l",
-                        "brand": "Coosur",
-                        "price": 13.81,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite de oliva virgen extra Tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
                     },
                     {
-                        "name": "Aceite D.O. Sierra Segura 0,5 l",
-                        "brand": "Fuenroble",
-                        "price": 13.79,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
-                        "brand": "Maestros de Hojiblanca",
-                        "price": 7.61,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite arroniz de tudela 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen picual 1 l",
-                        "brand": "Urzante",
-                        "price": 9.51,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite virgen extra 1 l",
-                        "brand": "Cazorla",
-                        "price": 11.67,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra 250 ml",
-                        "brand": "Urzante",
-                        "price": 3.61,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra aberquina 0,5 l",
-                        "brand": "Finca Almarech",
-                        "price": 8.18,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite de oliva virgen extra Tudela 1 l",
-                        "brand": "Trujal Almazara",
-                        "price": 9.51,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
-                    },
-                    {
-                        "name": "Aceite virgen extra 0,5 l",
-                        "brand": "Equidad",
-                        "price": 8.48,
-                        "cantidad": 4,
-                        "unit": "cucharadas"
+                        "product_name": "Aceite virgen extra 0,5 l",
+                        "product_brand": "Equidad",
+                        "price": 8.48
                     }
                 ]
             },
             "Sal": {
                 "nombre": "Sal",
+                "quantity": 1,
+                "unit": "pizca",
                 "productos": [
                     {
-                        "name": "Sal fina 1 kg",
-                        "brand": "BM",
-                        "price": 0.35,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal fina 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
                     },
                     {
-                        "name": "Sal marina yodada 1 kg",
-                        "brand": "Diat Radisson",
-                        "price": 1.49,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal marina yodada 1 kg",
+                        "product_brand": "Diat Radisson",
+                        "price": 1.49
                     },
                     {
-                        "name": "Sal para hornear 2 kg",
-                        "brand": "Sal Costa",
-                        "price": 2.35,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal para hornear 2 kg",
+                        "product_brand": "Sal Costa",
+                        "price": 2.35
                     },
                     {
-                        "name": "Flor de sal 125 g",
-                        "brand": "Añana",
-                        "price": 4.45,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Flor de sal 125 g",
+                        "product_brand": "Añana",
+                        "price": 4.45
                     },
                     {
-                        "name": "Bicarbonato sódico 250 g",
-                        "brand": "Ducros",
-                        "price": 2.29,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Bicarbonato sódico 250 g",
+                        "product_brand": "Ducros",
+                        "price": 2.29
                     },
                     {
-                        "name": "Sal mineral 500 g",
-                        "brand": "Añana",
-                        "price": 4.89,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal mineral 500 g",
+                        "product_brand": "Añana",
+                        "price": 4.89
                     },
                     {
-                        "name": "Sal rosa del Himalaya",
-                        "brand": "Ducros",
-                        "price": 2.79,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal rosa del Himalaya",
+                        "product_brand": "Ducros",
+                        "price": 2.79
                     },
                     {
-                        "name": "Sal gruesa 1 kg",
-                        "brand": "BM",
-                        "price": 0.35,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal gruesa 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
                     },
                     {
-                        "name": "Sal marina gruesa 1 kg",
-                        "brand": "Bueno",
-                        "price": 1.19,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal marina gruesa 1 kg",
+                        "product_brand": "Bueno",
+                        "price": 1.19
                     },
                     {
-                        "name": "Sal de fruta 150 g",
-                        "brand": "Sal Costa",
-                        "price": 3.5,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal de fruta 150 g",
+                        "product_brand": "Sal Costa",
+                        "price": 3.5
                     },
                     {
-                        "name": "Sal marina en escamas 125 g",
-                        "brand": "Maldon",
-                        "price": 3.25,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal marina en escamas 125 g",
+                        "product_brand": "Maldon",
+                        "price": 3.25
                     },
                     {
-                        "name": "Sal blanca mediterránea 90 g",
-                        "brand": "Ducros",
-                        "price": 2.85,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal blanca mediterránea 90 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
                     },
                     {
-                        "name": "Bicarbonato 150 g",
-                        "brand": "El Tigre",
-                        "price": 0.99,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Bicarbonato 150 g",
+                        "product_brand": "El Tigre",
+                        "price": 0.99
                     },
                     {
-                        "name": "Sal gruesa 2 kg",
-                        "brand": "BM",
-                        "price": 1.1,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal gruesa 2 kg",
+                        "product_brand": "BM",
+                        "price": 1.1
                     },
                     {
-                        "name": "Sal yodada 1 kg",
-                        "brand": "Salsil",
-                        "price": 1.59,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal yodada 1 kg",
+                        "product_brand": "Salsil",
+                        "price": 1.59
                     },
                     {
-                        "name": "Sal ahumada 125 g",
-                        "brand": "Maldon",
-                        "price": 4.3,
-                        "cantidad": 1,
-                        "unit": "pizca"
+                        "product_name": "Sal ahumada 125 g",
+                        "product_brand": "Maldon",
+                        "price": 4.3
+                    }
+                ]
+            },
+            "Pimienta": {
+                "nombre": "Pimienta",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Pimienta negra machacada",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo 45 g",
+                        "product_brand": "BM",
+                        "price": 1.31
+                    },
+                    {
+                        "product_name": "Aros de guindilla",
+                        "product_brand": "Ducros",
+                        "price": 4.1
+                    },
+                    {
+                        "product_name": "Molinillo gigante de mix de pimientas en frasco",
+                        "product_brand": "Carmencita",
+                        "price": 9.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo",
+                        "product_brand": "Ducros",
+                        "price": 4.64
+                    },
+                    {
+                        "product_name": "Pimienta blanca molida",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta cayena molida",
+                        "product_brand": "Ducros",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Frasco pimienta negra y roja 45 g",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta negra entera",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta steak molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Pimienta blanca molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molida 40 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
+                    },
+                    {
+                        "product_name": "Molinillo gigante de pimienta negra en frasco",
+                        "product_brand": "Carmencita",
+                        "price": 9.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Pimienta cayena entera 11 g",
+                        "product_brand": "Ducros",
+                        "price": 2.35
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "receta": "Hamburguesas de ternera",
+        "ingredientes": {
+            "Carne picada de ternera": {
+                "nombre": "Carne picada de ternera",
+                "quantity": 500,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Burger meat mixta bandeja (250 g aprox)",
+                        "product_brand": "Basatxerri",
+                        "price": 8.69
+                    },
+                    {
+                        "product_name": "Hamburguesa barbacoa 210 g",
+                        "product_brand": "Brooklyn Town",
+                        "price": 3.6
+                    },
+                    {
+                        "product_name": "Burger meat 100% vacuno bandeja (300 g aprox)",
+                        "product_brand": "",
+                        "price": 4.9
+                    },
+                    {
+                        "product_name": "Carne picada mixta (200 g aprox)",
+                        "product_brand": "",
+                        "price": 12.9
+                    },
+                    {
+                        "product_name": "Burger meat espinacas (320 g aprox)",
+                        "product_brand": "",
+                        "price": 2.25
+                    },
+                    {
+                        "product_name": "Carne picada de pollo-pavo",
+                        "product_brand": "",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Burger meat (100 g aprox)",
+                        "product_brand": "",
+                        "price": 10.9
+                    },
+                    {
+                        "product_name": "Burger meat chuleta de vaca (300 g aprox)",
+                        "product_brand": "",
+                        "price": 8.25
+                    },
+                    {
+                        "product_name": "Burger meat de pollo 320 g",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Burger meat mini 100% vacuno (240 g aprox)",
+                        "product_brand": "",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Burger meat pollo bandeja 2 unidades 250 g",
+                        "product_brand": "Luma Gorri",
+                        "price": 4.9
+                    },
+                    {
+                        "product_name": "Burger meat mixta bandeja 2x100 g",
+                        "product_brand": "",
+                        "price": 2.5
+                    },
+                    {
+                        "product_name": "Albóndigas burger meat mixtas vacuno (360 g apr.)",
+                        "product_brand": "",
+                        "price": 3.9
+                    },
+                    {
+                        "product_name": "Burger meat 100% vacuno (150 g aprox)",
+                        "product_brand": "",
+                        "price": 15.65
+                    },
+                    {
+                        "product_name": "Burger meat de ave bandeja 4 uds (320 g  aprox)",
+                        "product_brand": "",
+                        "price": 13.6
+                    },
+                    {
+                        "product_name": "Burger meat buey (300 g aprox)",
+                        "product_brand": "Cocina Selecta",
+                        "price": 7.99
+                    },
+                    {
+                        "product_name": "Carne picada de vacuno (200 g aprox)",
+                        "product_brand": "",
+                        "price": 13.49
+                    },
+                    {
+                        "product_name": "Preparado de carne picada 100% vacuno bandeja 400g",
+                        "product_brand": "",
+                        "price": 5.8
+                    },
+                    {
+                        "product_name": "Hamburguesa pollo y espinacas bandeja 250 g",
+                        "product_brand": "Coren",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Hamburguesa de pollo con queso de cabra 2x125 g",
+                        "product_brand": "Coren",
+                        "price": 3.95
+                    }
+                ]
+            },
+            "Pan de hamburguesas": {
+                "nombre": "Pan de hamburguesas",
+                "quantity": 4,
+                "unit": "unidades",
+                "productos": [
+                    {
+                        "product_name": "Pan de hot dog 4 unidades",
+                        "product_brand": "Bimbo",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Wraps original 6 unidades",
+                        "product_brand": "Mission",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Pan de hamburguesa 4 unidades",
+                        "product_brand": "BM",
+                        "price": 0.95
+                    },
+                    {
+                        "product_name": "Pan hot dog 6 unidades",
+                        "product_brand": "BM",
+                        "price": 1.0
+                    },
+                    {
+                        "product_name": "Wraps  multigrain semillas de lino 6 unidades",
+                        "product_brand": "Mission",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Pan Maxiburguer 4 unidades",
+                        "product_brand": "Bimbo",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Pan hamburguesa 4 unidades",
+                        "product_brand": "Bimbo",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Pan de hamburguesa Goiko 2 unidades 150 g",
+                        "product_brand": "Goiko",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cruapan 380 g",
+                        "product_brand": "Bimbo",
+                        "price": 3.69
+                    },
+                    {
+                        "product_name": "Pan de hamburguesa brioche 4 unidades",
+                        "product_brand": "Dulcesol",
+                        "price": 1.89
+                    },
+                    {
+                        "product_name": "Pan de pita natural, 6 unidades",
+                        "product_brand": "Iggy's",
+                        "price": 3.05
+                    }
+                ]
+            },
+            "Lechuga": {
+                "nombre": "Lechuga",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Corazón de escarola 150 g",
+                        "product_brand": "Selecta",
+                        "price": 1.34
+                    },
+                    {
+                        "product_name": "Ensalda gourmet 175 g",
+                        "product_brand": "BM",
+                        "price": 1.29
+                    },
+                    {
+                        "product_name": "Brotes deluxe 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91
+                    },
+                    {
+                        "product_name": "Corazón de lechuga baby especial (400 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Canónigos 125 g",
+                        "product_brand": "",
+                        "price": 2.01
+                    },
+                    {
+                        "product_name": "Brotes classic 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91
+                    },
+                    {
+                        "product_name": "Endibia bandeja (450 g aprox)",
+                        "product_brand": "",
+                        "price": 2.15
+                    },
+                    {
+                        "product_name": "Ensalada Mezclum Selecta 150 g",
+                        "product_brand": "BM",
+                        "price": 1.14
+                    },
+                    {
+                        "product_name": "Lechuga iceberg 250 g",
+                        "product_brand": "Florette",
+                        "price": 1.72
+                    },
+                    {
+                        "product_name": "Lechugas vivas (entre 300/500 g)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Lechuga en bolsa 140 g",
+                        "product_brand": "Eusko Label",
+                        "price": 1.81
+                    },
+                    {
+                        "product_name": "Cogollos de lechuga 2 unidades 200 g aprox",
+                        "product_brand": "",
+                        "price": 1.15
+                    },
+                    {
+                        "product_name": "Dúo canónigos-rúcula 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91
+                    },
+                    {
+                        "product_name": "Cuatro estaciones 250 g",
+                        "product_brand": "BM",
+                        "price": 0.76
+                    },
+                    {
+                        "product_name": "Gourmet mediterránea 150 g",
+                        "product_brand": "Florette",
+                        "price": 1.97
+                    },
+                    {
+                        "product_name": "Lechuga iceberg (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.09
+                    },
+                    {
+                        "product_name": "Rúcula 100 g",
+                        "product_brand": "Florette",
+                        "price": 2.01
+                    },
+                    {
+                        "product_name": "Ensalada gourmet 175 g",
+                        "product_brand": "Florette",
+                        "price": 1.97
+                    }
+                ]
+            },
+            "Tomate": {
+                "nombre": "Tomate",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Tomate natural rallado 250 g",
+                        "product_brand": "Chovi",
+                        "price": 2.69
+                    },
+                    {
+                        "product_name": "Tomate primera a granel (200 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Tomate cherry pera (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Tomate rallado con aceite (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.79
+                    },
+                    {
+                        "product_name": "Pepino corto a granel (150 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Tomate Natural Tumaca 200 g",
+                        "product_brand": "",
+                        "price": 1.79
+                    },
+                    {
+                        "product_name": "Tomate rallado natural (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Tomate Cherry Rama 500 g",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Tomate en rama a granel (150 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 2.39
+                    },
+                    {
+                        "product_name": "Tomate pera granel (125 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Tomate de caserío Primera",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Tomate cherry bandeja (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39
+                    },
+                    {
+                        "product_name": "Cherry pera kumato 250 g",
+                        "product_brand": "",
+                        "price": 1.99
+                    }
+                ]
+            },
+            "Queso cheddar": {
+                "nombre": "Queso cheddar",
+                "quantity": 100,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Queso parmesano rallado 60 g",
+                        "product_brand": "Galbani",
+                        "price": 2.64
+                    },
+                    {
+                        "product_name": "Queso natural 6 porciones",
+                        "product_brand": "Kiri",
+                        "price": 2.65
+                    },
+                    {
+                        "product_name": "Queso 4 quesos rallado para gratinar 200 g",
+                        "product_brand": "Eliges",
+                        "price": 1.95
+                    },
+                    {
+                        "product_name": "Queso finello pasta 150 g",
+                        "product_brand": "Arla",
+                        "price": 3.12
+                    },
+                    {
+                        "product_name": "Queso en polvo 90 g",
+                        "product_brand": "El Caserío",
+                        "price": 1.45
+                    },
+                    {
+                        "product_name": "Queso 4 quesos rallado 120 g",
+                        "product_brand": "El Caserío",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Queso rallado cheddar y mozzarella 150 g",
+                        "product_brand": "Arla",
+                        "price": 3.12
+                    },
+                    {
+                        "product_name": "Queso emmental rallado 120 g",
+                        "product_brand": "El Caserío",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Queso emmental rallado 200 g",
+                        "product_brand": "BM",
+                        "price": 1.65
+                    },
+                    {
+                        "product_name": "Queso mozzarella rallado 150 g",
+                        "product_brand": "Arla",
+                        "price": 3.12
+                    },
+                    {
+                        "product_name": "Queso pizza light rallado 150 g",
+                        "product_brand": "Arla",
+                        "price": 3.08
+                    },
+                    {
+                        "product_name": "Queso emmental rallado 70 g",
+                        "product_brand": "Entremont",
+                        "price": 1.09
+                    },
+                    {
+                        "product_name": "Queso rallado 3 quesos 140 g",
+                        "product_brand": "El Caserío",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Queso rallado para gratinar 150 g",
+                        "product_brand": "President",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Queso filatto rallado 80 g",
+                        "product_brand": "El Caserío",
+                        "price": 1.45
+                    },
+                    {
+                        "product_name": "Queso sin lactosa rallado 150 g",
+                        "product_brand": "Eliges",
+                        "price": 1.75
+                    },
+                    {
+                        "product_name": "Queso mozzarella rallado 200 g",
+                        "product_brand": "Eliges",
+                        "price": 1.55
+                    },
+                    {
+                        "product_name": "Queso 4 quesos rallado 150 g",
+                        "product_brand": "Aldanondo",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Queso grana padano rallado 60 g",
+                        "product_brand": "Galbani",
+                        "price": 2.19
+                    },
+                    {
+                        "product_name": "Queso emmental rallado 90 g",
+                        "product_brand": "President",
+                        "price": 2.52
+                    }
+                ]
+            },
+            "Cebolla": {
+                "nombre": "Cebolla",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Cebolla ecológica en malla (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99
+                    },
+                    {
+                        "product_name": "Cebolla tubo (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.85
+                    },
+                    {
+                        "product_name": "Ajo ecológico en bandeja (200 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 2.25
+                    },
+                    {
+                        "product_name": "Cebolla blanca dulce",
+                        "product_brand": "",
+                        "price": 1.39
+                    },
+                    {
+                        "product_name": "Cebolleta dulce 500 g",
+                        "product_brand": "",
+                        "price": 2.49
+                    },
+                    {
+                        "product_name": "Cebolla para guarnición (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69
+                    },
+                    {
+                        "product_name": "Ajos blancos 250 g",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Chalotas (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Ajos secos (500 g aprox)",
+                        "product_brand": "",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Ajos morados malla (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cebolla dulce a granel unidad (350 g aprox)",
+                        "product_brand": "",
+                        "price": 2.59
+                    },
+                    {
+                        "product_name": "Ajo negro",
+                        "product_brand": "",
+                        "price": 4.99
+                    },
+                    {
+                        "product_name": "Cebolla roja (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Cebolla dulce (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99
+                    },
+                    {
+                        "product_name": "Ajos frescos en  bandeja (100 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99
+                    }
+                ]
+            },
+            "Aceite de oliva": {
+                "nombre": "Aceite de oliva",
+                "quantity": 2,
+                "unit": "cucharadas",
+                "productos": [
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.79
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                        "product_brand": "Lectus",
+                        "price": 6.62
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 13.9
+                    },
+                    {
+                        "product_name": "Aceite de Oliva Virgen Extra Arbosana 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite ecológico virgen extra 0,5 l",
+                        "product_brand": "Románico",
+                        "price": 8.53
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 0,75 l",
+                        "product_brand": "Urzante",
+                        "price": 9.04
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra de Tudela kroneik 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra spray 200 ml",
+                        "product_brand": "Carbonell",
+                        "price": 4.18
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Kel",
+                        "price": 13.81
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 1 l",
+                        "product_brand": "Coosur",
+                        "price": 13.81
+                    },
+                    {
+                        "product_name": "Aceite D.O. Sierra Segura 0,5 l",
+                        "product_brand": "Fuenroble",
+                        "price": 13.79
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra Oda Nº5, 0,5 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 7.61
+                    },
+                    {
+                        "product_name": "Aceite arroniz de tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen picual 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 1 l",
+                        "product_brand": "Cazorla",
+                        "price": 11.67
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 250 ml",
+                        "product_brand": "Urzante",
+                        "price": 3.61
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                        "product_brand": "Finca Almarech",
+                        "price": 8.18
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra Tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.51
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 0,5 l",
+                        "product_brand": "Equidad",
+                        "price": 8.48
+                    }
+                ]
+            },
+            "Sal": {
+                "nombre": "Sal",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Sal fina 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
+                    },
+                    {
+                        "product_name": "Sal marina yodada 1 kg",
+                        "product_brand": "Diat Radisson",
+                        "price": 1.49
+                    },
+                    {
+                        "product_name": "Sal para hornear 2 kg",
+                        "product_brand": "Sal Costa",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Flor de sal 125 g",
+                        "product_brand": "Añana",
+                        "price": 4.45
+                    },
+                    {
+                        "product_name": "Bicarbonato sódico 250 g",
+                        "product_brand": "Ducros",
+                        "price": 2.29
+                    },
+                    {
+                        "product_name": "Sal mineral 500 g",
+                        "product_brand": "Añana",
+                        "price": 4.89
+                    },
+                    {
+                        "product_name": "Sal rosa del Himalaya",
+                        "product_brand": "Ducros",
+                        "price": 2.79
+                    },
+                    {
+                        "product_name": "Sal gruesa 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35
+                    },
+                    {
+                        "product_name": "Sal marina gruesa 1 kg",
+                        "product_brand": "Bueno",
+                        "price": 1.19
+                    },
+                    {
+                        "product_name": "Sal de fruta 150 g",
+                        "product_brand": "Sal Costa",
+                        "price": 3.5
+                    },
+                    {
+                        "product_name": "Sal marina en escamas 125 g",
+                        "product_brand": "Maldon",
+                        "price": 3.25
+                    },
+                    {
+                        "product_name": "Sal blanca mediterránea 90 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
+                    },
+                    {
+                        "product_name": "Bicarbonato 150 g",
+                        "product_brand": "El Tigre",
+                        "price": 0.99
+                    },
+                    {
+                        "product_name": "Sal gruesa 2 kg",
+                        "product_brand": "BM",
+                        "price": 1.1
+                    },
+                    {
+                        "product_name": "Sal yodada 1 kg",
+                        "product_brand": "Salsil",
+                        "price": 1.59
+                    },
+                    {
+                        "product_name": "Sal ahumada 125 g",
+                        "product_brand": "Maldon",
+                        "price": 4.3
+                    }
+                ]
+            },
+            "Pimienta": {
+                "nombre": "Pimienta",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Pimienta negra machacada",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo 45 g",
+                        "product_brand": "BM",
+                        "price": 1.31
+                    },
+                    {
+                        "product_name": "Aros de guindilla",
+                        "product_brand": "Ducros",
+                        "price": 4.1
+                    },
+                    {
+                        "product_name": "Molinillo gigante de mix de pimientas en frasco",
+                        "product_brand": "Carmencita",
+                        "price": 9.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo",
+                        "product_brand": "Ducros",
+                        "price": 4.64
+                    },
+                    {
+                        "product_name": "Pimienta blanca molida",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta cayena molida",
+                        "product_brand": "Ducros",
+                        "price": 2.35
+                    },
+                    {
+                        "product_name": "Frasco pimienta negra y roja 45 g",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta negra entera",
+                        "product_brand": "Ducros",
+                        "price": 3.1
+                    },
+                    {
+                        "product_name": "Pimienta steak molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Pimienta blanca molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molida 40 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85
+                    },
+                    {
+                        "product_name": "Molinillo gigante de pimienta negra en frasco",
+                        "product_brand": "Carmencita",
+                        "price": 9.99
+                    },
+                    {
+                        "product_name": "Pimienta negra molinillo 75 g",
+                        "product_brand": "Ducros",
+                        "price": 3.95
+                    },
+                    {
+                        "product_name": "Pimienta cayena entera 11 g",
+                        "product_brand": "Ducros",
+                        "price": 2.35
                     }
                 ]
             }

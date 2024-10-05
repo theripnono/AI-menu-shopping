@@ -17,18 +17,7 @@ Probar en local sin serv ni app
 
 
 # For testing
-recipes =[
-            {'receta': 'Tortilla de patatas',
-            'ingredientes': [
-                {'categoria': 'Huevos grandes', 'qty': 4, 'unit': 'unidades'},
-                {'categoria': 'Cebolla y ajo', 'qty': 1, 'unit': 'unidad'},
-                {'categoria': 'Aceite de oliva virgen y virgen extra', 'qty': 100, 'unit': 'ml'},
-                {'categoria': 'Sal y bicarbonato', 'qty': 1, 'unit': 'pizca'},
-            ]
-            }
-        ]
-
-
+# That is the respond I'm waiting for
 def export_json(df:object)->object:
 
     """
@@ -62,29 +51,31 @@ def export_json(df:object)->object:
             if ingrediente not in receta_dict['ingredientes']:
                 receta_dict['ingredientes'][ingrediente] = {
                     'nombre': ingrediente,
+                    'quantity': row['cantidad'],
+                    'unit': row['unit'],
                     'productos': []
                 }
             
             # Añadir el producto a la lista de productos
             producto_info = {
                 'product_name': row['name'],
-                'product_brand': row['brand'],
+                'product_brand': row['brand'].strip(),
                 'price': row['price'],
-                'quantity': row['cantidad'],
-                'unit': row['unit']
             }
             receta_dict['ingredientes'][ingrediente]['productos'].append(producto_info)
         
         recetas_json.append(receta_dict)
 
-    print("recipes files was sucesfully generated")
+    print("recipes file was sucesfully generated")
     return recetas_json
 
-def main(user_input):
 
+def main(user_input):
+    """
+    Get products from neo4j db
+    """
     recipe_obj = GenerateRecipes()
     response_recipes = recipe_obj.generate(user_input)
-    print(response_recipes)
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
@@ -110,12 +101,14 @@ def main(user_input):
 
         with open('exported_data.json', 'w', encoding='utf-8') as file:
             json.dump(json_export, file, indent=4, ensure_ascii=False)
-
+        
+        return json_export
+    
     except Exception as e:
         print('Oups! something goes wrong, please check: ')
         print({e})
 
-
 if __name__=="__main__":
 
-    main('hazme una receta vegetariana')
+    main('hazme una receta con carne')
+    print('done!')

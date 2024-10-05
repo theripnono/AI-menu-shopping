@@ -25,7 +25,7 @@
           <div v-else-if="serverResponse.length > 0">
             <div v-for="(recipe, index) in serverResponse" :key="index">
               <div style="margin-top: 20px;">
-                <h2>¿Qué te parece una {{ recipe.receta }}?</h2>
+                <h2>¿Qué te parece {{ recipe.receta }}?</h2>
                 <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
                   {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
                 </v-btn>
