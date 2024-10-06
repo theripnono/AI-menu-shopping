@@ -1,21 +1,20 @@
 <template>
-  <v-app class="full-width-app">
-    <v-main class="full-width-app">
-      <h1>{{ message }}</h1>
-      <div>
-        <p><strong>Asistente de compra de Supermercado BM con IA</strong></p>
-      </div>
-      
+    <v-container>
       <v-row>
         <!-- Sección para generar recetas -->
-        <v-col cols="12" md="8">
+        <v-col cols="8">
+          <h1>{{ message }}</h1>
+          <v-icon>mdi-home</v-icon>
+          <div>
+            <p><strong>Asistente de compra de Supermercado BM con IA</strong></p>
+          </div>
           <v-textarea 
             class="fixed-text" 
             variant="solo" 
             v-model="userText" 
-            placeholder="¿Qué te apetece que comamos esta semana?" 
+            placeholder="Ejemplo: Quiero recetas de celiacos" 
           ></v-textarea>
-          <v-btn style="margin-top: 20px;" @click="submitText">Generate Recipes</v-btn>
+          <v-btn style="margin-top: 20px;" @click="submitText">Generar Recetas</v-btn>
 
           <div v-if="isLoading">
             <h2>Qué te parece si cocinamos...</h2>
@@ -75,7 +74,7 @@
         </v-col>
 
         <!-- Sección para mostrar el carrito en la derecha -->
-        <v-col cols="12" md="4">
+        <v-col cols="4">
           <h2>Productos del Carrito</h2>
           <v-list>
             <v-list-item-group>
@@ -91,14 +90,14 @@
           <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>
         </v-col>
       </v-row>
-    </v-main>
-  </v-app>
+    </v-container>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue';
-import { VApp, VMain, VBtn, VCarousel, VCard, VCardTitle, VCardText, VCarouselItem, VSheet, VRow, VCol, VList, VListItem } from 'vuetify/components';
+import {  VBtn, VCarousel, VCard, VCardTitle, VCardText, VCarouselItem, VSheet, VRow, VCol, VList, VListItem } from 'vuetify/components';
 import axios from 'axios';
+
 
 export default {
   setup() {
@@ -127,6 +126,10 @@ export default {
     const submitText = () => {
       isLoading.value = true;
       serverResponse.value = []; // Limpiar la respuesta previa como lista vacía
+      
+      // inicializar el carrito
+      cartItems.value = [];
+      cartTotal.value = 0;
 
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
@@ -158,10 +161,10 @@ export default {
     const addCartProduct = (producto) => {
       const existingProduct = cartItems.value.find(item => item.product.product_name === producto.product_name);
       if (existingProduct) {
-        // If the product already exists, increase the quantity
+        // Si el producto existe añadir +1
         existingProduct.quantity += 1;
         } else {
-        // If it's a new product, add it to the cart with quantity 1
+        // Si no añadir nuevo item
         cartItems.value.push({ product: producto, quantity: 1 });
         }
    
