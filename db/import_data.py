@@ -58,6 +58,7 @@ def load_into_graph(nodes:list[dict]):
                     p.product_seo = item.product_seo,
                     p.product_name = item.product_name,
                     p.product_brand = item.product_brand,
+                    p.product_img = item.product_img,
                     p.product_price_centAmount = item.product_price_centAmount,
                     p.product_price_centUnitAmount = item.product_price_centUnitAmount,
                     p.product_offer_price_centAmount = item.product_offer_price_centAmount,
@@ -84,7 +85,7 @@ def import_data(file:str)->list[dict]:
     
     return data
 
-input_file = './clean_output_ids.json'
+input_file = 'preproces/img_clean_output_ids.json'
 nodes = import_data(input_file) 
 load_into_graph(nodes)
 

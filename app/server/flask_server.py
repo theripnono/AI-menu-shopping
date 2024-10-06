@@ -37,11 +37,11 @@ def generate_response():
     user_text = data.get('text', '').strip()
 
     
-    recipes_json =  procces_recipes(user_text)
+    #recipes_json =  procces_recipes(user_text)
     
     # For testing
     # That is the respond I'm waiting for
-    #recipes_json = test_neo4j()
+    recipes_json = test_neo4j()
 
     # Check if user_text is empty and respond accordingly
     if not user_text:

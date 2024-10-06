@@ -401,6 +401,7 @@ class BMAPI:
                             product_ean =  product['ean']
                             product_name = product['productData']['name']
                             product_seo = product['productData']['seo']
+                            product_img = product['productData']['imageURL']
                             product_brand = product['productData']['brand']['name']
 
                             """
@@ -433,6 +434,7 @@ class BMAPI:
                                                     'product_name':product_name,
                                                     'product_brand':product_brand,
                                                     'product_price':product_price,
+                                                    'product_img':product_img,
                                                     'product_price_centAmount':product_price_centAmount,
                                                     'product_price_centUnitAmount':product_price_centUnitAmount,
                                                     'product_offer_price_centAmount':product_offer_price_centAmount,
@@ -444,10 +446,10 @@ class BMAPI:
                             
                     print("All data downloaded successfully!")
         if export:     
-            self._export_to_json(products_list, 'output_ids')
+            self._export_to_json(products_list, 'output_img_ids')
 
             # Export all data 
-            self._export_to_json(product_metadata_list,'metadata_output')
+            #self._export_to_json(product_metadata_list,'metadata_output')
         return products_list
 
     def control_ids(self, new_ids: list = None) -> list:
@@ -518,7 +520,7 @@ for category in categories_ids:
             value = subcategory[key]
         lproduct_by_ids.append(value)
  
-#bm.get_products_by_ids(lproduct_by_ids, export=True)
+bm.get_products_by_ids(lproduct_by_ids, export=True)
 
    
 

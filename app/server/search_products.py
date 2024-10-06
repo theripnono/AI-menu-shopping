@@ -61,6 +61,7 @@ def export_json(df:object)->object:
                 'product_name': row['name'],
                 'product_brand': row['brand'].strip(),
                 'price': row['price'],
+                'img': row['img']
             }
             receta_dict['ingredientes'][ingrediente]['productos'].append(producto_info)
         
@@ -87,6 +88,7 @@ def procces_recipes(user_input):
                 "RETURN p.product_name as name, "
                 "p.product_brand as brand, "
                 "p.product_price_centAmount as price,"
+                "p.product_img as img,"
                 "receta.receta as receta,"
                 "ingrediente.ingrediente as ingrediente,"
                 "ingrediente.qty as cantidad,"
