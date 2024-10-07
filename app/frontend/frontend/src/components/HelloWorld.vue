@@ -48,7 +48,7 @@
                     <v-card-subtitle>Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}</v-card-subtitle>
                     <v-card-text>
                       <v-btn @click="toggleProducts(index, ingKey)" class="mb-2">
-                        {{ showProducts[index] && showProducts[index][ingKey] ? 'Ocultar' : 'Mostrar' }} Products
+                        {{ showProducts[index] && showProducts[index][ingKey] ? 'Ocultar' : 'Mostrar' }} Productos
                       </v-btn>
 
                       <v-carousel
