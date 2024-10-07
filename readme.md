@@ -20,4 +20,4 @@ Neo4j Cypher:
 Vue3:
 - [ ] Refactor: Separar los componentes
 - [ ] Añadir el atributo "Sticky" al carrito de la compra
-- [ ] Cambiar el favicon
+- [X] Cambiar el favicon
