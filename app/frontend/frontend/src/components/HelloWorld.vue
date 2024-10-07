@@ -2,7 +2,12 @@
     <v-container>
       <v-row>
         <!-- Sección para generar recetas -->
-        <v-col cols="8">
+
+        <v-col cols="12">
+          <div class="header" style="text-align: center;">
+            <h1>BM</h1>
+            <p>Supermercados</p>
+          </div>
           <h1>{{ message }}</h1>
           <v-icon>mdi-home</v-icon>
           <div>
@@ -13,6 +18,7 @@
             variant="filled"
             auto-grow
             v-model="userText" 
+            style="width: 500px"
             placeholder="Ejemplo: Quiero recetas de celiacos" 
           ></v-textarea>
           <v-btn style="margin-top: 20px;" @click="submitText">Generar Recetas</v-btn>
@@ -78,10 +84,10 @@
 
         <!-- Sección para mostrar el carrito en la derecha -->
         <v-col cols="4">
-          <div style="text-align: center;">
+          <div class="cart-list">
           <h2>Productos del Carrito</h2>
           <v-list>
-            <v-list-item-group>
+            <v-list-item-group >
               <v-list-item v-for="(item, index) in cartItems" :key="index">
                 <v-list-item-content>
                   <v-list-item-title>{{ item.product.product_name }} (x{{ item.quantity }})</v-list-item-title>
@@ -191,6 +197,21 @@ textarea {
   margin-bottom: 10px;
   padding: 8px;
   resize: none;  /* Fixed height */
+
+}
+
+.cart-list{
+justify-content: center;
+position: sticky;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #000000;
+  color: rgb(254,237,36);
+  font-size: 30px;
+  font-weight: bold
 }
 
 .spinner {
