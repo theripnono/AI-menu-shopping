@@ -47,11 +47,10 @@ def load_into_graph(nodes:list[dict]):
                 UNWIND $items AS item
                 MERGE (u:User {name: item.nombre})
                 SET u.edad = item.edad,
-                    u.id_cliente=item.id_cliente,
+                    u.id_cliente = item.id_cliente,
                     u.fecha_alta_cliente = item.fcliente,
                     u.sexo = item.sexo,
-                    u.ciudad = item.ciudad,
-                 
+                    u.ciudad = item.ciudad       
             """
 
             # Run the query with the items as parameters

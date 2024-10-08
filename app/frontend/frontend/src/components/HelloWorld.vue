@@ -3,7 +3,7 @@
       <v-row>
         <!-- Sección para generar recetas -->
 
-      <v-col cols="12">
+      <v-col cols="12" >
           <div class="header" style="text-align: center;">
             <h1>BM</h1>
             <p>Supermercados</p>
@@ -217,10 +217,13 @@ background-color: white;
   padding: 20px;
   text-align: center;
   background: #000000;
+  background-image: url("https://img.freepik.com/foto-gratis/vista-superior-monton-composicion-verduras-frescas_23-2148642957.jpg?t=st=1728413016~exp=1728416616~hmac=f9841c5980dd87efae8cc802c2eddc1105ade6e819b887edc210c0d325e07e1d&w=996");
+ 
   color: rgb(254,237,36);
   font-size: 30px;
   font-weight: bold
 }
+
 
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);

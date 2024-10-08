@@ -37,12 +37,7 @@ def load_into_graph(nodes:list[dict]):
             data= [
                 'cart':cart_id,
                 'id_cliente':id_cliente,
-                'products'=[
-                    {'product_id':product_id},
-                    {'product_id':product_id},
-                    {'product_id':product_id},
-                    {'product_id':product_id},
-                ]
+                'products'=[id1,id2...idn]
             ]
                      1  n         1   n 
             (user_id) -> (cart_id) -> (product_id)
@@ -50,15 +45,23 @@ def load_into_graph(nodes:list[dict]):
             """
 
             query = """
-                UNWIND $items AS item
-                MERGE (c:Cart{cart_id:item.card_id})
-                SET c.id_cliente=item.id_cliente,
-                    c.products=item.products
-                
-                MATCH (c:Cart),(u.User)
-                WHERE c.id_cliente = u.id_cliente
-                CREATE (u)-[:ha_comprado]->(c);
-            """
+                        UNWIND $items AS item
+                        MERGE (c:Cart {cart_id: item.cart_id})
+                        SET c.id_cliente = item.id_cliente,
+                            c.products_id = item.products_id
+
+                        // Pasamos el carrito modificado con WITH antes de hacer el siguiente MATCH
+                        WITH c
+                        MATCH (u:User)
+                        WHERE c.id_cliente = u.id_cliente
+                        CREATE (u)-[:HA_COMPRADO]->(c)
+
+                        // Pasamos el carrito nuevamente con WITH antes de hacer otro MATCH
+                        WITH c
+                        UNWIND c.products_id AS product_id
+                        MATCH (p:Product {product_id: product_id})
+                        CREATE (c)-[:LLEVA]->(p)
+                """
 
             # Run the query with the items as parameters
             session.run(query, items=nodes)
@@ -77,7 +80,7 @@ def import_data(file:str)->list[dict]:
     
     return data
 
-input_file = 'db/cart.json'
+input_file = 'db/carts.json'
 nodes = import_data(input_file) 
 load_into_graph(nodes)
 
