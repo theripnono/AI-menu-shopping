@@ -4,11 +4,13 @@ import neo4j
 from dotenv import dotenv_values
 import json
 import ast
+from datetime import datetime
 
 config = dotenv_values(".conf")
 
 URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
+
 
 """
 
@@ -31,6 +33,9 @@ def export_json(df:object)->object:
        5                          Huevos L docena              BM  ...         4  unidades
        6  Cebolla ecológica en malla (1 kg aprox)             ...  ...         1    unidad
        7                Cebolla tubo (1 kg aprox)             ...  ...         1    unida
+    
+    This functions generates a json file that will be displayed in the frontend.
+
     """
 
     recetas_json = []
@@ -72,9 +77,11 @@ def export_json(df:object)->object:
 
 
 def procces_recipes(user_input):
+    
     """
-    Get products from neo4j db
+    Process the llm output and get the products from neo4j db
     """
+
     recipe_obj = GenerateRecipes()
     response_recipes = recipe_obj.generate(user_input)
     try:
@@ -101,7 +108,11 @@ def procces_recipes(user_input):
 
         json_export = export_json(records_df)
 
-        with open('exported_data.json', 'w', encoding='utf-8') as file:
+        # Store a json copy of the neo4j output 
+        current_datetime = datetime.now().strftime('%Y%m%d_%H%M%S')
+        file_name = f'neo4j_outputs/{current_datetime}_output_data_.json'
+
+        with open(file_name, 'w', encoding='utf-8') as file:
             json.dump(json_export, file, indent=4, ensure_ascii=False)
         
         return json_export
