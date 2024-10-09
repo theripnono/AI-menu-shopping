@@ -19,6 +19,7 @@ Neo4j Cypher:
 
 Vue3:
 - [ ] Refactor: Separar los componentes
+- [ ] En la pantalla de inicio sacar un carousel con los productos recomendados
 - [X] Añadir el atributo "Sticky" al carrito de la compra
 - [X] Cambiar el favicon
 - [ ] Cuando hay una categoría mal y los productos no corresponden con el ingrediente, porque GPT me ha devuelto mal la categoría, habría que poner un botón donde:
