@@ -43,7 +43,7 @@ def rename_keys_in_list(data_list: list, new_key: str, old_key: str) -> list:
 
 # File paths
 input_file = 'preproces/output_img_ids.json'
-output_file = 'preproces/img_clean_output_ids.json'
+output_file = 'preproces/products.json'
 
 # Read the JSON file
 with open(input_file, 'r', encoding='utf-8') as file:

@@ -75,7 +75,7 @@ def import_data(file:str)->list[dict]:
     
     return data
 
-input_file = 'db/users.json'
+input_file = 'db/demo/users.json'
 nodes = import_data(input_file) 
 load_into_graph(nodes)
 

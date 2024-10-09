@@ -80,7 +80,7 @@ def import_data(file:str)->list[dict]:
     
     return data
 
-input_file = 'db/carts.json'
+input_file = 'db/demo/carts.json'
 nodes = import_data(input_file) 
 load_into_graph(nodes)
 
