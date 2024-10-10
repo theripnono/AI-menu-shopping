@@ -7,6 +7,9 @@ Server:
 - [ ] Crear una estimacion de la compra. Cuando GPT responde con las recetas poner total de la receta
 - [ ] Loging: Función para añadir usuarios a la base de datos. Cuando el usuario se da de alta, se crea un nodo usuario.
 
+LLM:
+- [ ] Crear un medidor tokenizador de manera que los prompts no sean muy largos. La gente hará frases cortas. 
+
 Test:
 - [ ] Crear los Test de las funciones
 - [X] Crear usuarios demo. Crear Jsons.
