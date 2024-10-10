@@ -1,5 +1,7 @@
-# TODO list
-Proximos features:
+# Alfa realsed v.0.0.0
+## TODO
+
+Completar todas las tareas para el lanzamiento
 
 Server:
 - [X] Añadir imagenes en los nodos
