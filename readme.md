@@ -1,4 +1,4 @@
-# Alfa realsed v.0.0.0
+# Alfa release: v.0.0.0
 ## TODO
 
 Completar todas las tareas para el lanzamiento
