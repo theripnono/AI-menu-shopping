@@ -19,7 +19,8 @@ Completar todas las tareas para el lanzamiento
 
 ### Neo4j Cypher:
 - [ ] Hay que rediseñar el nombre de los nodos, relaciones (verbos). Hay mezcla de ingles-castellano. Cambiar la relación "descripción"
-- [ ] Crear queries para similitud entre usuarios. Cosine similarity | Euclidean similarity
+- [ ] Crear queries para similitud entre usuarios.
+
 - [X] Crear nodos de usuarios (mock-up)
 - [X] Crear nodos de carritos de la compra (mock-up)
 
