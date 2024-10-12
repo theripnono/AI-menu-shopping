@@ -26,6 +26,7 @@ Completar todas las tareas para el lanzamiento
 
 ### Vue3:
 - [ ] Refactor: Separar los componentes
+- [ ] Crear Boton comprar. Este botón genera el nodo Order.
 - [ ] En la pantalla de inicio sacar un carousel con los productos recomendados
 - [X] Añadir el atributo "Sticky" al carrito de la compra
 - [X] Cambiar el favicon
