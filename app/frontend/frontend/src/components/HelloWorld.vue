@@ -5,31 +5,33 @@
 
       <v-col cols="12">
         <div class="header" style="text-align: center; ">
-
+          <h1 style=" text-shadow: 1px 1px whitesmoke;"><strong>Asistente de compra inteligente</strong>
+          </h1>
         </div>
         <v-row>
           <v-col cols="8">
-            <h1>{{ message }}</h1>
 
+            <!-- metodo get -->
+            <!-- <h1>{{ message }}</h1> -->
             <div>
-              <h3><strong>Asistente de compra para supermercado con IA</strong></h3>
+
             </div>
 
-            <v-textarea class="fixed-text" variant="filled" auto-grow v-model="userText" style="width: 500px"
+            <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" style="width: 500px"
               placeholder="Ejemplo: Quiero recetas de celiacos"></v-textarea>
             <v-btn style="margin-top: 20px;" @click="submitText">
               {{ buttonText }}
             </v-btn>
 
             <div v-if="isLoading">
-              <h2 style="background-color: rgb(254,237,36);">Qué te parece si cocinamos...</h2>
+              <h2>Voy a pensar que en algo rico...</h2>
               <v-progress-circular color="primary" indeterminate></v-progress-circular>
             </div>
 
             <div v-else-if="serverResponse.length > 0">
               <div v-for="(recipe, index) in serverResponse" :key="index">
                 <div style="margin-top: 20px;">
-                  <h2>¿Qué te parece {{ recipe.receta }}?</h2>
+                  <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
                   <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
                     {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
                   </v-btn>
@@ -237,15 +239,16 @@ textarea {
   position: sticky;
   max-height: 400px;
   top: 0;
-  background-color: white;
-
+  border: 1px solid #b8b8b8;
+  border-radius: 10px;
 }
 
 .header {
   padding: 20px;
-  background: #000000;
+  /* background: #000000;
   background-image: url("https://img.freepik.com/foto-gratis/vista-superior-monton-composicion-verduras-frescas_23-2148642957.jpg?t=st=1728413016~exp=1728416616~hmac=f9841c5980dd87efae8cc802c2eddc1105ade6e819b887edc210c0d325e07e1d&w=996");
-  height: 100px;
+  height: 100px; */
+
 }
 
 
