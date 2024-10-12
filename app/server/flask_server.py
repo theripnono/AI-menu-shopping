@@ -17,13 +17,13 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 #CORS(app)  # Enable CORS for all routes
 
 def test_neo4j():
-    with open('exported_data.json', 'r', encoding='utf-8') as file:
+    with open('neo4j_outputs/20241011_112455_output_data_.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
     return data
 
 @app.route('/', methods=['GET'])
 def index():
-    data = {"message": "Generador de Recetas"}
+    data = {"message": "Generador de Recetas Inteligente"}
     return jsonify(data)
 
 
@@ -32,23 +32,13 @@ def generate_response():
     if request.method == 'OPTIONS':
         return jsonify({}), 200
 
-    data = request.json
-    
-    user_text = data.get('text', '').strip()
-
-    
-    recipes_json =  procces_recipes(user_text)
+    data = request.json   
+    user_text = data.get('text', '').strip() 
+    #recipes_json =  procces_recipes(user_text)
     
     # For testing
     # That is the respond I'm waiting for
-    #recipes_json = test_neo4j()
-
-    # Check if user_text is empty and respond accordingly
-    if not user_text:
-        return jsonify({"error": "No text provided"}), 400
-    
-    # Process user_text using your logic here
-    print(recipes_json)
+    recipes_json = test_neo4j()
 
     recipes = {"message": recipes_json}
     return jsonify(recipes)

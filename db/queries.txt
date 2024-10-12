@@ -1,0 +1,9 @@
+Mis queries para buscar los productos.
+
+
+Todas las relaciones entre usarios, que pedidos ha hecho y que productos ha comprado
+MATCH (u:User)-[:HA_COMPRADO]->(c:Cart)-[:LLEVA]->(p:Product) RETURN u,c,p
+
+Relaciona desde usuarios hasta categorias de los productos
+MATCH (u:User)-[:HA_COMPRADO]->(c:Cart)-[:LLEVA]->(p:Product)-[d:descripcion]->(ca:Category) RETURN u,c,p,ca
+

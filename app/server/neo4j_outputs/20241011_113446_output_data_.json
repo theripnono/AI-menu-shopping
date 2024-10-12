@@ -1,0 +1,1305 @@
+[
+    {
+        "receta": "Arroz integral con verduras al curry",
+        "ingredientes": {
+            "Arroz integral": {
+                "nombre": "Arroz integral",
+                "quantity": 150,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Harina de garbanzo 500g",
+                        "product_brand": "Ecocesta",
+                        "price": 3.56,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70198_00.jpg?t=20241005030151"
+                    },
+                    {
+                        "product_name": "Harina de trigo integral 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 1.53,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A74650_00.jpg?t=20241005030135"
+                    },
+                    {
+                        "product_name": "Harina de avena ecológica 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 2.81,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70196_00.jpg?t=20241003030855"
+                    },
+                    {
+                        "product_name": "Fideos de arroz sin gluten 400g",
+                        "product_brand": "Gallo",
+                        "price": 2.2,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11065_00.jpg?t=20241003030855"
+                    },
+                    {
+                        "product_name": "Harina de centeno integral 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 1.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70197_00.jpg?t=20241003030855"
+                    },
+                    {
+                        "product_name": "Copos de avena 500 g",
+                        "product_brand": "Diat Radisson",
+                        "price": 2.3,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A34102_00.jpg?t=20241005030118"
+                    },
+                    {
+                        "product_name": "Harina de maíz ecológica 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 2.54,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70194_00.jpg?t=20241003030854"
+                    },
+                    {
+                        "product_name": "Harina de arroz ecológica 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 3.23,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70195_00.jpg?t=20241003030854"
+                    },
+                    {
+                        "product_name": "Arroz integral hinchado 125 g",
+                        "product_brand": "Ecocesta",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70192_00.jpg?t=20241003030008"
+                    },
+                    {
+                        "product_name": "Lenteja roja ecológica 500 g",
+                        "product_brand": "Orgranic",
+                        "price": 2.55,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A89191_00.jpg?t=20241006030050"
+                    },
+                    {
+                        "product_name": "Harina de espelta integral BIO 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 3.56,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A85248_00.jpg?t=20241003030855"
+                    },
+                    {
+                        "product_name": "Trigo sarraceno ecológico sin gluten 500 g",
+                        "product_brand": "Eliges Eco",
+                        "price": 2.81,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A67294_00.jpg?t=20241004030319"
+                    }
+                ]
+            },
+            "Brócoli": {
+                "nombre": "Brócoli",
+                "quantity": 100,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Brocoli-coliflor-zanah para microondas 275 g",
+                        "product_brand": "Florette",
+                        "price": 1.89,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A25028_00.jpg?t=20241005030206"
+                    },
+                    {
+                        "product_name": "Apio verde (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23225_00.jpg?t=20241004030008"
+                    },
+                    {
+                        "product_name": "Col-Coliflor",
+                        "product_brand": "",
+                        "price": 4.03,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23002_00.jpg?t=20241003030413"
+                    },
+                    {
+                        "product_name": "Brocoli para microondas 225 g",
+                        "product_brand": "Florette",
+                        "price": 1.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A25027_00.jpg?t=20241004030059"
+                    },
+                    {
+                        "product_name": "Col-repollo granel unidad (1,2 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.83,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23015_00.jpg?t=20241003030529"
+                    },
+                    {
+                        "product_name": "Col-brócoli granel unidad (550 g aprox)",
+                        "product_brand": "",
+                        "price": 3.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23000_00.jpg?t=20241003030611"
+                    }
+                ]
+            },
+            "Zanahoria": {
+                "nombre": "Zanahoria",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Puerros Bandeja 500 g",
+                        "product_brand": "",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23442_00.jpg?t=20241005030118"
+                    },
+                    {
+                        "product_name": "Nabos en bandeja",
+                        "product_brand": "",
+                        "price": 1.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24549_00.jpg?t=20241006030032"
+                    },
+                    {
+                        "product_name": "Remolacha cocida bandeja (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.39,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23471_00.jpg?t=20241004030106"
+                    },
+                    {
+                        "product_name": "Zanahoria bolsa 1 kg",
+                        "product_brand": "",
+                        "price": 1.16,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A25238_00.jpg?t=20241004030059"
+                    },
+                    {
+                        "product_name": "Puerro mazo 3 unidades",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26562_00.jpg?t=20241003030206"
+                    },
+                    {
+                        "product_name": "Zanahoria ecológica bandeja (600 g aprox)",
+                        "product_brand": "",
+                        "price": 2.39,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40692_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Maíz cocido en bandeja (400 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23400_00.jpg?t=20241003030524"
+                    },
+                    {
+                        "product_name": "Rabanitos 200 g",
+                        "product_brand": "",
+                        "price": 1.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23460_00.jpg?t=20241005030217"
+                    },
+                    {
+                        "product_name": "Jengibre ecológico bandeja (200 g aprox)",
+                        "product_brand": "",
+                        "price": 2.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26405_00.jpg?t=20241004030055"
+                    },
+                    {
+                        "product_name": "Zanahoria rama bolsa (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.4,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23510_00.jpg?t=20241003030529"
+                    },
+                    {
+                        "product_name": "Zanahoria bolsa 500 g",
+                        "product_brand": "",
+                        "price": 0.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23500_00.jpg?t=20241003030611"
+                    }
+                ]
+            },
+            "Calabacín": {
+                "nombre": "Calabacín",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Calabacín verde granel unidad (450 g aprox)",
+                        "product_brand": "",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23250_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Calabaza pelada al vacío (500 g aprox)",
+                        "product_brand": "",
+                        "price": 2.75,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26461_00.jpg?t=20241003030559"
+                    },
+                    {
+                        "product_name": "Calabaza granel (850 g aprox./unidad)",
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23260_00.jpg?t=20241003030605"
+                    }
+                ]
+            },
+            "Cebolla": {
+                "nombre": "Cebolla",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Cebolla roja (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A16983_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Ajo ecológico en bandeja (200 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A49728_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Cebolla blanca dulce",
+                        "product_brand": "",
+                        "price": 1.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23280_00.jpg?t=20241005030212"
+                    },
+                    {
+                        "product_name": "Cebolla tubo (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 1.89,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23270_00.jpg?t=20241003030207"
+                    },
+                    {
+                        "product_name": "Cebolla dulce a granel unidad (350 g aprox)",
+                        "product_brand": "",
+                        "price": 2.65,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23273_00.jpg?t=20241003030207"
+                    },
+                    {
+                        "product_name": "Ajos frescos en  bandeja (100 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23190_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Cebolla dulce (700 g aprox)",
+                        "product_brand": "Buti",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A17145_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Cebolla ecológica en malla (1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A49729_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Ajos secos (500 g aprox)",
+                        "product_brand": "",
+                        "price": 4.03,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71502_00.jpg?t=20241002030721"
+                    },
+                    {
+                        "product_name": "Ajos blancos 250 g",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23169_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Cebolla para guarnición (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A17146_00.jpg?t=20241003030207"
+                    },
+                    {
+                        "product_name": "Chalotas (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23310_00.jpg?t=20241003030208"
+                    },
+                    {
+                        "product_name": "Atado de cebolletas 3 cabezas (600 g aprox)",
+                        "product_brand": "",
+                        "price": 1.52,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23291_00.jpg?t=20241005030118"
+                    },
+                    {
+                        "product_name": "Ajo negro",
+                        "product_brand": "",
+                        "price": 4.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40696_00.jpg?t=20240925030458"
+                    },
+                    {
+                        "product_name": "Ajos morados malla (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23170_00.jpg?t=20241003030611"
+                    }
+                ]
+            },
+            "Curry en polvo": {
+                "nombre": "Curry en polvo",
+                "quantity": 1,
+                "unit": "cucharadita",
+                "productos": [
+                    {
+                        "product_name": "Sazonador de spaguetis 18 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A04485_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Sazonador barbacoa 44 g",
+                        "product_brand": "Ducros",
+                        "price": 2.83,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A78445_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Sazonador México 40 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A75878_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Frasco grande de ajo perejil 200 g",
+                        "product_brand": "Ducros",
+                        "price": 6.89,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A15914_00.jpg?t=20241004030050"
+                    },
+                    {
+                        "product_name": "Sazonador carne 17g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A04479_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Sazonador de ensaladas 18 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A04484_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Sazonador de ajo-perejil 43 g",
+                        "product_brand": "Ducros",
+                        "price": 2.19,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A15910_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Sazonador Italia 30 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A75876_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Sazonador de pescados 40 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A62222_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Sazonador de pollo 18 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A04487_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Sazonador oriental 32 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A75879_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Nata leche de coco para cocinar 200 ml",
+                        "product_brand": "Naturgreen",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A88814_00.jpg?t=20241003030039"
+                    },
+                    {
+                        "product_name": "Directo al horno barbacoa",
+                        "product_brand": "Maggi",
+                        "price": 1.19,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A44886_00.jpg?t=20241003030136"
+                    }
+                ]
+            },
+            "Aceite de oliva virgen": {
+                "nombre": "Aceite de oliva virgen",
+                "quantity": 1,
+                "unit": "cucharada",
+                "productos": [
+                    {
+                        "product_name": "Aceite de oliva virgen extra Tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A74147_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.56,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A79078_00.jpg?t=20241004030318"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 14.18,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11375_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                        "product_brand": "Finca Almarech",
+                        "price": 8.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A76670_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11665_00.jpg?t=20241003030006"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra intenso 3 l",
+                        "product_brand": "Urzante",
+                        "price": 29.11,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10219_00.jpg?t=20241005030025"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 0,75 l",
+                        "product_brand": "Carbonell",
+                        "price": 10.58,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A03421_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Kel",
+                        "price": 9.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A05649_00.jpg?t=20241005030239"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen Arbequina 0,5 l",
+                        "product_brand": "Urzante",
+                        "price": 6.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10407_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10408_00.jpg?t=20241006030056"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra spray 200 ml",
+                        "product_brand": "Carbonell",
+                        "price": 4.26,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A76288_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 250 ml",
+                        "product_brand": "Urzante",
+                        "price": 3.68,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A37521_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 1 l",
+                        "product_brand": "Cazorla",
+                        "price": 11.9,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A03086_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen picual 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A44603_00.jpg?t=20241005030140"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 0,75 l",
+                        "product_brand": "Urzante",
+                        "price": 9.22,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10848_00.jpg?t=20241005030227"
+                    },
+                    {
+                        "product_name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                        "product_brand": "Lectus",
+                        "price": 6.76,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40095_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 0,5 l",
+                        "product_brand": "Equidad",
+                        "price": 8.65,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A35401_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite D.O. Navarra 1 l",
+                        "product_brand": "Olivar de la Ribera",
+                        "price": 9.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A09773_00.jpg?t=20241005030037"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra intenso 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A09218_00.jpg?t=20241005030227"
+                    },
+                    {
+                        "product_name": "Aceite D.O. Sierra Segura 0,5 l",
+                        "product_brand": "Fuenroble",
+                        "price": 13.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A13100_00.jpg?t=20241003030007"
+                    },
+                    {
+                        "product_name": "Aceite ecológico virgen extra 0,5 l",
+                        "product_brand": "Románico",
+                        "price": 8.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A13101_00.jpg?t=20241004030319"
+                    }
+                ]
+            },
+            "Sal": {
+                "nombre": "Sal",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Flor de sal 125 g",
+                        "product_brand": "Añana",
+                        "price": 4.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71670_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal ahumada 125 g",
+                        "product_brand": "Maldon",
+                        "price": 4.3,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A30833_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal gruesa 2 kg",
+                        "product_brand": "BM",
+                        "price": 1.1,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A87975_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Bicarbonato sódico 250 g",
+                        "product_brand": "Ducros",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A33421_00.jpg?t=20241004030007"
+                    },
+                    {
+                        "product_name": "Sal marina gruesa 1 kg",
+                        "product_brand": "Bueno",
+                        "price": 1.19,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A04154_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal fina 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A35197_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal rosa del Himalaya",
+                        "product_brand": "Ducros",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A82427_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Sal de fruta 150 g",
+                        "product_brand": "Sal Costa",
+                        "price": 3.5,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A61237_00.jpg?t=20241003030031"
+                    },
+                    {
+                        "product_name": "Sal blanca mediterránea 90 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A82483_00.jpg?t=20241003030344"
+                    },
+                    {
+                        "product_name": "Sal mineral 500 g",
+                        "product_brand": "Añana",
+                        "price": 4.89,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71671_00.jpg?t=20240913030024"
+                    },
+                    {
+                        "product_name": "Sal marina yodada 1 kg",
+                        "product_brand": "Diat Radisson",
+                        "price": 1.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A17828_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal para hornear 2 kg",
+                        "product_brand": "Sal Costa",
+                        "price": 2.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A65640_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal gruesa 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A79590_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal marina en escamas 125 g",
+                        "product_brand": "Maldon",
+                        "price": 3.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A01063_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal yodada 1 kg",
+                        "product_brand": "Salsil",
+                        "price": 1.59,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A06210_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Bicarbonato 150 g",
+                        "product_brand": "El Tigre",
+                        "price": 0.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A30642_00.jpg?t=20241004030109"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "receta": "Ensalada de quinoa y aguacate",
+        "ingredientes": {
+            "Quinoa": {
+                "nombre": "Quinoa",
+                "quantity": 200,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Avena cocida 2x125 g",
+                        "product_brand": "Brillante",
+                        "price": 1.55,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A65468_00.jpg?t=20241005030107"
+                    },
+                    {
+                        "product_name": "Quinoa 2x125 g",
+                        "product_brand": "Brillante",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A45250_00.jpg?t=20241005030239"
+                    },
+                    {
+                        "product_name": "Quinoa bio 500 g",
+                        "product_brand": "Ecocesta",
+                        "price": 6.07,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70188_00.jpg?t=20241003030008"
+                    },
+                    {
+                        "product_name": "Cous cous 2x125 g",
+                        "product_brand": "Brillante",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A45251_00.jpg?t=20241003030009"
+                    },
+                    {
+                        "product_name": "Cous cous 500 g",
+                        "product_brand": "Gallo",
+                        "price": 2.03,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11071_00.jpg?t=20241005030210"
+                    },
+                    {
+                        "product_name": "Quinoa 250 g",
+                        "product_brand": "Sos",
+                        "price": 1.94,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A45257_00.jpg?t=20241003030008"
+                    },
+                    {
+                        "product_name": "Semilla de chía 250 g",
+                        "product_brand": "Eliges Eco",
+                        "price": 1.89,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A67221_00.jpg?t=20241003030853"
+                    }
+                ]
+            },
+            "Aguacate": {
+                "nombre": "Aguacate",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Plátano para freír",
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22349_00.jpg?t=20241006030008"
+                    },
+                    {
+                        "product_name": "Piña entera pelada 420 g",
+                        "product_brand": "",
+                        "price": 3.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24593_00.jpg?t=20241005030124"
+                    },
+                    {
+                        "product_name": "Plátano embolsado Selecta",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23502_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Coco troceado orgánico con caramelo 56 g",
+                        "product_brand": "Genuine Coconut",
+                        "price": 1.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26518_00.jpg?t=20241003030606"
+                    },
+                    {
+                        "product_name": "Aguacate a granel unidad (250 g aprox)",
+                        "product_brand": "",
+                        "price": 5.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21990_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Piña Selecta unidad (2,2 kg aprox)",
+                        "product_brand": "Selecta",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20010_00.jpg?t=20241003030206"
+                    },
+                    {
+                        "product_name": "Pitahaya",
+                        "product_brand": "",
+                        "price": 10.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26227_00.jpg?t=20241003030558"
+                    },
+                    {
+                        "product_name": "Granada a granel (300 g aprox./unidad)",
+                        "product_brand": "",
+                        "price": 3.52,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22150_00.jpg?t=20241003030206"
+                    },
+                    {
+                        "product_name": "Kiwi unidad (150 g aprox)",
+                        "product_brand": "Zespri",
+                        "price": 5.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22286_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Mango bandeja (600 g aprox)",
+                        "product_brand": "",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26406_00.jpg?t=20241006030032"
+                    },
+                    {
+                        "product_name": "Aguacate Bandeja (2 unidades)",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21992_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Piña maduración especial mitad (1,1 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20163_00.jpg?t=20241005030238"
+                    },
+                    {
+                        "product_name": "Piña maduración especial (pieza 2,2 kg aprox)",
+                        "product_brand": "",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24574_00.jpg?t=20241005030233"
+                    },
+                    {
+                        "product_name": "Piña selecta mitad (1,1 kg aprox)",
+                        "product_brand": "Selecta",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20160_00.jpg?t=20241006030042"
+                    },
+                    {
+                        "product_name": "Chirimoya a granel",
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22105_00.jpg?t=20241006030021"
+                    },
+                    {
+                        "product_name": "Coco en trocitos",
+                        "product_brand": "",
+                        "price": 1.52,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26505_00.jpg?t=20241003030352"
+                    },
+                    {
+                        "product_name": "Coco troceado orgánico con vainilla natural 56 g",
+                        "product_brand": "Genuine Coconut",
+                        "price": 1.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26517_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Mango Selecta de Malaga",
+                        "product_brand": "Selecta",
+                        "price": 4.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26489_00.jpg?t=20241003030209"
+                    },
+                    {
+                        "product_name": "Papayón unidad (1,5 kg aprox)",
+                        "product_brand": "",
+                        "price": 5.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22325_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Kiwi amarillo sungold unidad (150 g aprox)",
+                        "product_brand": "Zespri",
+                        "price": 6.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22190_00.jpg?t=20241003030206"
+                    }
+                ]
+            },
+            "Tomate": {
+                "nombre": "Tomate",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Tomate natural rallado 250 g",
+                        "product_brand": "Chovi",
+                        "price": 2.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A82686_00.jpg?t=20241006030104"
+                    },
+                    {
+                        "product_name": "Tomate de caserío Primera",
+                        "product_brand": "",
+                        "price": 1.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24602_00.jpg?t=20241006030106"
+                    },
+                    {
+                        "product_name": "Tomate Cherry Rama 500 g",
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26011_00.jpg?t=20241006030039"
+                    },
+                    {
+                        "product_name": "Tomate primera a granel (200 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 4.03,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23123_00.jpg?t=20241003030530"
+                    },
+                    {
+                        "product_name": "Tomate pera granel (125 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23142_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Tomate Natural Tumaca 200 g",
+                        "product_brand": "",
+                        "price": 1.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26031_00.jpg?t=20241003030531"
+                    },
+                    {
+                        "product_name": "Tomate en rama a granel (150 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 2.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23126_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Tomate rallado con aceite (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A42572_00.jpg?t=20241003030531"
+                    },
+                    {
+                        "product_name": "Pepino corto a granel (150 g aprox unidad)",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23421_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Tomate rallado natural (200 g aprox)",
+                        "product_brand": "",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A42571_00.jpg?t=20241005030130"
+                    },
+                    {
+                        "product_name": "Tomate cherry pera (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.73,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A44243_00.jpg?t=20241003030207"
+                    },
+                    {
+                        "product_name": "Cherry pera kumato 250 g",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26420_00.jpg?t=20241004030143"
+                    },
+                    {
+                        "product_name": "Tomate cherry bandeja (250 g aprox)",
+                        "product_brand": "",
+                        "price": 1.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23150_00.jpg?t=20241003030611"
+                    }
+                ]
+            },
+            "Lechuga": {
+                "nombre": "Lechuga",
+                "quantity": 100,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Gourmet mediterránea 150 g",
+                        "product_brand": "Florette",
+                        "price": 1.97,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71529_00.jpg?t=20241004030142"
+                    },
+                    {
+                        "product_name": "Corazón de escarola 150 g",
+                        "product_brand": "Selecta",
+                        "price": 1.39,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A25113_00.jpg?t=20241005030025"
+                    },
+                    {
+                        "product_name": "Lechuga iceberg (500 g aprox)",
+                        "product_brand": "",
+                        "price": 1.09,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23055_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Brotes classic 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23706_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Rúcula 100 g",
+                        "product_brand": "Florette",
+                        "price": 2.01,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23762_00.jpg?t=20241004030051"
+                    },
+                    {
+                        "product_name": "Ensalda gourmet 175 g",
+                        "product_brand": "BM",
+                        "price": 1.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A25053_00.jpg?t=20241004030047"
+                    },
+                    {
+                        "product_name": "Brotes deluxe 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.91,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23708_00.jpg?t=20241004030139"
+                    },
+                    {
+                        "product_name": "Corazón de lechuga baby especial (400 g aprox)",
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23062_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Lechuga en bolsa 140 g",
+                        "product_brand": "Eusko Label",
+                        "price": 1.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23890_00.jpg?t=20241005030217"
+                    },
+                    {
+                        "product_name": "Brotes Gourmet 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A72602_00.jpg?t=20241005030217"
+                    },
+                    {
+                        "product_name": "Cogollos de lechuga 2 unidades 200 g aprox",
+                        "product_brand": "",
+                        "price": 1.16,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23060_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Cuatro estaciones 250 g",
+                        "product_brand": "BM",
+                        "price": 0.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A25068_00.jpg?t=20241004030128"
+                    },
+                    {
+                        "product_name": "Canónigos 125 g",
+                        "product_brand": "",
+                        "price": 2.1,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A47814_00.jpg?t=20241005030227"
+                    },
+                    {
+                        "product_name": "Endibia bandeja (450 g aprox)",
+                        "product_brand": "",
+                        "price": 2.15,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23320_00.jpg?t=20241005030112"
+                    },
+                    {
+                        "product_name": "Lechuga iceberg 250 g",
+                        "product_brand": "Florette",
+                        "price": 1.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A16987_00.jpg?t=20241004030036"
+                    },
+                    {
+                        "product_name": "Ensalada gourmet 175 g",
+                        "product_brand": "Florette",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23703_00.jpg?t=20241005030140"
+                    },
+                    {
+                        "product_name": "Dúo canónigos-rúcula 100 g",
+                        "product_brand": "Florette",
+                        "price": 1.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71531_00.jpg?t=20241004030059"
+                    },
+                    {
+                        "product_name": "Ensalada Mezclum Selecta 150 g",
+                        "product_brand": "BM",
+                        "price": 1.19,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23704_00.jpg?t=20241005030026"
+                    }
+                ]
+            },
+            "Aceite de oliva virgen extra": {
+                "nombre": "Aceite de oliva virgen extra",
+                "quantity": 2,
+                "unit": "cucharadas",
+                "productos": [
+                    {
+                        "product_name": "Aceite de oliva virgen extra Tudela 1 l",
+                        "product_brand": "Trujal Almazara",
+                        "price": 9.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A74147_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.56,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A79078_00.jpg?t=20241004030318"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Maestros de Hojiblanca",
+                        "price": 14.18,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11375_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra aberquina 0,5 l",
+                        "product_brand": "Finca Almarech",
+                        "price": 8.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A76670_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Carbonell",
+                        "price": 13.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11665_00.jpg?t=20241003030006"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra intenso 3 l",
+                        "product_brand": "Urzante",
+                        "price": 29.11,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10219_00.jpg?t=20241005030025"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen 0,75 l",
+                        "product_brand": "Carbonell",
+                        "price": 10.58,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A03421_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 1 l",
+                        "product_brand": "Kel",
+                        "price": 9.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A05649_00.jpg?t=20241005030239"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen Arbequina 0,5 l",
+                        "product_brand": "Urzante",
+                        "price": 6.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10407_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra hojiblanca 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10408_00.jpg?t=20241006030056"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra spray 200 ml",
+                        "product_brand": "Carbonell",
+                        "price": 4.26,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A76288_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 250 ml",
+                        "product_brand": "Urzante",
+                        "price": 3.68,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A37521_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 1 l",
+                        "product_brand": "Cazorla",
+                        "price": 11.9,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A03086_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen picual 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.51,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A44603_00.jpg?t=20241005030140"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra 0,75 l",
+                        "product_brand": "Urzante",
+                        "price": 9.22,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10848_00.jpg?t=20241005030227"
+                    },
+                    {
+                        "product_name": "Aceite de arbequina D.O. Rioja 0,5 l",
+                        "product_brand": "Lectus",
+                        "price": 6.76,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40095_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite virgen extra 0,5 l",
+                        "product_brand": "Equidad",
+                        "price": 8.65,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A35401_00.jpg?t=20241004030319"
+                    },
+                    {
+                        "product_name": "Aceite D.O. Navarra 1 l",
+                        "product_brand": "Olivar de la Ribera",
+                        "price": 9.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A09773_00.jpg?t=20241005030037"
+                    },
+                    {
+                        "product_name": "Aceite de oliva virgen extra intenso 1 l",
+                        "product_brand": "Urzante",
+                        "price": 9.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A09218_00.jpg?t=20241005030227"
+                    },
+                    {
+                        "product_name": "Aceite D.O. Sierra Segura 0,5 l",
+                        "product_brand": "Fuenroble",
+                        "price": 13.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A13100_00.jpg?t=20241003030007"
+                    },
+                    {
+                        "product_name": "Aceite ecológico virgen extra 0,5 l",
+                        "product_brand": "Románico",
+                        "price": 8.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A13101_00.jpg?t=20241004030319"
+                    }
+                ]
+            },
+            "Vinagre balsámico": {
+                "nombre": "Vinagre balsámico",
+                "quantity": 1,
+                "unit": "cucharada",
+                "productos": [
+                    {
+                        "product_name": "Vinagre balsámico de módena 250 ml",
+                        "product_brand": "Borges",
+                        "price": 2.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10970_00.jpg?t=20241003030138"
+                    },
+                    {
+                        "product_name": "Vinagre balsámico blanco 250 ml",
+                        "product_brand": "Borges",
+                        "price": 2.55,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40094_00.jpg?t=20241003030138"
+                    },
+                    {
+                        "product_name": "Crema de vinagre al Pedro Ximénez 275 ml",
+                        "product_brand": "Carbonell",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A43045_00.jpg?t=20241005030012"
+                    },
+                    {
+                        "product_name": "Crema balsámica de módena 250 g",
+                        "product_brand": "Borges",
+                        "price": 3.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A70333_00.jpg?t=20241003030436"
+                    },
+                    {
+                        "product_name": "Vinagre balsámico de módena 500 ml",
+                        "product_brand": "BM",
+                        "price": 2.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A35224_00.jpg?t=20241003030138"
+                    },
+                    {
+                        "product_name": "Crema balsámica de módena 250 ml",
+                        "product_brand": "BM",
+                        "price": 1.75,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A35226_00.jpg?t=20241003030138"
+                    }
+                ]
+            },
+            "Sal": {
+                "nombre": "Sal",
+                "quantity": 1,
+                "unit": "pizca",
+                "productos": [
+                    {
+                        "product_name": "Flor de sal 125 g",
+                        "product_brand": "Añana",
+                        "price": 4.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71670_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal ahumada 125 g",
+                        "product_brand": "Maldon",
+                        "price": 4.3,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A30833_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal gruesa 2 kg",
+                        "product_brand": "BM",
+                        "price": 1.1,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A87975_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Bicarbonato sódico 250 g",
+                        "product_brand": "Ducros",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A33421_00.jpg?t=20241004030007"
+                    },
+                    {
+                        "product_name": "Sal marina gruesa 1 kg",
+                        "product_brand": "Bueno",
+                        "price": 1.19,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A04154_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal fina 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A35197_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal rosa del Himalaya",
+                        "product_brand": "Ducros",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A82427_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Sal de fruta 150 g",
+                        "product_brand": "Sal Costa",
+                        "price": 3.5,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A61237_00.jpg?t=20241003030031"
+                    },
+                    {
+                        "product_name": "Sal blanca mediterránea 90 g",
+                        "product_brand": "Ducros",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A82483_00.jpg?t=20241003030344"
+                    },
+                    {
+                        "product_name": "Sal mineral 500 g",
+                        "product_brand": "Añana",
+                        "price": 4.89,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A71671_00.jpg?t=20240913030024"
+                    },
+                    {
+                        "product_name": "Sal marina yodada 1 kg",
+                        "product_brand": "Diat Radisson",
+                        "price": 1.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A17828_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal para hornear 2 kg",
+                        "product_brand": "Sal Costa",
+                        "price": 2.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A65640_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal gruesa 1 kg",
+                        "product_brand": "BM",
+                        "price": 0.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A79590_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal marina en escamas 125 g",
+                        "product_brand": "Maldon",
+                        "price": 3.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A01063_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Sal yodada 1 kg",
+                        "product_brand": "Salsil",
+                        "price": 1.59,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A06210_00.jpg?t=20241003030140"
+                    },
+                    {
+                        "product_name": "Bicarbonato 150 g",
+                        "product_brand": "El Tigre",
+                        "price": 0.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A30642_00.jpg?t=20241004030109"
+                    }
+                ]
+            }
+        }
+    }
+]

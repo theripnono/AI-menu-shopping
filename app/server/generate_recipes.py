@@ -111,7 +111,7 @@ class GenerateRecipes():
         """
         
         #TODO ocultar el path
-        file  = 'clean_output_ids.json'
+        file  = 'output_img_ids.json'
 
         context_categories = self.subcategories_as_context(file)
 

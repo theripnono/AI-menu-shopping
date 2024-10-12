@@ -1,14 +1,10 @@
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 
-export default createVuetify({
+
+const vuetify = createVuetify({
     icons: {
-        defaultSet: 'mdi',
-        aliases,
-        sets: {
-            mdi,
-        },
+        defaultSet: 'mdi', // Asegúrate de configurar el set de iconos
     },
 })
