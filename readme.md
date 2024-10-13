@@ -26,6 +26,7 @@ Completar todas las tareas para el lanzamiento
 
 ### Vue3:
 - [ ] Refactor: Separar los componentes
+- [ ] Crear Boton comprar. Este botón genera el nodo Order.
 - [ ] En la pantalla de inicio sacar un carousel con los productos recomendados
 - [X] Añadir el atributo "Sticky" al carrito de la compra
 - [X] Cambiar el favicon
@@ -33,3 +34,6 @@ Completar todas las tareas para el lanzamiento
 	    1- Se abre un textarea y se pregunta al usuario qué está busacando, de manera que se inserta en la query y te busca.
       2-Vuelve  a buscar en la base de datos, con técnicas como lematización. De esta manera reduces el peligro de inyecciones maliciosas
 
+# Forward steps:
+
+Se da el caso que un usuario pide cosas muy específicas. Por ejemplo comida para niños pequeños, pero no quiere siempre tener que escribir en el prompt el texto. Se podría almacenar el texto, enlazarlo con el usuario y pasarlo como template.
