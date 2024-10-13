@@ -2,6 +2,7 @@ import os
 import sys
 import json
 from .search_products import procces_recipes
+from .import2neoj4 import _purchased_query
 
 
 # Add the project root to the Python path
@@ -17,7 +18,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 #CORS(app)  # Enable CORS for all routes
 
 def test_neo4j():
-    with open('neo4j_outputs/20241011_112455_output_data_.json', 'r', encoding='utf-8') as file:
+    with open('exported_data.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
     return data
 
@@ -42,6 +43,26 @@ def generate_response():
 
     recipes = {"message": recipes_json}
     return jsonify(recipes)
+
+
+@app.route('/api/buy', methods=['POST', 'OPTIONS'])
+def order_purchased():
+    if request.method == 'OPTIONS':
+        return jsonify({}), 200
+        
+    if request.method == 'POST':
+        data = request.json 
+        order = data.get('items', [])
+    
+        _purchased_query(user_sesion='David', order=order)
+
+        if not order:
+            return jsonify({"error": "No hay productos para comprar."}), 400
+
+    return jsonify({}), 200
+    
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

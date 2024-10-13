@@ -25,7 +25,12 @@
 
             <div v-if="isLoading">
               <h2>Voy a pensar que en algo rico...</h2>
-              <v-progress-circular color="primary" indeterminate></v-progress-circular>
+              <v-progress-circular color="blue-lighten-3"
+               model-value="20"
+                indeterminate
+                :size="84"
+                :width="12"
+                ></v-progress-circular>
             </div>
 
             <div v-else-if="serverResponse.length > 0">
@@ -79,7 +84,7 @@
           <!-- Sección para mostrar el carrito en la derecha -->
           <v-col cols="4">
             <div class="cart-list">
-              <h2>Productos del Carrito</h2>
+              <h2>Cesta</h2>
               <v-list>
                 <v-list-item-group>
                   <v-list-item v-for="(item, index) in cartItems" :key="index">
@@ -106,8 +111,14 @@
                 </v-list-item-group>
               </v-list>
               <hr>
-              <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>
+              <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>´
+              <v-btn 
+                v-if="cartItems.length >= 1" append-icon="" @click="buyItems">
+                Comprar
+                <v-icon color="green">mdi-cart-check</v-icon>             
+              </v-btn>
             </div>
+
           </v-col>
         </v-row>
 
@@ -153,7 +164,8 @@ export default {
       // inicializar el carrito
       cartItems.value = [];
       cartTotal.value = 0;
-
+      
+  
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
           serverResponse.value = response.data.message;
@@ -193,6 +205,7 @@ export default {
         existingProduct.quantity += 1;
       } else {
         // Si no añadir nuevo item
+        console.log(producto)
         cartItems.value.push({ product: producto, quantity: 1 });
       }
 
@@ -214,9 +227,33 @@ export default {
       }
     };
 
+    const buyItems = () => {
+      if (cartItems.value.length === 0) {
+        console.log('No hay productos en el carrito.');
+        return;
+      }
+
+      // Aquí puedes enviar los productos al servidor para completar la compra
+      // Ejemplo de llamada POST al servidor:
+      axios.post('http://localhost:5000/api/buy', { items: cartItems.value })
+        .then(response => {
+
+          // Muestra un mensaje de éxito si la compra fue exitosa
+          alert('¡Compra completada con éxito!');
+          // Limpiar el carrito después de la compra
+          cartItems.value = [];
+          cartTotal.value = 0;
+        })
+        .catch(error => {
+          console.error('Error al procesar la compra:', error);
+          alert('Ocurrió un error al intentar procesar la compra.');
+        });
+    };
+
+
     return {
       message, userText, serverResponse, isLoading,
-      submitText, showProducts, cartTotal,
+      submitText, showProducts, cartTotal, buyItems,
       toggleProducts, showIngredients, buttonText,
       toggleIngredients, addCartProduct, cartItems, removeCartProduct
     };
@@ -239,8 +276,7 @@ textarea {
   position: sticky;
   max-height: 400px;
   top: 0;
-  border: 1px solid #b8b8b8;
-  border-radius: 10px;
+
 }
 
 .header {
