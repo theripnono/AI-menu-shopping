@@ -64,9 +64,11 @@ def export_json(df:object)->object:
             # Añadir el producto a la lista de productos
             producto_info = {
                 'product_name': row['name'],
+                'product_id':row['pid'],
                 'product_brand': row['brand'].strip(),
                 'price': row['price'],
                 'img': row['img']
+
             }
             receta_dict['ingredientes'][ingrediente]['productos'].append(producto_info)
         
@@ -96,6 +98,7 @@ def procces_recipes(user_input):
                 "p.product_brand as brand, "
                 "p.product_price_centAmount as price,"
                 "p.product_img as img,"
+                "p.product_id as pid,"
                 "receta.receta as receta,"
                 "ingrediente.ingrediente as ingrediente,"
                 "ingrediente.qty as cantidad,"
