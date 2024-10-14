@@ -5,9 +5,8 @@ Completar todas las tareas para el lanzamiento
 
 ### Server:
 - [X] Añadir imagenes en los nodos
-- [ ] Crear una funcion para insertar campos nuevos a los nodos.
 - [ ] Crear una estimacion de la compra. Cuando GPT responde con las recetas poner total de la receta
-- [ ] Loging: Función para añadir usuarios a la base de datos. Cuando el usuario se da de alta, se crea un nodo usuario.
+- [ ] Crear Loging: Función para añadir usuarios a la base de datos. Cuando el usuario se da de alta, se crea un nodo usuario.
 - [X] Funcion purchase: Cuando el usuario compra, se crea un nodo relacionado con el usuario con el nodo de compra y este nodo esta relacionado con los nodos de productos.
 
 ### LLM:
@@ -16,12 +15,13 @@ Completar todas las tareas para el lanzamiento
 ### Test:
 - [ ] Crear los Test de las funciones
 - [X] Crear usuarios demo. Crear Jsons.
+- [X] Crear carritos demo. 
 - [X] Crear nodos demo. Crear Jsons
 
 ### Neo4j Cypher:
 - [X] Hay que rediseñar el nombre de los nodos, relaciones (verbos). Hay mezcla de ingles-castellano. Cambiar la relación "descripción"
 - [ ] Crear queries para similitud entre usuarios.
-
+- [X] Crear query: Cuando el usuario compra crear Nodo el Order y las relaciones con usuario y productos (u)->(o)->(p)
 - [X] Crear nodos de usuarios (mock-up)
 - [X] Crear nodos de carritos de la compra (mock-up)
 
