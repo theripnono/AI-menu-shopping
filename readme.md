@@ -40,3 +40,6 @@ Completar todas las tareas para el lanzamiento
 # Forward steps:
 
 Se da el caso que un usuario pide cosas muy específicas. Por ejemplo comida para niños pequeños, pero no quiere siempre tener que escribir en el prompt el texto. Se podría almacenar el texto, enlazarlo con el usuario y pasarlo como template.
+Se podría sugerir las calorias de la receta.
+Escribir la receta. Crear un agente que basado en los ingredientes, haga la receta. guardarlo en el perfil del usuario.
+Habría que pensar la manera que **no sea redundante**. Siempre que creas una receta, devuelve los ingredientes. Pero claro puede ser que por ejemplo siga teniendo aceite, leche, tomates en mi despensa 
