@@ -40,7 +40,7 @@
                   <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
                     {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
                   </v-btn>
-                  <v-btn @click="buyIngredient" color="primary">
+                  <v-btn @click="buyIngredients(index)" color="primary">
                     Comprar ingredientes
                   </v-btn>
                 </div>
@@ -210,12 +210,11 @@ export default {
         existingProduct.quantity += 1;
       } else {
         // Si no añadir nuevo item
-        console.log(producto)
         cartItems.value.push({ product: producto, quantity: 1 });
       }
 
       cartTotal.value = Math.round((cartTotal.value + producto.price + Number.EPSILON) * 100) / 100
-      console.log('Producto añadido al carrito:', producto);
+     
     };
 
     const removeCartProduct = (index) => {
@@ -256,19 +255,21 @@ export default {
 
     };
 
-    const buyIngredient = () => {
-    const recipe = serverResponse.value[0]; // Toma la primera receta
+    const buyIngredients = (recipeIndex) => {
+    const recipe = serverResponse.value[recipeIndex]; // Toma la receta específica seleccionada
     for (let key in recipe.ingredientes) {
-        const producto = (recipe.ingredientes[key].productos[0])
-        addCartProduct(producto)
+        const producto = recipe.ingredientes[key].productos[0];
+        if (producto) {
+            addCartProduct(producto);
+        }
       }
-    };
+  };
 
 
     return {
       message, userText, serverResponse, isLoading,
       submitText, showProducts, cartTotal, buyItems,
-      toggleProducts, showIngredients, buttonText,buyIngredient,
+      toggleProducts, showIngredients, buttonText,buyIngredients,
       toggleIngredients, addCartProduct, cartItems, removeCartProduct
     };
   }
@@ -290,8 +291,23 @@ textarea {
   position: sticky;
   max-height: 400px;
   top: 0;
-
+  overflow-y: auto; /* Habilita el scroll vertical */
+  padding: 10px;
+  background-color: #f9f9f9; /* Color de fondo para darle contraste */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
+
+/* Estilos para la barra de scroll en navegadores Webkit (Chrome, Edge, Safari) */
+.cart-list::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de scroll */
+}
+
+.cart-list::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Color del track (fondo de la barra de scroll) */
+  border-radius: 8px;
+}
+
 
 .header {
   padding: 20px;
