@@ -35,10 +35,13 @@
 
             <div v-else-if="serverResponse.length > 0">
               <div v-for="(recipe, index) in serverResponse" :key="index">
-                <div style="margin-top: 20px;">
+                <div style="margin-top: 20px; background-color: aliceblue" >
                   <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
                   <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
                     {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
+                  </v-btn>
+                  <v-btn @click="buyIngredient" color="primary">
+                    Comprar ingredientes
                   </v-btn>
                 </div>
 
@@ -142,6 +145,7 @@ export default {
     const cartItems = ref([]);
     const cartTotal = ref(0);
 
+
     // Estado para controlar la visibilidad de los productos
     const showProducts = ref({});
     // Estado para controlar la visibilidad de los ingredientes
@@ -169,6 +173,7 @@ export default {
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
           serverResponse.value = response.data.message;
+          console.log(serverResponse)
           isLoading.value = false;
           // Inicializar showProducts y showIngredients vacíos para cada receta
           showProducts.value = {};
@@ -248,13 +253,22 @@ export default {
           console.error('Error al procesar la compra:', error);
           alert('Ocurrió un error al intentar procesar la compra.');
         });
+
+    };
+
+    const buyIngredient = () => {
+    const recipe = serverResponse.value[0]; // Toma la primera receta
+    for (let key in recipe.ingredientes) {
+        const producto = (recipe.ingredientes[key].productos[0])
+        addCartProduct(producto)
+      }
     };
 
 
     return {
       message, userText, serverResponse, isLoading,
       submitText, showProducts, cartTotal, buyItems,
-      toggleProducts, showIngredients, buttonText,
+      toggleProducts, showIngredients, buttonText,buyIngredient,
       toggleIngredients, addCartProduct, cartItems, removeCartProduct
     };
   }
