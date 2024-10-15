@@ -1,13 +1,14 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
   /* background-color: rgb(255, 255, 255); */
-  background-image: url(https://img.freepik.com/vector-gratis/dibujado-mano-estilo-acuarela-bibimbap_53876-43858.jpg?t=st=1728722814~exp=1728726414~hmac=a1c30c1cab3a976be388a982e650dbcda5b3b4965e60a7fde6e3cc388fe13c8d&w=740);
-  background-repeat: repeat-x;
+  background-image: url(C:\Users\Theri\Escritorio\BM-API\app\frontend\frontend\src\assets\img\healthy-breakfast-set.png);
+  background-size: cover;
+
 }
 
 /* Amarilllo color del bm rgb(254,237,36) */

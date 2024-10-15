@@ -4,7 +4,7 @@ import json
 import ast
 import hashlib
 import secrets
-
+import neo4j
 from datetime import datetime
 
 """
@@ -72,12 +72,31 @@ def _purchased_query(user_sesion:str, order:list[dict]):
         
     }
 
-    load_into_graph(query, parameters)
+    connect2_graph(query, parameters)
         
     print(f'the {order_id} node was created')
     
+def export_similar_products_json(df:object)->object:
 
-def load_into_graph(query:str, parameters:dict):
+    """
+    This functions generates a json file that will be displayed in the frontend.
+    """
+
+    recetas_json = []
+    for _, row in df.iterrows():
+        product_info={
+            'product_name': row.iloc[0]['product_name'],
+            'product_id':row.iloc[0]['product_id'],
+            'product_brand': row.iloc[0]['product_brand'].strip(),
+            'price': row.iloc[0]['product_price_centAmount'],
+            'img': row.iloc[0]['product_img']
+        }
+        recetas_json.append(product_info)
+       
+    return recetas_json
+   
+
+def connect2_graph(query:str, parameters:dict):
 
     """
     Load formated rows into neo4j db.
@@ -97,6 +116,30 @@ def load_into_graph(query:str, parameters:dict):
         print({e})
 
 
+
+def similar_products():
+    try:
+        with GraphDatabase.driver(URI, auth=AUTH) as driver:
+            driver.verify_connectivity()
+
+            records_df = driver.execute_query(
+                    "MATCH (u:User{name: 'David'})-[:HA_COMPRADO]->(o:Order)-[:contiene]->(p1:Product)-[:descripcion]->(c:Category)<-[:descripcion]-(p2:Product)"
+                    "WHERE NOT ((u)-[:HA_COMPRADO]->(p2))"
+                    "RETURN p2 limit 10"                      
+                , database_="neo4j"
+                , result_transformer_=neo4j.Result.to_df
+            )
+
+        json_export = export_similar_products_json(records_df)
+        return json_export
+    
+    except Exception as e:
+        print('Oups! something goes wrong, please check: ')
+        print({e})
+
+
+
+similar_products()
 
 test_nodes = [{'product':
                 {'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A16983_00.jpg?t=20241003030611',
