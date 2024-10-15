@@ -125,7 +125,7 @@ def similar_products():
             records_df = driver.execute_query(
                     "MATCH (u:User{name: 'David'})-[:HA_COMPRADO]->(o:Order)-[:contiene]->(p1:Product)-[:descripcion]->(c:Category)<-[:descripcion]-(p2:Product)"
                     "WHERE NOT ((u)-[:HA_COMPRADO]->(p2))"
-                    "RETURN p2 limit 10"                      
+                    "RETURN p2"                      
                 , database_="neo4j"
                 , result_transformer_=neo4j.Result.to_df
             )

@@ -23,6 +23,30 @@
               {{ buttonText }}
             </v-btn>
 
+            <v-row>
+              <div style="padding-top: 50px; padding-left: 10px;">
+                <h2 style="background-color: aliceblue;"><strong>Productos Recomendados para ti:</strong></h2>
+              </div>
+              <v-col cols="12"> 
+              <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000" >
+
+                <v-carousel-item v-for="(product, index) in similar_products" :key="index">
+                  <v-card style="background-color: aliceblue;opacity: 0.7;">
+                    <v-img :src="product.img" height="200px"></v-img>
+                    <v-card-title>{{ product.product_name }}</v-card-title>
+                    <v-card-subtitle>
+                      <span v-if="product.product_brand">{{ product.product_brand }}</span>
+                      <span v-else>Marca desconocida</span>
+                    </v-card-subtitle>
+                    <v-card-text>
+                      <p>Precio: €{{ product.price.toFixed(2) }}</p>
+                    </v-card-text>
+                  </v-card>
+                </v-carousel-item>
+              </v-carousel>
+            </v-col>
+            </v-row>
+          
             <div v-if="isLoading">
               <h2>Voy a pensar que en algo rico...</h2>
               <v-progress-circular color="blue-lighten-3"
@@ -138,12 +162,13 @@ import axios from 'axios';
 
 export default {
   setup() {
-    const message = ref('');
+    const similar_products = ref([]);
     const userText = ref('');
     const serverResponse = ref([]);
     const isLoading = ref(false);
     const cartItems = ref([]);
     const cartTotal = ref(0);
+    // Mostrar productos recomendados por defecto
 
 
     // Estado para controlar la visibilidad de los productos
@@ -154,11 +179,15 @@ export default {
     onMounted(() => {
       axios.get('http://localhost:5000')
         .then(response => {
-          message.value = response.data.message;
+          similar_products.value = response.data.message;
+         //hacer una lista aleatoria de productos
+         
         })
+        
         .catch(error => {
           console.error('Error fetching data:', error);
         });
+        return similar_products
     });
 
     const submitText = () => {
@@ -168,12 +197,14 @@ export default {
       // inicializar el carrito
       cartItems.value = [];
       cartTotal.value = 0;
+        
+
       
   
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
           serverResponse.value = response.data.message;
-          console.log(serverResponse)
+         
           isLoading.value = false;
           // Inicializar showProducts y showIngredients vacíos para cada receta
           showProducts.value = {};
@@ -267,7 +298,7 @@ export default {
 
 
     return {
-      message, userText, serverResponse, isLoading,
+      similar_products, userText, serverResponse, isLoading,
       submitText, showProducts, cartTotal, buyItems,
       toggleProducts, showIngredients, buttonText,buyIngredients,
       toggleIngredients, addCartProduct, cartItems, removeCartProduct
