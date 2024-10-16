@@ -6,6 +6,7 @@ Completar todas las tareas para el lanzamiento
 ### Server:
 - [X] Añadir imagenes en los nodos
 - [ ] Crear una estimacion de la compra. Cuando GPT responde con las recetas poner total de la receta. Idea: Un objeto con todos los ingredientes, si hay ingredientes (o productos) repetidos eliminar. Este objeto hace el calc total del objeto.
+- [X] Función para ordenar los productos con los ingredientes.
 - [ ] Crear Loging: Función para añadir usuarios a la base de datos. Cuando el usuario se da de alta, se crea un nodo usuario.
 - [X] Funcion purchase: Cuando el usuario compra, se crea un nodo relacionado con el usuario con el nodo de compra y este nodo esta relacionado con los nodos de productos.
 
