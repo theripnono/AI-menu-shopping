@@ -1,6 +1,7 @@
 from .generate_recipes import GenerateRecipes
 from neo4j import GraphDatabase
 import neo4j
+from difflib import SequenceMatcher
 from dotenv import dotenv_values
 import json
 import ast
@@ -16,6 +17,29 @@ AUTH = ast.literal_eval(config['AUTH'])
 
 Probar en local sin serv ni app
 """
+
+
+def similarity_calc(a, b):
+    # This function calculates the simalrity between two given items.
+    return SequenceMatcher(None, a, b).ratio()
+
+def sort_json(data:list[dict]):
+    """
+    Order the json by string by dictionart ingredient key word.
+    The aim of the function is to sort the json ingredient->prodct
+    in order to show the similar products given by llm.
+
+    """
+    for receta in data:
+        for ingrediente, detalles in receta["ingredientes"].items():
+            nombre = detalles["nombre"]
+            # Ordenar productos
+            detalles["productos"] = sorted(
+                detalles["productos"],
+                key=lambda producto: similarity_calc(nombre, producto["product_name"]),
+                reverse=True  # Ordenar de mayor a menor similitud
+            )
+
 
 
 # For testing
