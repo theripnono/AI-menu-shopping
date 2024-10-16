@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-from .search_products import procces_recipes
+from .search_products import procces_recipes, sort_json
 from .import2neoj4 import _purchased_query
 
 
@@ -41,6 +41,8 @@ def generate_response():
     # That is the respond I'm waiting for
     recipes_json = test_neo4j()
 
+    sort_json(recipes_json)
+    
     recipes = {"message": recipes_json}
     return jsonify(recipes)
 
