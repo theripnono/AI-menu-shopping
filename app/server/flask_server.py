@@ -1,8 +1,8 @@
 import os
 import sys
 import json
-from .search_products import procces_recipes, sort_json
-from .import2neoj4 import _purchased_query
+from .search_products import procces_recipes
+from .import2neoj4 import _purchased_query, similar_products
 
 
 # Add the project root to the Python path
@@ -24,8 +24,13 @@ def test_neo4j():
 
 @app.route('/', methods=['GET'])
 def index():
-    data = {"message": "Generador de Recetas Inteligente"}
-    return jsonify(data)
+    
+    # En el landing page poner similitud de recetas
+    recomended_products=similar_products()
+    if len!=0:
+        
+        return jsonify({"message":recomended_products})
+    
 
 
 @app.route('/api/submit-text', methods=['POST', 'OPTIONS'])

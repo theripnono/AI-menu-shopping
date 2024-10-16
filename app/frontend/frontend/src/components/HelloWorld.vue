@@ -23,6 +23,30 @@
               {{ buttonText }}
             </v-btn>
 
+            <v-row>
+              <div style="padding-top: 50px; padding-left: 10px;">
+                <h2 style="background-color: aliceblue;"><strong>Productos Recomendados para ti:</strong></h2>
+              </div>
+              <v-col cols="12"> 
+              <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000" >
+
+                <v-carousel-item v-for="(product, index) in similar_products" :key="index">
+                  <v-card style="background-color: aliceblue;opacity: 0.7;">
+                    <v-img :src="product.img" height="200px"></v-img>
+                    <v-card-title>{{ product.product_name }}</v-card-title>
+                    <v-card-subtitle>
+                      <span v-if="product.product_brand">{{ product.product_brand }}</span>
+                      <span v-else>Marca desconocida</span>
+                    </v-card-subtitle>
+                    <v-card-text>
+                      <p>Precio: €{{ product.price.toFixed(2) }}</p>
+                    </v-card-text>
+                  </v-card>
+                </v-carousel-item>
+              </v-carousel>
+            </v-col>
+            </v-row>
+          
             <div v-if="isLoading">
               <h2>Voy a pensar que en algo rico...</h2>
               <v-progress-circular color="blue-lighten-3"
@@ -40,7 +64,7 @@
                   <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
                     {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
                   </v-btn>
-                  <v-btn @click="buyIngredient" color="primary">
+                  <v-btn @click="buyIngredients(index)" color="primary">
                     Comprar ingredientes
                   </v-btn>
                 </div>
@@ -138,12 +162,13 @@ import axios from 'axios';
 
 export default {
   setup() {
-    const message = ref('');
+    const similar_products = ref([]);
     const userText = ref('');
     const serverResponse = ref([]);
     const isLoading = ref(false);
     const cartItems = ref([]);
     const cartTotal = ref(0);
+    // Mostrar productos recomendados por defecto
 
 
     // Estado para controlar la visibilidad de los productos
@@ -154,11 +179,15 @@ export default {
     onMounted(() => {
       axios.get('http://localhost:5000')
         .then(response => {
-          message.value = response.data.message;
+          similar_products.value = response.data.message;
+         //hacer una lista aleatoria de productos
+         
         })
+        
         .catch(error => {
           console.error('Error fetching data:', error);
         });
+        return similar_products
     });
 
     const submitText = () => {
@@ -168,12 +197,14 @@ export default {
       // inicializar el carrito
       cartItems.value = [];
       cartTotal.value = 0;
+        
+
       
   
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
           serverResponse.value = response.data.message;
-          console.log(serverResponse)
+         
           isLoading.value = false;
           // Inicializar showProducts y showIngredients vacíos para cada receta
           showProducts.value = {};
@@ -210,12 +241,11 @@ export default {
         existingProduct.quantity += 1;
       } else {
         // Si no añadir nuevo item
-        console.log(producto)
         cartItems.value.push({ product: producto, quantity: 1 });
       }
 
       cartTotal.value = Math.round((cartTotal.value + producto.price + Number.EPSILON) * 100) / 100
-      console.log('Producto añadido al carrito:', producto);
+     
     };
 
     const removeCartProduct = (index) => {
@@ -256,19 +286,21 @@ export default {
 
     };
 
-    const buyIngredient = () => {
-    const recipe = serverResponse.value[0]; // Toma la primera receta
+    const buyIngredients = (recipeIndex) => {
+    const recipe = serverResponse.value[recipeIndex]; // Toma la receta específica seleccionada
     for (let key in recipe.ingredientes) {
-        const producto = (recipe.ingredientes[key].productos[0])
-        addCartProduct(producto)
+        const producto = recipe.ingredientes[key].productos[0];
+        if (producto) {
+            addCartProduct(producto);
+        }
       }
-    };
+  };
 
 
     return {
-      message, userText, serverResponse, isLoading,
+      similar_products, userText, serverResponse, isLoading,
       submitText, showProducts, cartTotal, buyItems,
-      toggleProducts, showIngredients, buttonText,buyIngredient,
+      toggleProducts, showIngredients, buttonText,buyIngredients,
       toggleIngredients, addCartProduct, cartItems, removeCartProduct
     };
   }
@@ -290,8 +322,23 @@ textarea {
   position: sticky;
   max-height: 400px;
   top: 0;
-
+  overflow-y: auto; /* Habilita el scroll vertical */
+  padding: 10px;
+  background-color: #f9f9f9; /* Color de fondo para darle contraste */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
+
+/* Estilos para la barra de scroll en navegadores Webkit (Chrome, Edge, Safari) */
+.cart-list::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de scroll */
+}
+
+.cart-list::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Color del track (fondo de la barra de scroll) */
+  border-radius: 8px;
+}
+
 
 .header {
   padding: 20px;

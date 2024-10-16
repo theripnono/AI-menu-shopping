@@ -7,3 +7,15 @@ MATCH (u:User)-[:HA_COMPRADO]->(c:Cart)-[:LLEVA]->(p:Product) RETURN u,c,p
 Relaciona desde usuarios hasta categorias de los productos
 MATCH (u:User)-[:HA_COMPRADO]->(c:Cart)-[:LLEVA]->(p:Product)-[d:descripcion]->(ca:Category) RETURN u,c,p,ca
 
+query para sacar productos relacionados (temporal)
+
+
+esta query me da todas las categorias de todos los productos que he comprado:
+MATCH (u:User{name: "David"})-[:HA_COMPRADO]->(o:Order)-[:contiene]->(p1:Product)-[:descripcion]->(c:Category)<-[:descripcion]-(p2:Product)
+RETURN c,p2
+
+
+Testearlo más. 
+MATCH (u:User{name: "David"})-[:HA_COMPRADO]->(o:Order)-[:contiene]->(p1:Product)-[:descripcion]->(c:Category)<-[:descripcion]-(p2:Product)
+WHERE NOT ((u)-[:HA_COMPRADO]->(p2))
+RETURN p2 limit 10
