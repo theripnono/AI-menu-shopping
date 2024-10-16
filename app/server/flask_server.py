@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-from .search_products import procces_recipes
+from .search_products import procces_recipes,sort_json
 from .import2neoj4 import _purchased_query, similar_products
 
 
@@ -27,11 +27,12 @@ def index():
     
     # En el landing page poner similitud de recetas
     recomended_products=similar_products()
-    if len!=0:
-        
-        return jsonify({"message":recomended_products})
-    
+    sort_json(recomended_products)
 
+    if len!=0:
+        return jsonify({"message":recomended_products})
+    else:
+        return jsonify({"message":""})
 
 @app.route('/api/submit-text', methods=['POST', 'OPTIONS'])
 def generate_response():
@@ -45,7 +46,6 @@ def generate_response():
     # For testing
     # That is the respond I'm waiting for
     recipes_json = test_neo4j()
-
     sort_json(recipes_json)
     
     recipes = {"message": recipes_json}
