@@ -23,7 +23,7 @@
               {{ buttonText }}
             </v-btn>
 
-            <v-row>
+            <v-row v-if="userText === ''">
               <div style="padding-top: 50px; padding-left: 10px;">
                 <h2 style="background-color: aliceblue;"><strong>Productos Recomendados para ti:</strong></h2>
               </div>
@@ -44,7 +44,7 @@
                   </v-card>
                 </v-carousel-item>
               </v-carousel>
-            </v-col>
+              </v-col>
             </v-row>
           
             <div v-if="isLoading">
