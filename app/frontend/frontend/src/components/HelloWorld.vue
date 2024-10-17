@@ -13,18 +13,19 @@
 
             <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" style="width: 500px"
               placeholder="Ejemplo: Quiero recetas de celiacos"></v-textarea>
-            <v-btn style="margin-top: 20px;" @click="submitText">
+            <v-btn style="margin-top: 20px; margin-bottom: 20px" @click="submitText">
               {{ buttonText }}
             </v-btn>
 
-            <v-row v-if="userText === ''">
+            <!-- Productos Recomendados -->
+            <v-row v-if="userText === '' && similarProducts.length!==0">
               <div style="padding-top: 50px; padding-left: 10px;">
                 <h2><strong>Productos recomendados para ti:</strong></h2>
               </div>
               <v-col cols="12"> 
               <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000" >
 
-                <v-carousel-item v-for="(product, index) in similar_products" :key="index">
+                <v-carousel-item v-for="(product, index) in similarProducts" :key="index">
                   <v-card style="background-color: aliceblue;opacity: 0.7;">
                     <v-img :src="product.img" height="200px"></v-img>
                     <v-card-title>{{ product.product_name }}</v-card-title>
@@ -41,14 +42,17 @@
               </v-col>
             </v-row>
           
-            <div v-if="isLoading">
-              <h2>Voy a pensar que en algo rico...</h2>
-              <v-progress-circular color="blue-lighten-3"
-               model-value="20"
-                indeterminate
-                :size="84"
-                :width="12"
-                ></v-progress-circular>
+            <div v-if="isLoading">     
+              <v-dialog v-model="isLoading" persistent max-width="400">      
+                <v-card class="d-flex flex-column align-center pa-4" style="height: 320px;">
+                  <div style="text-align: center">
+                    <h1>¡Espero que disfrutes cocinando!</h1>
+                    <v-card-text>
+                      <img src="@/assets/gif/menu.gif" width="150"/>
+                    </v-card-text>
+                  </div>
+                </v-card>
+              </v-dialog>
             </div>
 
             <div v-else-if="serverResponse.length > 0">
@@ -128,7 +132,7 @@
               <hr>
               <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>´
               <v-btn 
-                v-if="cartItems.length >= 1" append-icon="" @click="buyItems">
+                v-if="cartItems.length >= 1" append-icon="" @click="purchaseOrder">
                 Comprar
                 <v-icon color="green">mdi-cart-check</v-icon>             
               </v-btn>
@@ -156,37 +160,33 @@
 
 <script>
 import { ref, onMounted, computed } from 'vue';
-import { VBtn, VCarousel, VCard, VCardTitle, VCardText, VCarouselItem, VSheet, VRow, VCol, VList, VListItem } from 'vuetify/components';
 import axios from 'axios';
 
 
 export default {
   setup() {
-    const similar_products = ref([]);
+    const similarProducts = ref([]);
     const userText = ref('');
     const serverResponse = ref([]);
     const isLoading = ref(false);
     const cartItems = ref([]);
     const cartTotal = ref(0);
     const showSuccessModal = ref(false); // Nuevo estado para el modal
-    // Estado para controlar la visibilidad de los productos
-    const showProducts = ref({});
-    // Estado para controlar la visibilidad de los ingredientes
-    const showIngredients = ref({});
+
+
 
     onMounted(() => {
       axios.get('http://localhost:5000')
         .then(response => {
-          similar_products.value = response.data.message;
-         //hacer una lista aleatoria de productos
-         
+          similarProducts.value = response.data.message;         
         })
         
         .catch(error => {
           console.error('Error fetching data:', error);
         });
-        return similar_products
+        return similarProducts
     });
+
 
     const submitText = () => {
       isLoading.value = true;
@@ -198,12 +198,9 @@ export default {
   
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
-          serverResponse.value = response.data.message;
-         
+          serverResponse.value = response.data.message;     
           isLoading.value = false;
-          // Inicializar showProducts y showIngredients vacíos para cada receta
-          showProducts.value = {};
-          showIngredients.value = {};
+         
         })
         .catch(error => {
           console.error('Error:', error);
@@ -245,7 +242,7 @@ export default {
       }
     };
 
-    const buyItems = () => {
+    const purchaseOrder = () => {
       if (cartItems.value.length === 0) {
         console.log('No hay productos en el carrito.');
         return;
@@ -255,8 +252,7 @@ export default {
       // Ejemplo de llamada POST al servidor:
       axios.post('http://localhost:5000/api/buy', { items: cartItems.value })
         .then(response => {
-
-         
+       
         showSuccessModal.value = true;
         // Limpiar el carrito después de la compra
         showSuccessModal: false, // Controla si el modal está abierto o cerrado
@@ -282,9 +278,9 @@ export default {
 
 
     return {
-      similar_products, userText, serverResponse, isLoading,
-      submitText, showProducts, cartTotal, buyItems,
-      showIngredients, buttonText,buyIngredients,showSuccessModal,
+      similarProducts, userText, serverResponse, isLoading,
+      submitText, cartTotal, purchaseOrder,
+      buttonText,buyIngredients,showSuccessModal,
       addCartProduct, cartItems, removeCartProduct,
       
     };
@@ -335,23 +331,4 @@ textarea {
 
 }
 
-
-.spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #000;
-  border-radius: 50%;
-  width: 50px;
-  height: 5px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 </style>
