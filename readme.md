@@ -7,7 +7,6 @@ Completar todas las tareas para el lanzamiento
 - [X] Añadir imagenes en los nodos
 - [X] Función para ordenar los productos con los ingredientes.
 - [X] Funcion purchase: Cuando el usuario compra, se crea un nodo relacionado con el usuario con el nodo de compra y este nodo esta relacionado con los nodos de productos.
-- [ ] Una funcion que relacione usuario con recetas.
 - [ ] Crear nodos menu. Boton para guardar los menús asociarlos al usuario. La idea es que hacer menus con embeddings. 
 
 ### LLM:
