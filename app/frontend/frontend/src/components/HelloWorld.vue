@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="background-color: rgb(255, 247, 209)">
     <v-row>
       <!-- Sección para generar recetas -->
 
@@ -11,12 +11,6 @@
         <v-row>
           <v-col cols="8">
 
-            <!-- metodo get -->
-            <!-- <h1>{{ message }}</h1> -->
-            <div>
-
-            </div>
-
             <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" style="width: 500px"
               placeholder="Ejemplo: Quiero recetas de celiacos"></v-textarea>
             <v-btn style="margin-top: 20px;" @click="submitText">
@@ -25,7 +19,7 @@
 
             <v-row v-if="userText === ''">
               <div style="padding-top: 50px; padding-left: 10px;">
-                <h2 style="background-color: aliceblue;"><strong>Productos Recomendados para ti:</strong></h2>
+                <h2><strong>Productos recomendados para ti:</strong></h2>
               </div>
               <v-col cols="12"> 
               <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000" >
@@ -58,53 +52,47 @@
             </div>
 
             <div v-else-if="serverResponse.length > 0">
-              <div v-for="(recipe, index) in serverResponse" :key="index">
-                <div style="margin-top: 20px; background-color: aliceblue" >
-                  <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
-                  <v-btn @click="toggleIngredients(index)" style="margin: 20px;">
-                    {{ showIngredients[index] ? 'Ocultar Ingredientes' : 'Mostrar Ingredientes' }}
-                  </v-btn>
-                  <v-btn @click="buyIngredients(index)" color="primary">
-                    Comprar ingredientes
-                  </v-btn>
-                </div>
+              <v-expansion-panels multiple>
+                <v-expansion-panel v-for="(recipe, index) in serverResponse" :key="index">
+                  <v-expansion-panel-title>
+                    <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
+                  </v-expansion-panel-title>
+                  
+                  <v-expansion-panel-text>
+                    <v-btn @click="buyIngredients(index)" color="primary" style="margin-bottom: 20px;">
+                      Comprar ingredientes
+                    </v-btn>
 
-                <v-row v-if="showIngredients[index]">
-                  <v-col v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey" cols="6">
+                    <v-expansion-panels multiple>
+                      <v-expansion-panel v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
+                        <v-expansion-panel-title>
+                          {{ ingrediente.nombre }} - Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}
+                        </v-expansion-panel-title>
 
-                    <v-card class="mb-2" style="background-color:aliceblue ;">
-                      <v-card-title>{{ ingrediente.nombre }}</v-card-title>
-                      <v-card-subtitle>Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}</v-card-subtitle>
-                      <v-card-text>
-
-                        <v-btn @click="toggleProducts(index, ingKey)" class="mb-2">
-                          {{ showProducts[index] && showProducts[index][ingKey] ? 'Ocultar' : 'Mostrar' }} Productos
-                        </v-btn>
-
-                        <v-carousel v-if="showProducts[index] && showProducts[index][ingKey]" height="200"
-                          show-arrows="hover" hide-delimiters>
-
-                          <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
-                            <v-sheet height="100%" tile>
-                              <v-row class="fill-height" align="center" justify="center">
-                                <v-col cols="12" class="text-center">
-                                  <h3>{{ producto.product_name }}</h3>
-                                  <p>{{ producto.product_brand }}</p>
-                                  <img :src="producto.img" :alt="producto.product_name" width="80" height="70">
-                                  <p>{{ producto.price }}€</p>
-                                  <v-btn @click="addCartProduct(producto)" color="primary">
-                                    Añadir
-                                  </v-btn>
-                                </v-col>
-                              </v-row>
-                            </v-sheet>
-                          </v-carousel-item>
-                        </v-carousel>
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                </v-row>
-              </div>
+                        <v-expansion-panel-text>
+                          <v-carousel height="200" show-arrows="hover" hide-delimiters>
+                            <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
+                              <v-sheet height="100%" tile>
+                                <v-row class="fill-height" align="center" justify="center">
+                                  <v-col cols="12" class="text-center">
+                                    <!-- <h4>{{ producto.product_name }}</h4> -->
+                                    <p>{{ producto.product_brand }}</p>
+                                    <img :src="producto.img" :alt="producto.product_name" width="80" height="70">
+                                    <p>{{ producto.price }}€</p>
+                                    <v-btn @click="addCartProduct(producto)" color="primary">
+                                      Añadir
+                                    </v-btn>
+                                  </v-col>
+                                </v-row>
+                              </v-sheet>
+                            </v-carousel-item>
+                          </v-carousel>
+                        </v-expansion-panel-text>
+                      </v-expansion-panel>
+                    </v-expansion-panels>
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
             </div>
           </v-col>
 
@@ -221,19 +209,7 @@ export default {
       return userText.value ? 'Generar Recetas' : 'Recetas Aleatorias';
     });
 
-    // Función para alternar la visibilidad de los productos
-    const toggleProducts = (recipeIndex, ingKey) => {
-      if (!showProducts.value[recipeIndex]) {
-        showProducts.value[recipeIndex] = {};
-      }
-      showProducts.value[recipeIndex][ingKey] = !showProducts.value[recipeIndex][ingKey];
-    };
-
-    // Función para alternar la visibilidad de los ingredientes
-    const toggleIngredients = (recipeIndex) => {
-      showIngredients.value[recipeIndex] = !showIngredients.value[recipeIndex];
-    };
-
+  
     const addCartProduct = (producto) => {
       const existingProduct = cartItems.value.find(item => item.product.product_name === producto.product_name);
       if (existingProduct) {
@@ -289,25 +265,28 @@ export default {
     const buyIngredients = (recipeIndex) => {
     const recipe = serverResponse.value[recipeIndex]; // Toma la receta específica seleccionada
     for (let key in recipe.ingredientes) {
-        const producto = recipe.ingredientes[key].productos[0];
-        if (producto) {
-            addCartProduct(producto);
-        }
+      const producto = recipe.ingredientes[key].productos[0];
+      if (producto) {
+        addCartProduct(producto);
       }
+    }
   };
 
 
     return {
       similar_products, userText, serverResponse, isLoading,
       submitText, showProducts, cartTotal, buyItems,
-      toggleProducts, showIngredients, buttonText,buyIngredients,
-      toggleIngredients, addCartProduct, cartItems, removeCartProduct
+      showIngredients, buttonText,buyIngredients,
+      addCartProduct, cartItems, removeCartProduct,
+      
     };
   }
 };
 </script>
 
 <style scoped>
+
+/* https://colorhunt.co/palette/fff7d1ffecc8ffd09bffb0b0 */
 textarea {
   width: 100%;
   margin-bottom: 10px;
