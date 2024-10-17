@@ -1,8 +1,8 @@
 import os
 import sys
 import json
-from .search_products import procces_recipes,sort_json
-from .import2neoj4 import _purchased_query, similar_products
+from .search_products import procces_recipes, sort_json
+from .import2neoj4 import _create_order_node, create_menu_node, similar_products_node
 
 
 # Add the project root to the Python path
@@ -26,7 +26,7 @@ def test_neo4j():
 def index():
     
     # En el landing page poner similitud de recetas
-    recomended_products=similar_products()
+    recomended_products=similar_products_node()
     sort_json(recomended_products)
 
     if len!=0:
@@ -61,7 +61,7 @@ def order_purchased():
         data = request.json 
         order = data.get('items', [])
     
-        _purchased_query(user_sesion='David', order=order)
+        _create_order_node(user_session='David', order=order)
 
         if not order:
             return jsonify({"error": "No hay productos para comprar."}), 400
@@ -69,7 +69,12 @@ def order_purchased():
     return jsonify({}), 200
     
 
+@app.route('/api/addRecipe',methods=['POST','OPTIONS'])
+def save_user_recipe():
+    if request.method=='POST':
+        data=request.json
+        recipe = data.get('recipe',[])
 
-
+        create_menu_node()
 if __name__ == '__main__':
     app.run(debug=True)

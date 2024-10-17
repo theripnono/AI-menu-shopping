@@ -11,6 +11,7 @@ from datetime import datetime
 Import data to neo4j db
 
 When the users create the cart import the data from the frontend.
+When the user save a menu, Menu node + the relation is created
 """
 
 config = dotenv_values("./.conf")
@@ -19,29 +20,44 @@ URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
 
 
-
-
 # TODO 
 # User sesion
 
+test_nodes = [{'product':
+                {'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A16983_00.jpg?t=20241003030611',
+                'price': 1.99,
+                'product_brand': 'Buti',
+                'product_id': 4435,
+                'product_name': 'Cebolla roja (700 g aprox)'},
+                'quantity': 1
+                },
+                {'product': {'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A74147_00.jpg?t=20241004030319',
+                'price': 9.7,
+                'product_brand': 'Trujal Almazara',
+                'product_id': 42,
+                'product_name': 'Aceite de oliva virgen extra Tudela 1 l'},
+                'quantity': 2}
+                
+            ]
 
-def _create_cart_id():
+
+def _create_token():
     token = secrets.token_bytes(10) 
     result = hashlib.md5(token)
     return result.hexdigest()
 
-def _purchased_query(user_sesion:str, order:list[dict]):
+def _create_order_node(user_session:str, order:list[dict]):
             
     """
-    Import the purchased order.
+    Import the purchased order to the db
     params:
         user: The user session
     """
 
-    order_id = _create_cart_id()
+    order_id = _create_token()
     
     #id_cliente = user_sesion
-    name= user_sesion
+    name= user_session
     now = datetime.now()
     purchased_date =  now.strftime("%m/%d/%Y, %H:%M:%S")
     products_id = [{'product_id':product_line['product']['product_id'],
@@ -55,12 +71,12 @@ def _purchased_query(user_sesion:str, order:list[dict]):
     
     WITH o
     MATCH (u:User {name: $name})
-    CREATE (u)-[:HA_COMPRADO]->(o)
+    CREATE (u)-[:HAS_BUYED]->(o)
 
     WITH o
     UNWIND $products_id as product_id
     MATCH (p:Product {product_id: product_id.product_id})
-    CREATE (o)-[:contiene {cantidad:product_id.quantity}]->(p)
+    CREATE (o)-[:INCLUDES {cantidad:product_id.quantity}]->(p)
     """
 
     parameters = {
@@ -68,8 +84,7 @@ def _purchased_query(user_sesion:str, order:list[dict]):
         "purchased_date": purchased_date,
         "order_bill":order_bill,
         "products_id":products_id,
-        "name": name
-        
+        "name": name   
     }
 
     connect2_graph(query, parameters)
@@ -79,10 +94,11 @@ def _purchased_query(user_sesion:str, order:list[dict]):
 def export_similar_products_json(df:object)->object:
 
     """
-    This functions generates a json file that will be displayed in the frontend.
+    This function takes the neo4j df output and does the necessary transformations to produce a json
+    that will be displayed in the frontend.
     """
 
-    recetas_json = []
+    similar_products_json = []
     for _, row in df.iterrows():
         product_info={
             'product_name': row.iloc[0]['product_name'],
@@ -91,9 +107,9 @@ def export_similar_products_json(df:object)->object:
             'price': row.iloc[0]['product_price_centAmount'],
             'img': row.iloc[0]['product_img']
         }
-        recetas_json.append(product_info)
+        similar_products_json.append(product_info)
        
-    return recetas_json
+    return similar_products_json
    
 
 def connect2_graph(query:str, parameters:dict):
@@ -117,7 +133,8 @@ def connect2_graph(query:str, parameters:dict):
 
 
 
-def similar_products():
+def similar_products_node():
+    # TODO mejorar la query de similar products
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
@@ -139,21 +156,35 @@ def similar_products():
 
 
 
-similar_products()
 
-test_nodes = [{'product':
-                {'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A16983_00.jpg?t=20241003030611',
-                'price': 1.99,
-                'product_brand': 'Buti',
-                'product_id': 4435,
-                'product_name': 'Cebolla roja (700 g aprox)'},
-                'quantity': 1
-                },
-                {'product': {'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A74147_00.jpg?t=20241004030319',
-                'price': 9.7,
-                'product_brand': 'Trujal Almazara',
-                'product_id': 42,
-                'product_name': 'Aceite de oliva virgen extra Tudela 1 l'},
-                'quantity': 2}
-                
-            ]
+def create_menu_node(user_session:str, recipe:dict):
+
+    """
+    Por ahora no tengo los ingredientes solo las categorias y productos.
+    
+    """
+
+    menu_id = _create_token()
+    name= user_session
+    now = datetime.now()
+    date_create_menu =  now.strftime("%m/%d/%Y, %H:%M:%S") # when was the node created
+
+    recipe_name = recipe
+
+    query = """
+            MERGE (m:Menu {menu_id: $menu_id, date_create_menu: $date_create_menu, recipe_name: $recipe_name})
+
+            WITH o
+            MATCH (u:User {name: $name})
+            CREATE (u)-[:HAS_SAVED]->(m)
+
+
+            """
+
+    parameters = {
+        "menu_id":menu_id,
+        "name":name,
+        "date_create_menu":date_create_menu,
+        "recipe_name":recipe_name,
+        }
+    connect2_graph(query, parameters)
