@@ -31,12 +31,10 @@ Completar todas las tareas para el lanzamiento
 - [X] Crear Boton comprar. Este botón genera el nodo Order.
 - [ ] Crear un Dialog en lugar de "Alert" al comprar.
 - [X] En la pantalla de inicio sacar un carousel con los productos recomendados.
-- [ ] Cuando el spinner está activo, no hay que dejar que el usuario escriba nada. Bloquear la pagina.
+- [ ] Cambiar el spinner por menu.gif.
 - [X] Añadir el atributo "Sticky" al carrito de la compra
 - [X] Cambiar el favicon
-- [ ] Cuando hay una categoría mal y los productos no corresponden con el ingrediente, porque GPT me ha devuelto mal la categoría, habría que poner un botón donde:
-	1- Se abre un textarea y se pregunta al usuario qué está busacando, de manera que se inserta en la query y te busca.
-	2- Vuelve  a buscar en la base de datos, con técnicas como lematización. De esta manera reduces el peligro de inyecciones maliciosas
+
 
 # Forward steps:
 
@@ -45,4 +43,4 @@ Completar todas las tareas para el lanzamiento
 - Escribir la receta. Crear un agente que basado en los ingredientes, haga la receta. guardarlo en el perfil del usuario.
 Habría que pensar la manera que **no sea redundante**. Siempre que creas una receta, devuelve los ingredientes. Pero claro puede ser que por ejemplo siga teniendo aceite, leche, tomates en mi despensa.
 - Crear nodos menu. Boton para guardar los menús asociarlos al usuario. La idea es que hacer menus con embeddings. 
-
+- Ofrecer la posibilidad desde el la categoria poder buscar el producto.
