@@ -6,7 +6,6 @@ Completar todas las tareas para el lanzamiento
 ### Server:
 - [X] Añadir imagenes en los nodos
 - [X] Función para ordenar los productos con los ingredientes.
-- [ ] Crear Loging: Función para añadir usuarios a la base de datos. Cuando el usuario se da de alta, se crea un nodo usuario.
 - [X] Funcion purchase: Cuando el usuario compra, se crea un nodo relacionado con el usuario con el nodo de compra y este nodo esta relacionado con los nodos de productos.
 - [ ] Una funcion que relacione usuario con recetas.
 - [ ] Crear nodos menu. Boton para guardar los menús asociarlos al usuario. La idea es que hacer menus con embeddings. 
@@ -42,7 +41,7 @@ Completar todas las tareas para el lanzamiento
 
 
 # Forward steps:
-
+- Crear Loging: Función para añadir usuarios a la base de datos. Cuando el usuario se da de alta, se crea un nodo usuario.
 - Se da el caso que un usuario pide cosas muy específicas. Por ejemplo comida para niños pequeños, pero no quiere siempre tener que escribir en el prompt el texto. Se podría almacenar el texto, enlazarlo con el usuario y pasarlo como template.
 - Se podría sugerir las calorias de la receta.
 - Escribir la receta. Crear un agente que basado en los ingredientes, haga la receta. guardarlo en el perfil del usuario.
