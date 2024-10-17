@@ -1,6 +1,5 @@
 from neo4j import GraphDatabase
 from dotenv import dotenv_values
-import json
 import ast
 import hashlib
 import secrets

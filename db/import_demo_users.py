@@ -3,7 +3,7 @@ from dotenv import dotenv_values
 import json
 import ast
 import hashlib
-
+import secrets
 """
 Import demo users to de db
 """
@@ -35,7 +35,7 @@ def load_into_graph(nodes:list[dict]):
             """
             change the item structure
             data =[
-                    {"nombre": "Admin", "id_cliente": 123456, "fcliente": "20/05/2003", "edad": 28, "sexo": "M", "ciudad": "Bilbao"},
+                    {"nombre": "Marta", "id_cliente": 123456, "fcliente": "20/05/2003", "edad": 28, "sexo": "F", "ciudad": "Bilbao"},
                     {"nombre": "Ana",   "id_cliente": 556644, "fcliente": "05/10/2012", "edad": 34, "sexo": "F", "ciudad": "Irun"},
                     {"nombre": "David", "id_cliente": 789310, "fcliente": "19/03/2019", "edad": 22, "sexo": "M", "ciudad": "Irun"},
                     {"nombre": "Lucía", "id_cliente": 492513, "fcliente": "06/02/2022", "edad": 30, "sexo": "F", "ciudad": "Donosti"},
@@ -66,6 +66,7 @@ def load_into_graph(nodes:list[dict]):
 def encrypt_users(user:str):
     md5 = hashlib.md5(user.encode())
     return md5.hexdigest() 
+
 
 def import_data(file:str)->list[dict]:
     

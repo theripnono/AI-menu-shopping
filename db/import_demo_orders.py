@@ -16,8 +16,6 @@ URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
 
 
-
-
 def load_into_graph(nodes:list[dict]):
 
     """
@@ -35,18 +33,18 @@ def load_into_graph(nodes:list[dict]):
             """
             Node structure:
             data= [
-                'cart':cart_id,
+                'cart':order_id,
                 'id_cliente':id_cliente,
                 'products'=[id1,id2...idn]
             ]
                      1  n         1   n 
-            (user_id) -> (cart_id) -> (product_id)
+            (user_id) -> (order_id) -> (product_id)
             https://community.neo4j.com/t/creating-a-relationship-between-2-nodes/38408/2
             """
 
             query = """
                         UNWIND $items AS item
-                        MERGE (c:Cart {cart_id: item.cart_id})
+                        MERGE (c:Cart {order_id: item.order_id})
                         SET c.id_cliente = item.id_cliente,
                             c.products_id = item.products_id
 
@@ -80,7 +78,7 @@ def import_data(file:str)->list[dict]:
     
     return data
 
-input_file = 'db/demo/carts.json'
+input_file = 'db/demo/orders.json'
 nodes = import_data(input_file) 
 load_into_graph(nodes)
 
