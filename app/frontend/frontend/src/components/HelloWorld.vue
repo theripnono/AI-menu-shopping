@@ -1,54 +1,52 @@
 <template>
-  <v-container style="background-color: rgb(255, 247, 209)">
+  <v-container>
     <v-row>
       <!-- Sección para generar recetas -->
-
       <v-col cols="12">
-        <div class="header" style="text-align: center; ">
-          <h1 style=" text-shadow: 1px 1px whitesmoke;"><strong>Asistente de compra inteligente</strong>
-          </h1>
+        <div class="header" style="text-align: center;">
+          <h1 style="text-shadow: 1px 1px whitesmoke;"><strong>Asistente de compra inteligente</strong></h1>
         </div>
         <v-row>
-          <v-col cols="8">
-
-            <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" style="width: 500px"
-              placeholder="Ejemplo: Quiero recetas de celiacos"></v-textarea>
+          <v-col cols="12" md="8">
+            <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" 
+              style="max-width: 100%; width: 500px" 
+              placeholder="Ejemplo: Quiero recetas de celiacos">
+            </v-textarea>
             <v-btn style="margin-top: 20px; margin-bottom: 20px" @click="submitText">
               {{ buttonText }}
             </v-btn>
 
             <!-- Productos Recomendados -->
-            <v-row v-if="userText === '' && similarProducts.length!==0">
+            <v-row v-if="!hideRecommendedProducts && userText === '' && similarProducts.length !== 0 ">
               <div style="padding-top: 50px; padding-left: 10px;">
                 <h2><strong>Productos recomendados para ti:</strong></h2>
               </div>
-              <v-col cols="12"> 
-              <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000" >
-
-                <v-carousel-item v-for="(product, index) in similarProducts" :key="index">
-                  <v-card style="background-color: aliceblue;opacity: 0.7;">
-                    <v-img :src="product.img" height="200px"></v-img>
-                    <v-card-title>{{ product.product_name }}</v-card-title>
-                    <v-card-subtitle>
-                      <span v-if="product.product_brand">{{ product.product_brand }}</span>
-                      <span v-else>Marca desconocida</span>
-                    </v-card-subtitle>
-                    <v-card-text>
-                      <p>Precio: €{{ product.price.toFixed(2) }}</p>
-                    </v-card-text>
-                  </v-card>
-                </v-carousel-item>
-              </v-carousel>
+              <v-col cols="12">
+                <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000">
+                  <v-carousel-item v-for="(product, index) in similarProducts" :key="index">
+                    <v-card style="background-color: aliceblue; opacity: 0.7;">
+                      <v-img :src="product.img" height="200px"></v-img>
+                      <v-card-title>{{ product.product_name }}</v-card-title>
+                      <v-card-subtitle>
+                        <span v-if="product.product_brand">{{ product.product_brand }}</span>
+                        <span v-else>Marca desconocida</span>
+                      </v-card-subtitle>
+                      <v-card-text>
+                        <p>Precio: €{{ product.price.toFixed(2) }}</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-carousel-item>
+                </v-carousel>
               </v-col>
             </v-row>
-          
-            <div v-if="isLoading">     
-              <v-dialog v-model="isLoading" persistent max-width="400">      
+
+            <div v-if="isLoading">
+              <v-dialog v-model="isLoading" persistent max-width="400">
                 <v-card class="d-flex flex-column align-center pa-4" style="height: 320px;">
                   <div style="text-align: center">
                     <h1>¡Espero que disfrutes cocinando!</h1>
                     <v-card-text>
-                      <img src="@/assets/gif/menu.gif" width="150"/>
+                      <img src="@/assets/gif/menu.gif" width="150" />
                     </v-card-text>
                   </div>
                 </v-card>
@@ -61,26 +59,24 @@
                   <v-expansion-panel-title>
                     <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
                   </v-expansion-panel-title>
-                  
+
                   <v-expansion-panel-text>
                     <v-btn @click="buyIngredients(index)" color="primary" style="margin-bottom: 20px;">
                       Comprar ingredientes
                     </v-btn>
-
                     <v-expansion-panels multiple>
                       <v-expansion-panel v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
                         <v-expansion-panel-title>
                           {{ ingrediente.nombre }} - Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}
                         </v-expansion-panel-title>
-
                         <v-expansion-panel-text>
                           <v-carousel height="200" show-arrows="hover" hide-delimiters>
                             <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
                               <v-sheet height="100%" tile>
                                 <v-row class="fill-height" align="center" justify="center">
                                   <v-col cols="12" class="text-center">
-                                    <!-- <h4>{{ producto.product_name }}</h4> -->
-                                    <p>{{ producto.product_brand }}</p>
+                                    <h4>{{ producto.product_name }}</h4>
+                                    <h4>{{ producto.product_brand }}</h4>
                                     <img :src="producto.img" :alt="producto.product_name" width="80" height="70">
                                     <p>{{ producto.price }}€</p>
                                     <v-btn @click="addCartProduct(producto)" color="primary">
@@ -100,63 +96,71 @@
             </div>
           </v-col>
 
-          <!-- Sección para mostrar el carrito en la derecha -->
-          <v-col cols="4">
-            <div class="cart-list">
-              <h2>Cesta</h2>
-              <v-list>
-                <v-list-item-group>
-                  <v-list-item v-for="(item, index) in cartItems" :key="index">
-                    <v-list-item-content>
-                      <v-list-item-title style="white-space: normal; word-wrap: break-word; padding: 5px;
-                      ">{{
-                        item.product.product_name }}
-                        (x{{ item.quantity }})
-                        <v-btn icon small @click="removeCartProduct(index)" style="width: 24px; height: 24px;">
-                          <v-icon color="red" variant="tonal">mdi-minus</v-icon>
-                        </v-btn>
-                      </v-list-item-title>
+          <!-- Sección para mostrar el carrito -->
+          <v-col cols="12" md="4">
+            <v-expansion-panels>
+              <v-expansion-panel>
+                <v-expansion-panel-title>
+                  <h2>Cesta ( {{ totalItemsInCart  }} artículos)</h2>
+                </v-expansion-panel-title>
 
-                      <v-list-item-subtitle>{{ item.product.product_brand }}</v-list-item-subtitle>
-
-
-
-                      <v-list-item-subtitle>Precio: {{ (item.product.price * item.quantity).toFixed(2)
-                        }}€</v-list-item-subtitle>
-
-
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list-item-group>
-              </v-list>
-              <hr>
-              <h3>Total: {{ cartTotal.toFixed(2) }}€</h3>´
-              <v-btn 
-                v-if="cartItems.length >= 1" append-icon="" @click="purchaseOrder">
-                Comprar
-                <v-icon color="green">mdi-cart-check</v-icon>             
-              </v-btn>
-            </div>
+                <v-expansion-panel-text>
+                  <div class="cart-list">
+                    <v-list>
+                      <v-list-item-group>
+                        <v-list-item v-for="(item, index) in cartItems" :key="index">    
+                          <v-list-item-content>
+                            <v-list-item-title style="white-space: normal; word-wrap: break-word; padding: 5px;">
+                              {{ item.product.product_name }} (x{{ item.quantity }})
+                              <v-btn icon small @click="removeCartProduct(index)" style="width: 24px; height: 24px;">
+                                <v-icon color="red" variant="tonal">mdi-minus</v-icon>
+                              </v-btn>
+                            </v-list-item-title>
+                            <v-list-item-subtitle>{{ item.product.product_brand }}</v-list-item-subtitle>
+                            <v-list-item-subtitle>Precio: {{ (item.product.price * item.quantity).toFixed(2) }}€</v-list-item-subtitle>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </v-list-item-group>
+                    </v-list>
+                    <hr>
+                   
+                  </div>
+                
+                </v-expansion-panel-text>
+                <div style="text-align: center; padding-bottom: 20px;">
+                  <v-btn  v-if="cartItems.length >= 1"  @click="purchaseOrder">
+                       Comprar: {{ cartTotal.toFixed(2) }}€
+                      <v-icon color="green">mdi-cart-check</v-icon>
+                  </v-btn>
+                </div>
+              </v-expansion-panel>
+            </v-expansion-panels>
 
           </v-col>
-        </v-row>
 
+        </v-row>
       </v-col>
+
+      <!--Succes Dialog-->
       <v-dialog v-model="showSuccessModal" max-width="400">
-      <v-card>
-        <v-card-title class="headline">¡Compra completada!</v-card-title>
-        <v-card-text>
-          Tu compra se ha realizado con éxito. ¡Gracias por tu compra!
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="primary" @click="showSuccessModal = false">Cerrar</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+        <v-card>
+          <v-card-title class="headline">¡Compra completada!</v-card-title>
+          <v-card-text>
+            Tu compra se ha realizado con éxito. ¡Gracias por tu compra!
+            <!-- Añadir múltiples combobox para las recetas -->
+          
+          </v-card-text>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="primary" @click="showSuccessModal = false">Cerrar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-row>
   </v-container>
 </template>
+
 
 <script>
 import { ref, onMounted, computed } from 'vue';
@@ -173,7 +177,7 @@ export default {
     const cartTotal = ref(0);
     const showSuccessModal = ref(false); // Nuevo estado para el modal
 
-
+    const hideRecommendedProducts = ref(false)
 
     onMounted(() => {
       axios.get('http://localhost:5000')
@@ -187,7 +191,9 @@ export default {
         return similarProducts
     });
 
-
+    const totalItemsInCart = computed(() => {
+      return cartItems.value.reduce((total, item) => total + item.quantity, 0);
+    });
     const submitText = () => {
       isLoading.value = true;
       serverResponse.value = []; // Limpiar la respuesta previa como lista vacía
@@ -196,6 +202,8 @@ export default {
       cartItems.value = [];
       cartTotal.value = 0;
   
+      hideRecommendedProducts.value = true;
+
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
           serverResponse.value = response.data.message;     
@@ -210,6 +218,7 @@ export default {
 
     // Propiedad computada para cambiar el texto del botón
     const buttonText = computed(() => {
+      
       return userText.value ? 'Generar Recetas' : 'Recetas Aleatorias';
     });
 
@@ -222,6 +231,7 @@ export default {
       } else {
         // Si no añadir nuevo item
         cartItems.value.push({ product: producto, quantity: 1 });
+        console.log(producto)
       }
 
       cartTotal.value = Math.round((cartTotal.value + producto.price + Number.EPSILON) * 100) / 100
@@ -252,10 +262,9 @@ export default {
       // Ejemplo de llamada POST al servidor:
       axios.post('http://localhost:5000/api/buy', { items: cartItems.value })
         .then(response => {
-       
         showSuccessModal.value = true;
         // Limpiar el carrito después de la compra
-        showSuccessModal: false, // Controla si el modal está abierto o cerrado
+       
         cartItems.value = [];
         cartTotal.value = 0;
         })
@@ -266,6 +275,7 @@ export default {
 
     };
 
+    // Comprar todos los ingredientes->productos de la receta
     const buyIngredients = (recipeIndex) => {
     const recipe = serverResponse.value[recipeIndex]; // Toma la receta específica seleccionada
     for (let key in recipe.ingredientes) {
@@ -279,8 +289,8 @@ export default {
 
     return {
       similarProducts, userText, serverResponse, isLoading,
-      submitText, cartTotal, purchaseOrder,
-      buttonText,buyIngredients,showSuccessModal,
+      submitText, cartTotal, purchaseOrder,totalItemsInCart,
+      buttonText,buyIngredients,showSuccessModal,hideRecommendedProducts,
       addCartProduct, cartItems, removeCartProduct,
       
     };
