@@ -54,13 +54,13 @@ def load_into_graph(nodes:list[dict]):
                         WITH c
                         MATCH (u:User)
                         WHERE c.id_cliente = u.id_cliente
-                        CREATE (u)-[:HA_COMPRADO]->(c)
+                        CREATE (u)-[:HAS_BUYED]->(c)
 
                         // Pasamos el carrito nuevamente con WITH antes de hacer otro MATCH
                         WITH c
                         UNWIND c.products_id AS product_id
                         MATCH (p:Product {product_id: product_id})
-                        CREATE (c)-[:LLEVA]->(p)
+                        CREATE (c)-[:BELONGS]->(p)
                 """
 
             # Run the query with the items as parameters

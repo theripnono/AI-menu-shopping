@@ -53,7 +53,7 @@ def load_into_graph(nodes:list[dict]):
                 UNWIND $items AS item
                 MERGE (c:Category {category: item.category})
                 MERGE (p:Product {product_id: item.product_id})
-                MERGE (c)<-[d:descripcion]-(p)
+                MERGE (c)<-[:BELONGS]-(p)
                 SET p.product_ean = item.product_ean,
                     p.product_seo = item.product_seo,
                     p.product_name = item.product_name,
