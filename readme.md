@@ -34,7 +34,7 @@ Completar todas las tareas para el lanzamiento
 - [X] Crear Boton comprar. Este botón genera el nodo Order.
 - [X] Crear un Dialog en lugar de "Alert" al comprar.
 - [X] En la pantalla de inicio sacar un carousel con los productos recomendados.
-- [ ] Cambiar el spinner por menu.gif.
+- [X] Cambiar el spinner por menu.gif.
 - [X] Añadir el atributo "Sticky" al carrito de la compra
 - [X] Cambiar el favicon
 
