@@ -138,6 +138,18 @@
         </v-row>
 
       </v-col>
+      <v-dialog v-model="showSuccessModal" max-width="400">
+      <v-card>
+        <v-card-title class="headline">¡Compra completada!</v-card-title>
+        <v-card-text>
+          Tu compra se ha realizado con éxito. ¡Gracias por tu compra!
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" @click="showSuccessModal = false">Cerrar</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </v-row>
   </v-container>
 </template>
@@ -156,9 +168,7 @@ export default {
     const isLoading = ref(false);
     const cartItems = ref([]);
     const cartTotal = ref(0);
-    // Mostrar productos recomendados por defecto
-
-
+    const showSuccessModal = ref(false); // Nuevo estado para el modal
     // Estado para controlar la visibilidad de los productos
     const showProducts = ref({});
     // Estado para controlar la visibilidad de los ingredientes
@@ -185,9 +195,6 @@ export default {
       // inicializar el carrito
       cartItems.value = [];
       cartTotal.value = 0;
-        
-
-      
   
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
         .then(response => {
@@ -249,11 +256,12 @@ export default {
       axios.post('http://localhost:5000/api/buy', { items: cartItems.value })
         .then(response => {
 
-          // Muestra un mensaje de éxito si la compra fue exitosa
-          alert('¡Compra completada con éxito!');
-          // Limpiar el carrito después de la compra
-          cartItems.value = [];
-          cartTotal.value = 0;
+         
+        showSuccessModal.value = true;
+        // Limpiar el carrito después de la compra
+        showSuccessModal: false, // Controla si el modal está abierto o cerrado
+        cartItems.value = [];
+        cartTotal.value = 0;
         })
         .catch(error => {
           console.error('Error al procesar la compra:', error);
@@ -276,7 +284,7 @@ export default {
     return {
       similar_products, userText, serverResponse, isLoading,
       submitText, showProducts, cartTotal, buyItems,
-      showIngredients, buttonText,buyIngredients,
+      showIngredients, buttonText,buyIngredients,showSuccessModal,
       addCartProduct, cartItems, removeCartProduct,
       
     };
