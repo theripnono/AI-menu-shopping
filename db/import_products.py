@@ -2,12 +2,17 @@ from neo4j import GraphDatabase
 from dotenv import dotenv_values
 import json
 import ast
+import hashlib
 
 
 config = dotenv_values("./.conf")
 
 URI = config['URI']
 AUTH = ast.literal_eval(config['AUTH'])
+
+def get_hash(input_string):
+    return hashlib.md5(input_string.encode()).hexdigest()
+
 
 def load_into_graph(nodes:list[dict]):
 
@@ -46,12 +51,14 @@ def load_into_graph(nodes:list[dict]):
             items = []
             for node in nodes:
                 for category, product_info in node.items():
+                    category_id=get_hash(category)
                     product_info["category"] = category
+                    product_info["category_id"]=category_id
                     items.append(product_info)
 
             query = """
                 UNWIND $items AS item
-                MERGE (c:Category {category: item.category})
+                MERGE (c:Category {category: item.category, category_id:item.category_id})
                 MERGE (p:Product {product_id: item.product_id})
                 MERGE (c)<-[:BELONGS]-(p)
                 SET p.product_ean = item.product_ean,
@@ -87,5 +94,5 @@ def import_data(file:str)->list[dict]:
 
 input_file = 'db/demo/products.json'
 nodes = import_data(input_file) 
-load_into_graph(nodes)
+
 

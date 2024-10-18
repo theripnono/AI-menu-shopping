@@ -42,12 +42,13 @@
 
             <div v-if="isLoading">
               <v-dialog v-model="isLoading" persistent max-width="400">
-                <v-card class="d-flex flex-column align-center pa-4" style="height: 320px;">
+                <v-card class="d-flex flex-column align-center pa-4" style="height: 420px;">
                   <div style="text-align: center">
-                    <h1>¡Espero que disfrutes cocinando!</h1>
+                    <h1>¡Dejame pensar en algo súper bueno!</h1>
                     <v-card-text>
                       <img src="@/assets/gif/menu.gif" width="150" />
                     </v-card-text>
+                    <h2>¡Espero que disfrutes cocinando!</h2>
                   </div>
                 </v-card>
               </v-dialog>

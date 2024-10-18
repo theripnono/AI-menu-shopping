@@ -41,11 +41,11 @@ def generate_response():
 
     data = request.json   
     user_text = data.get('text', '').strip() 
-    #recipes_json =  procces_recipes(user_text)
+    recipes_json =  procces_recipes(user_text)
     
     # For testing
     # That is the respond I'm waiting for
-    recipes_json = test_neo4j()
+    #recipes_json = test_neo4j()
     sort_json(recipes_json)
     
     recipes = {"message": recipes_json}
@@ -61,7 +61,7 @@ def order_purchased():
         data = request.json 
         order = data.get('items', [])
     
-        #_create_order_node(user_session='David', order=order)
+        _create_order_node(user_session='David', order=order)
 
         if not order:
             return jsonify({"error": "No hay productos para comprar."}), 400
@@ -75,8 +75,8 @@ def save_user_recipe():
         data=request.json
         recipe = data.get('recipe',[])
 
-        print(recipe)
-        #_create_menu_node(recipe)
+        
+        _create_menu_node(user_session="David",recipe=recipe)
 
     return jsonify({}), 200
 if __name__ == '__main__':

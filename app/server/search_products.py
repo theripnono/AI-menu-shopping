@@ -83,6 +83,7 @@ def export_json(df:object)->object:
             if ingrediente not in receta_dict['ingredientes']:
                 receta_dict['ingredientes'][ingrediente] = {
                     'nombre': ingrediente,
+                    'categoria':row['categoria'],
                     'quantity': row['cantidad'],
                     'unit': row['unit'],
                     'productos': []
@@ -126,10 +127,12 @@ def procces_recipes(user_input):
                 "p.product_price_centAmount as price,"
                 "p.product_img as img,"
                 "p.product_id as pid,"
+                "c.category as categoria,"
                 "receta.receta as receta,"
                 "ingrediente.ingrediente as ingrediente,"
                 "ingrediente.qty as cantidad,"
                 "ingrediente.unit as unit"
+                
                         
                 , response_recipes=response_recipes
                 , database_="neo4j"

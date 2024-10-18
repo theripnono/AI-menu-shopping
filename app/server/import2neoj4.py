@@ -39,6 +39,20 @@ test_nodes = [{'product':
                 
             ]
 
+test_menu = {'ingredientes':
+              {'Aceite de oliva virgen extra':
+                    {'categoria': 'Aceite de oliva virgen y virgen extra',
+                    'nombre': 'Aceite de oliva virgen extra',
+                    'productos':
+                    [{'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11375_00.jpg?t=20241004030319',
+                        'price': 14.18, 'product_brand': 'Maestros de Hojiblanca', 'product_id': 34, 'product_name': 'Aceite de oliva virgen extra 1 l'},
+                    {'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11665_00.jpg?t=20241003030006',
+                        'price': 13.79, 'product_brand': 'Carbonell', 'product_id': 36, 'product_name': 'Aceite de oliva virgen extra 1 l'}],
+            'quantity': 1, 'unit': 'unidad'}},
+            'receta': 'Ensalada de quinoa y aguacate'
+            }
+
+
 
 def _create_token():
     token = secrets.token_bytes(10) 
@@ -137,10 +151,10 @@ def similar_products_node():
     try:
         with GraphDatabase.driver(URI, auth=AUTH) as driver:
             driver.verify_connectivity()
-
+            # TODO descripcion se cambiara por BELONGS
             records_df = driver.execute_query(
-                    "MATCH (u:User{name: 'David'})-[:HA_COMPRADO]->(o:Order)-[:contiene]->(p1:Product)-[:descripcion]->(c:Category)<-[:descripcion]-(p2:Product)"
-                    "WHERE NOT ((u)-[:HA_COMPRADO]->(p2))"
+                    "MATCH (u:User{name: 'David'})-[:HAS_BUYED]->(o:Order)-[:INCLUDES]->(p1:Product)-[:descripcion]->(c:Category)<-[:descripcion]-(p2:Product)"
+                    "WHERE NOT ((u)-[:HAS_BUYED]->(p2))"
                     "RETURN p2"                      
                 , database_="neo4j"
                 , result_transformer_=neo4j.Result.to_df
@@ -155,32 +169,6 @@ def similar_products_node():
 
 
 
-test_menu = {
-    'ingredientes': {
-        'Aceite de oliva virgen extra': {
-            'nombre': 'Aceite de oliva virgen extra',
-            'productos': [
-                {
-                    'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11375_00.jpg?t=20241004030319',
-                    'price': 14.18,
-                    'product_brand': 'Maestros de Hojiblanca',
-                    'product_id': 34,
-                    'product_name': 'Aceite de oliva virgen extra 1 l'
-                },
-                {
-                    'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11665_00.jpg?t=20241003030006',
-                    'price': 13.79,
-                    'product_brand': 'Carbonell',
-                    'product_id': 36,
-                    'product_name': 'Aceite de oliva virgen extra 1 l'
-                }
-            ],
-        'quantity': 1,
-        'unit': 'pizca',
-        }
-    },
-    'receta': 'Test Aceites'
-}
 
 
 def _create_menu_node(user_session:str, recipe:dict):
@@ -197,6 +185,7 @@ def _create_menu_node(user_session:str, recipe:dict):
     for nombre, detalles in recipe['ingredientes'].items():
         ingredientes.append({
             "nombre": nombre,
+            "categoria":detalles.get("categoria", ""),
             "quantity": detalles.get("quantity", ""),
             "unit": detalles.get("unit", ""),
             "productos": detalles.get("productos", [])
@@ -209,19 +198,13 @@ def _create_menu_node(user_session:str, recipe:dict):
 
                     MATCH (u:User {name: $name})
                     CREATE (u)-[:HAS_SAVED]->(m)
-                    
-                    // Crear nodos de ingredientes y sus relaciones con el menú
+
                     WITH m
-                    UNWIND $ingredientes as ingredienteData
-                    MERGE (i:Ingrediente {nombre: ingredienteData.nombre})
-                    CREATE (m)-[:CONTAINS {quantity: ingredienteData.quantity, unit: ingredienteData.unit}]->(i)
-                    
-                    // Crear nodos de productos y sus relaciones con los ingredientes
-                    WITH i, ingredienteData
-                    UNWIND ingredienteData.productos as productoData
-                    MERGE (p:Product {product_id: productoData.product_id})
-                   
-                    CREATE (i)-[:INCLUDES]->(p)
+                    UNWIND $ingredientes AS ingrediente
+                    // Aquí se relaciona con la categoría
+                    MATCH (c:Category {category: ingrediente.categoria})  
+                    CREATE (m)-[:INCLUDES]->(c)
+
                 """
 
     parameters = {
@@ -233,5 +216,3 @@ def _create_menu_node(user_session:str, recipe:dict):
         }
     
     connect2_graph(query, parameters)
-
-_create_menu_node('David',test_menu)

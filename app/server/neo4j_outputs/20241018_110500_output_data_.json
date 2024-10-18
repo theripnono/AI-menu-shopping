@@ -1,0 +1,832 @@
+[
+    {
+        "receta": "Ensalada de pasta con frutas",
+        "ingredientes": {
+            "Piña": {
+                "nombre": "Piña",
+                "categoria": "Piña, aguacate, kiwi y tropicales",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Plátano para freír",
+                        "product_id": 7060,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22349_00.jpg?t=20241006030008"
+                    },
+                    {
+                        "product_name": "Piña entera pelada 420 g",
+                        "product_id": 19277,
+                        "product_brand": "",
+                        "price": 3.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24593_00.jpg?t=20241005030124"
+                    },
+                    {
+                        "product_name": "Plátano embolsado Selecta",
+                        "product_id": 7653,
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23502_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Coco troceado orgánico con caramelo 56 g",
+                        "product_id": 24097,
+                        "product_brand": "Genuine Coconut",
+                        "price": 1.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26518_00.jpg?t=20241003030606"
+                    },
+                    {
+                        "product_name": "Aguacate a granel unidad (250 g aprox)",
+                        "product_id": 4369,
+                        "product_brand": "",
+                        "price": 5.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21990_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Piña Selecta unidad (2,2 kg aprox)",
+                        "product_id": 4367,
+                        "product_brand": "Selecta",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20010_00.jpg?t=20241003030206"
+                    },
+                    {
+                        "product_name": "Pitahaya",
+                        "product_id": 22551,
+                        "product_brand": "",
+                        "price": 10.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26227_00.jpg?t=20241003030558"
+                    },
+                    {
+                        "product_name": "Granada a granel (300 g aprox./unidad)",
+                        "product_id": 7993,
+                        "product_brand": "",
+                        "price": 3.52,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22150_00.jpg?t=20241003030206"
+                    },
+                    {
+                        "product_name": "Kiwi unidad (150 g aprox)",
+                        "product_id": 4365,
+                        "product_brand": "Zespri",
+                        "price": 5.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22286_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Mango bandeja (600 g aprox)",
+                        "product_id": 23244,
+                        "product_brand": "",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26406_00.jpg?t=20241006030032"
+                    },
+                    {
+                        "product_name": "Aguacate Bandeja (2 unidades)",
+                        "product_id": 16391,
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21992_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Piña maduración especial mitad (1,1 kg aprox)",
+                        "product_id": 29429,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20163_00.jpg?t=20241005030238"
+                    },
+                    {
+                        "product_name": "Piña maduración especial (pieza 2,2 kg aprox)",
+                        "product_id": 23803,
+                        "product_brand": "",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24574_00.jpg?t=20241005030233"
+                    },
+                    {
+                        "product_name": "Piña selecta mitad (1,1 kg aprox)",
+                        "product_id": 29428,
+                        "product_brand": "Selecta",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20160_00.jpg?t=20241006030042"
+                    },
+                    {
+                        "product_name": "Chirimoya a granel",
+                        "product_id": 7890,
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22105_00.jpg?t=20241006030021"
+                    },
+                    {
+                        "product_name": "Coco en trocitos",
+                        "product_id": 23254,
+                        "product_brand": "",
+                        "price": 1.52,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26505_00.jpg?t=20241003030352"
+                    },
+                    {
+                        "product_name": "Coco troceado orgánico con vainilla natural 56 g",
+                        "product_id": 24096,
+                        "product_brand": "Genuine Coconut",
+                        "price": 1.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26517_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Mango Selecta de Malaga",
+                        "product_id": 22975,
+                        "product_brand": "Selecta",
+                        "price": 4.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26489_00.jpg?t=20241003030209"
+                    },
+                    {
+                        "product_name": "Papayón unidad (1,5 kg aprox)",
+                        "product_id": 4373,
+                        "product_brand": "",
+                        "price": 5.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22325_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Kiwi amarillo sungold unidad (150 g aprox)",
+                        "product_id": 4363,
+                        "product_brand": "Zespri",
+                        "price": 6.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22190_00.jpg?t=20241003030206"
+                    }
+                ]
+            },
+            "Fresas": {
+                "nombre": "Fresas",
+                "categoria": "Fresas y frutos rojos",
+                "quantity": 100,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Fresa en cestillo 500 g",
+                        "product_id": 4456,
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22115_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Grosella roja en bandeja 150 g",
+                        "product_id": 4460,
+                        "product_brand": "",
+                        "price": 4.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22146_00.jpg?t=20241005030222"
+                    },
+                    {
+                        "product_name": "Frambuesas en bandeja 125 g",
+                        "product_id": 4459,
+                        "product_brand": "",
+                        "price": 2.24,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22145_00.jpg?t=20241003030530"
+                    },
+                    {
+                        "product_name": "Arándano bandeja 250 g",
+                        "product_id": 16029,
+                        "product_brand": "",
+                        "price": 4.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26168_00.jpg?t=20241003030336"
+                    },
+                    {
+                        "product_name": "Moras en bandeja 125 g",
+                        "product_id": 4462,
+                        "product_brand": "",
+                        "price": 2.85,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22148_00.jpg?t=20241005030212"
+                    }
+                ]
+            },
+            "Naranjas": {
+                "nombre": "Naranjas",
+                "categoria": "Naranjas y otros cítricos",
+                "quantity": 2,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Lima en bandeja 230 g",
+                        "product_id": 28683,
+                        "product_brand": "",
+                        "price": 1.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40695_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Limón malla 1 kg",
+                        "product_id": 26786,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26571_00.jpg?t=20241006030036"
+                    },
+                    {
+                        "product_name": "Naranja de mesa a granel (unidad 300 g aprox)",
+                        "product_id": 4323,
+                        "product_brand": "Naranjas Torres",
+                        "price": 4.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21120_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Mandarina calibre 1/2 (100g aprox)",
+                        "product_id": 4331,
+                        "product_brand": "",
+                        "price": 2.39,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21200_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Naranja para zumo",
+                        "product_id": 29401,
+                        "product_brand": "",
+                        "price": 1.55,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24599_00.jpg?t=20241003030612"
+                    },
+                    {
+                        "product_name": "Limón a granel (unidad 200 g aprox)",
+                        "product_id": 4874,
+                        "product_brand": "",
+                        "price": 3.32,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21280_00.jpg?t=20241003030528"
+                    },
+                    {
+                        "product_name": "Naranja en malla (2 kg aprox)",
+                        "product_id": 4325,
+                        "product_brand": "Naranjas Torres",
+                        "price": 6.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21136_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Naranja de mesa de primera (220 g aprox./unidad)",
+                        "product_id": 7938,
+                        "product_brand": "",
+                        "price": 2.81,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21121_00.jpg?t=20241003030205"
+                    },
+                    {
+                        "product_name": "Naranja de primera malla 2 kg",
+                        "product_id": 7591,
+                        "product_brand": "",
+                        "price": 5.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21157_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Pomelo a granel unidad (300 g aprox)",
+                        "product_id": 4328,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21290_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Clementina a granel (unidad 120 g aprox)",
+                        "product_id": 4332,
+                        "product_brand": "Naranjas Torres",
+                        "price": 4.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21212_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Naranja para zumo malla (3 kg aprox)",
+                        "product_id": 4327,
+                        "product_brand": "",
+                        "price": 6.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21159_00.jpg?t=20241004030142"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "receta": "Espaguetis con salsa de frutas",
+        "ingredientes": {
+            "Espaguetis": {
+                "nombre": "Espaguetis",
+                "categoria": "Espaguetis y tallarines",
+                "quantity": 250,
+                "unit": "gramos",
+                "productos": [
+                    {
+                        "product_name": "Maccheroni al huevo 450 g",
+                        "product_id": 3377,
+                        "product_brand": "Gallo",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10580_00.jpg?t=20241003030736"
+                    },
+                    {
+                        "product_name": "Espagueti nº 5 500 g",
+                        "product_id": 8434,
+                        "product_brand": "Barilla",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A30665_00.jpg?t=20241003030134"
+                    },
+                    {
+                        "product_name": "Tallarín nº 13 500 g",
+                        "product_id": 3270,
+                        "product_brand": "Barilla",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A08073_00.jpg?t=20241003030133"
+                    },
+                    {
+                        "product_name": "Espagueti con titnta de calamar 250 g",
+                        "product_id": 29384,
+                        "product_brand": "Lositos",
+                        "price": 2.59,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10041_00.jpg?t=20241003030134"
+                    },
+                    {
+                        "product_name": "Espaguetis 900 g",
+                        "product_id": 3276,
+                        "product_brand": "Gallo",
+                        "price": 2.65,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A12183_00.jpg?t=20241003030854"
+                    },
+                    {
+                        "product_name": "Espaguetis tagliatelle 500 g",
+                        "product_id": 17029,
+                        "product_brand": "Garofalo",
+                        "price": 2.8,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A84958_00.jpg?t=20241003030134"
+                    },
+                    {
+                        "product_name": "Spaghettini al huevo 450 g",
+                        "product_id": 3371,
+                        "product_brand": "Gallo",
+                        "price": 1.69,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A10554_00.jpg?t=20241003030736"
+                    },
+                    {
+                        "product_name": "Conchiglie rigate 500 grs",
+                        "product_id": 23105,
+                        "product_brand": "De Cecco",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A61249_00.jpg?t=20241003030133"
+                    },
+                    {
+                        "product_name": "Espagueti integral 400 g",
+                        "product_id": 3369,
+                        "product_brand": "Gallo",
+                        "price": 1.84,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A09677_00.jpg?t=20241003030855"
+                    },
+                    {
+                        "product_name": "Espagueti de maíz sin gluten 400g",
+                        "product_id": 3395,
+                        "product_brand": "Gallo",
+                        "price": 2.2,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A74900_00.jpg?t=20241003030855"
+                    },
+                    {
+                        "product_name": "Espagueti 3 minutos 400 g",
+                        "product_id": 3268,
+                        "product_brand": "Gallo Pasta Fina",
+                        "price": 1.35,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A05019_00.jpg?t=20241003030854"
+                    },
+                    {
+                        "product_name": "Pasta Casarecce 500 g",
+                        "product_id": 17028,
+                        "product_brand": "Garofalo",
+                        "price": 1.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A84957_00.jpg?t=20241003030134"
+                    },
+                    {
+                        "product_name": "Espagueti nº3 450 g",
+                        "product_id": 3263,
+                        "product_brand": "Gallo",
+                        "price": 1.36,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A02024_00.jpg?t=20241003030854"
+                    },
+                    {
+                        "product_name": "Rigatoni 500 g",
+                        "product_id": 23263,
+                        "product_brand": "De Cecco",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A61247_00.jpg?t=20241003030133"
+                    },
+                    {
+                        "product_name": "Tallarín 450 g",
+                        "product_id": 3259,
+                        "product_brand": "Gallo",
+                        "price": 1.36,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A02020_00.jpg?t=20241003030854"
+                    },
+                    {
+                        "product_name": "Espagueti integral 500 g",
+                        "product_id": 3278,
+                        "product_brand": "Barilla",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A75854_00.jpg?t=20241003030137"
+                    },
+                    {
+                        "product_name": "Pennoni Rigate 500 gr",
+                        "product_id": 23106,
+                        "product_brand": "De Cecco",
+                        "price": 2.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A61248_00.jpg?t=20241003030133"
+                    },
+                    {
+                        "product_name": "Spaghetti, 500 g",
+                        "product_id": 17026,
+                        "product_brand": "Garofalo",
+                        "price": 1.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A84954_00.jpg?t=20241003030134"
+                    },
+                    {
+                        "product_name": "Espaguetis lunghi 500 g",
+                        "product_id": 17030,
+                        "product_brand": "Garofalo",
+                        "price": 2.8,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A84959_00.jpg?t=20241003030133"
+                    },
+                    {
+                        "product_name": "Pasta Mafalda Corta 500 g",
+                        "product_id": 17024,
+                        "product_brand": "Garofalo",
+                        "price": 1.7,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A84952_00.jpg?t=20241003030458"
+                    }
+                ]
+            },
+            "Manzanas": {
+                "nombre": "Manzanas",
+                "categoria": "Manzanas, peras y uvas",
+                "quantity": 2,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Pera conferencia bolsa (1 kg aprox)",
+                        "product_id": 20891,
+                        "product_brand": "",
+                        "price": 2.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26448_00.jpg?t=20241003030529"
+                    },
+                    {
+                        "product_name": "Pera Ercolina (100 g aprox./unidad)",
+                        "product_id": 4354,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21760_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Pera limonera (250 g aprox./unidad)",
+                        "product_id": 7506,
+                        "product_brand": "",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21756_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana golden 70/80 a granel unidad (150 g aprox)",
+                        "product_id": 4340,
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21312_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana royal gala bolsa (1,5 kg aprox)",
+                        "product_id": 7942,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23743_00.jpg?t=20241005030025"
+                    },
+                    {
+                        "product_name": "Manzana golden +80 mm (240 g aprox)",
+                        "product_id": 7437,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21300_00.jpg?t=20241005030037"
+                    },
+                    {
+                        "product_name": "Manzana pink lady a granel (250 g aprox./unidad)",
+                        "product_id": 4345,
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21400_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana fuji (250 g aprox./unidad)",
+                        "product_id": 4344,
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21392_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana reineta parda a granel unidad (200 g aprx)",
+                        "product_id": 7946,
+                        "product_brand": "",
+                        "price": 3.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21330_00.jpg?t=20241004030102"
+                    },
+                    {
+                        "product_name": "Pera conferencia suprema a granel (250 g aprox.)",
+                        "product_id": 4351,
+                        "product_brand": "",
+                        "price": 4.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21710_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana royal gala Selecta unidad (250 g aprox)",
+                        "product_id": 7922,
+                        "product_brand": "",
+                        "price": 2.75,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20028_00.jpg?t=20241003030205"
+                    },
+                    {
+                        "product_name": "Manzana roja temporada y caserio",
+                        "product_id": 7939,
+                        "product_brand": "",
+                        "price": 4.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21465_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Uva blanca",
+                        "product_id": 7924,
+                        "product_brand": "",
+                        "price": 3.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22370_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Manzana golden ecológica bandeja (750 g aprox.)",
+                        "product_id": 4474,
+                        "product_brand": "",
+                        "price": 3.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40686_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana reineta verde a granel (250 g aprox.)",
+                        "product_id": 4342,
+                        "product_brand": "",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21320_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana chanteclerc a granel unidad (210 g aprox)",
+                        "product_id": 4346,
+                        "product_brand": "",
+                        "price": 4.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21440_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Uva negra a granel",
+                        "product_id": 4381,
+                        "product_brand": "",
+                        "price": 3.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22361_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Pera conferencia 67 mm unidad (250 g aprox)",
+                        "product_id": 4352,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21720_00.jpg?t=20241003030205"
+                    },
+                    {
+                        "product_name": "Manzana kanzi a granel unidad (200 g aprox)",
+                        "product_id": 4350,
+                        "product_brand": "",
+                        "price": 3.75,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A72386_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana golden bolsa 1,5 kg",
+                        "product_id": 4338,
+                        "product_brand": "",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A17147_00.jpg?t=20241003030610"
+                    }
+                ]
+            },
+            "Pera": {
+                "nombre": "Pera",
+                "categoria": "Manzanas, peras y uvas",
+                "quantity": 1,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Pera conferencia bolsa (1 kg aprox)",
+                        "product_id": 20891,
+                        "product_brand": "",
+                        "price": 2.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A26448_00.jpg?t=20241003030529"
+                    },
+                    {
+                        "product_name": "Pera Ercolina (100 g aprox./unidad)",
+                        "product_id": 4354,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21760_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Pera limonera (250 g aprox./unidad)",
+                        "product_id": 7506,
+                        "product_brand": "",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21756_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana golden 70/80 a granel unidad (150 g aprox)",
+                        "product_id": 4340,
+                        "product_brand": "",
+                        "price": 1.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21312_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana royal gala bolsa (1,5 kg aprox)",
+                        "product_id": 7942,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A23743_00.jpg?t=20241005030025"
+                    },
+                    {
+                        "product_name": "Manzana golden +80 mm (240 g aprox)",
+                        "product_id": 7437,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21300_00.jpg?t=20241005030037"
+                    },
+                    {
+                        "product_name": "Manzana pink lady a granel (250 g aprox./unidad)",
+                        "product_id": 4345,
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21400_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana fuji (250 g aprox./unidad)",
+                        "product_id": 4344,
+                        "product_brand": "",
+                        "price": 3.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21392_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana reineta parda a granel unidad (200 g aprx)",
+                        "product_id": 7946,
+                        "product_brand": "",
+                        "price": 3.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21330_00.jpg?t=20241004030102"
+                    },
+                    {
+                        "product_name": "Pera conferencia suprema a granel (250 g aprox.)",
+                        "product_id": 4351,
+                        "product_brand": "",
+                        "price": 4.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21710_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana royal gala Selecta unidad (250 g aprox)",
+                        "product_id": 7922,
+                        "product_brand": "",
+                        "price": 2.75,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A20028_00.jpg?t=20241003030205"
+                    },
+                    {
+                        "product_name": "Manzana roja temporada y caserio",
+                        "product_id": 7939,
+                        "product_brand": "",
+                        "price": 4.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21465_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Uva blanca",
+                        "product_id": 7924,
+                        "product_brand": "",
+                        "price": 3.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22370_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Manzana golden ecológica bandeja (750 g aprox.)",
+                        "product_id": 4474,
+                        "product_brand": "",
+                        "price": 3.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A40686_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana reineta verde a granel (250 g aprox.)",
+                        "product_id": 4342,
+                        "product_brand": "",
+                        "price": 2.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21320_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana chanteclerc a granel unidad (210 g aprox)",
+                        "product_id": 4346,
+                        "product_brand": "",
+                        "price": 4.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21440_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Uva negra a granel",
+                        "product_id": 4381,
+                        "product_brand": "",
+                        "price": 3.29,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22361_00.jpg?t=20241003030611"
+                    },
+                    {
+                        "product_name": "Pera conferencia 67 mm unidad (250 g aprox)",
+                        "product_id": 4352,
+                        "product_brand": "",
+                        "price": 2.99,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21720_00.jpg?t=20241003030205"
+                    },
+                    {
+                        "product_name": "Manzana kanzi a granel unidad (200 g aprox)",
+                        "product_id": 4350,
+                        "product_brand": "",
+                        "price": 3.75,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A72386_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Manzana golden bolsa 1,5 kg",
+                        "product_id": 4338,
+                        "product_brand": "",
+                        "price": 2.79,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A17147_00.jpg?t=20241003030610"
+                    }
+                ]
+            },
+            "Melocotón": {
+                "nombre": "Melocotón",
+                "categoria": "Fruta de hueso",
+                "quantity": 3,
+                "unit": "unidad",
+                "productos": [
+                    {
+                        "product_name": "Melocotón rojo 75 y + (220 g aprox./unidad)",
+                        "product_id": 7607,
+                        "product_brand": "",
+                        "price": 3.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21500_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Melocotón amarillo de primera (250g aprox./unidad)",
+                        "product_id": 7610,
+                        "product_brand": "",
+                        "price": 3.01,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A21521_00.jpg?t=20241003030518"
+                    },
+                    {
+                        "product_name": "Ciruela roja a granel unidad (100 g aprox)",
+                        "product_id": 7941,
+                        "product_brand": "",
+                        "price": 3.49,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A22071_00.jpg?t=20241003030610"
+                    },
+                    {
+                        "product_name": "Melocotón amarillo (320g aprox)",
+                        "product_id": 11458,
+                        "product_brand": "",
+                        "price": 4.25,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A24555_00.jpg?t=20241003030610"
+                    }
+                ]
+            },
+            "Canela": {
+                "nombre": "Canela",
+                "categoria": "Canela",
+                "quantity": 1,
+                "unit": "cucharadita",
+                "productos": [
+                    {
+                        "product_name": "Canela molida 39 g",
+                        "product_id": 4117,
+                        "product_brand": "Ducros",
+                        "price": 2.59,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A33433_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Canela en rama  3 unidades",
+                        "product_id": 22545,
+                        "product_brand": "BM",
+                        "price": 1.45,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A62361_00.jpg?t=20241003030155"
+                    },
+                    {
+                        "product_name": "Canela en rama 5 palos",
+                        "product_id": 4144,
+                        "product_brand": "Ducros",
+                        "price": 5.5,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A72804_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Canela en rama 10 g",
+                        "product_id": 4116,
+                        "product_brand": "Ducros",
+                        "price": 2.65,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A33432_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Canela en rama palo",
+                        "product_id": 4075,
+                        "product_brand": "Ducros",
+                        "price": 1.55,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A09028_00.jpg?t=20240729030030"
+                    },
+                    {
+                        "product_name": "Canela saigon",
+                        "product_id": 15274,
+                        "product_brand": "Ducros",
+                        "price": 4.1,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A76954_00.jpg?t=20241003030154"
+                    },
+                    {
+                        "product_name": "Canela molida bio 27 g",
+                        "product_id": 22039,
+                        "product_brand": "Ducros",
+                        "price": 2.95,
+                        "img": "https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A62215_00.jpg?t=20240829030110"
+                    }
+                ]
+            }
+        }
+    }
+]
