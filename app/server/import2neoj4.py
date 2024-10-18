@@ -155,35 +155,83 @@ def similar_products_node():
 
 
 
+test_menu = {
+    'ingredientes': {
+        'Aceite de oliva virgen extra': {
+            'nombre': 'Aceite de oliva virgen extra',
+            'productos': [
+                {
+                    'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11375_00.jpg?t=20241004030319',
+                    'price': 14.18,
+                    'product_brand': 'Maestros de Hojiblanca',
+                    'product_id': 34,
+                    'product_name': 'Aceite de oliva virgen extra 1 l'
+                },
+                {
+                    'img': 'https://cdn-bm.aktiosdigitalservices.com/tol/bm/media/product/img/300x300/A11665_00.jpg?t=20241003030006',
+                    'price': 13.79,
+                    'product_brand': 'Carbonell',
+                    'product_id': 36,
+                    'product_name': 'Aceite de oliva virgen extra 1 l'
+                }
+            ],
+        'quantity': 1,
+        'unit': 'pizca',
+        }
+    },
+    'receta': 'Test Aceites'
+}
 
-def create_menu_node(user_session:str, recipe:dict):
 
-    """
-    Por ahora no tengo los ingredientes solo las categorias y productos.
-    
-    """
+def _create_menu_node(user_session:str, recipe:dict):
+
 
     menu_id = _create_token()
+    menu_name = recipe['receta']
     name= user_session
     now = datetime.now()
     date_create_menu =  now.strftime("%m/%d/%Y, %H:%M:%S") # when was the node created
 
-    recipe_name = recipe
+    # Prepare ingredients list for import to neo4j
+    ingredientes = []
+    for nombre, detalles in recipe['ingredientes'].items():
+        ingredientes.append({
+            "nombre": nombre,
+            "quantity": detalles.get("quantity", ""),
+            "unit": detalles.get("unit", ""),
+            "productos": detalles.get("productos", [])
+        })
 
     query = """
-            MERGE (m:Menu {menu_id: $menu_id, date_create_menu: $date_create_menu, recipe_name: $recipe_name})
+                    MERGE (m:Menu {menu_id: $menu_id})
+                    ON CREATE SET m.date_create_menu = $date_create_menu, m.menu_name = $menu_name
+                    WITH m
 
-            WITH o
-            MATCH (u:User {name: $name})
-            CREATE (u)-[:HAS_SAVED]->(m)
-
-
-            """
+                    MATCH (u:User {name: $name})
+                    CREATE (u)-[:HAS_SAVED]->(m)
+                    
+                    // Crear nodos de ingredientes y sus relaciones con el menú
+                    WITH m
+                    UNWIND $ingredientes as ingredienteData
+                    MERGE (i:Ingrediente {nombre: ingredienteData.nombre})
+                    CREATE (m)-[:CONTAINS {quantity: ingredienteData.quantity, unit: ingredienteData.unit}]->(i)
+                    
+                    // Crear nodos de productos y sus relaciones con los ingredientes
+                    WITH i, ingredienteData
+                    UNWIND ingredienteData.productos as productoData
+                    MERGE (p:Product {product_id: productoData.product_id})
+                   
+                    CREATE (i)-[:INCLUDES]->(p)
+                """
 
     parameters = {
         "menu_id":menu_id,
+        "menu_name":menu_name,
         "name":name,
         "date_create_menu":date_create_menu,
-        "recipe_name":recipe_name,
+        "ingredientes": ingredientes,
         }
+    
     connect2_graph(query, parameters)
+
+_create_menu_node('David',test_menu)

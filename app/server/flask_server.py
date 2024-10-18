@@ -2,7 +2,7 @@ import os
 import sys
 import json
 from .search_products import procces_recipes, sort_json
-from .import2neoj4 import _create_order_node, create_menu_node, similar_products_node
+from .import2neoj4 import _create_order_node, _create_menu_node, similar_products_node
 
 
 # Add the project root to the Python path
@@ -61,7 +61,7 @@ def order_purchased():
         data = request.json 
         order = data.get('items', [])
     
-        _create_order_node(user_session='David', order=order)
+        #_create_order_node(user_session='David', order=order)
 
         if not order:
             return jsonify({"error": "No hay productos para comprar."}), 400
@@ -69,12 +69,15 @@ def order_purchased():
     return jsonify({}), 200
     
 
-@app.route('/api/addRecipe',methods=['POST','OPTIONS'])
+@app.route('/api/save-recipe',methods=['POST','OPTIONS'])
 def save_user_recipe():
     if request.method=='POST':
         data=request.json
         recipe = data.get('recipe',[])
 
-        create_menu_node()
+        print(recipe)
+        #_create_menu_node(recipe)
+
+    return jsonify({}), 200
 if __name__ == '__main__':
     app.run(debug=True)

@@ -30,16 +30,19 @@ def sort_json(data:list[dict]):
     in order to show the similar products given by llm.
 
     """
-    for receta in data:
-        for ingrediente, detalles in receta["ingredientes"].items():
-            nombre = detalles["nombre"]
-            # Ordenar productos
-            detalles["productos"] = sorted(
-                detalles["productos"],
-                key=lambda producto: similarity_calc(nombre, producto["product_name"]),
-                reverse=True  # Ordenar de mayor a menor similitud
-            )
-
+    try:
+        for receta in data:
+            for ingrediente, detalles in receta["ingredientes"].items():
+                nombre = detalles["nombre"]
+                # Ordenar productos
+                detalles["productos"] = sorted(
+                    detalles["productos"],
+                    key=lambda producto: similarity_calc(nombre, producto["product_name"]),
+                    reverse=True  # Ordenar de mayor a menor similitud
+                )
+    except Exception as e:
+        print('No hay datos para buscar recetas similares. Puede que no esté conectado a la bbdd o no tenga productos')
+        print({e})
 
 
 # For testing
