@@ -72,8 +72,10 @@
                       </v-btn>
 
                       <!-- Botón de guardar receta -->
-                      <v-btn
-                        style="position: absolute; right: 0; top: 0; margin-bottom: 20px;" prepend-icon="mdi-pencil-plus">
+                      <v-btn v-if="!savedRecipes.includes(index)"
+                        @click="saveRecipe(index)"
+                        style="position: absolute; right: 0; top: 0; margin-bottom: 20px;"
+                        prepend-icon="mdi-pencil-plus">
                          Guardar Receta
                       </v-btn>
                     </div>
@@ -186,6 +188,7 @@ export default {
     const cartItems = ref([]);
     const cartTotal = ref(0);
     const showSuccessModal = ref(false); // Nuevo estado para el modal
+    const savedRecipes = ref([]);
 
     const hideRecommendedProducts = ref(false)
 
@@ -211,7 +214,8 @@ export default {
       // inicializar el carrito
       cartItems.value = [];
       cartTotal.value = 0;
-  
+      savedRecipes.value = [];
+
       hideRecommendedProducts.value = true;
 
       axios.post('http://localhost:5000/api/submit-text', { text: userText.value })
@@ -232,7 +236,19 @@ export default {
       return userText.value ? 'Generar Recetas' : 'Recetas Aleatorias';
     });
 
-  
+    const saveRecipe = (index) => {
+      if (!savedRecipes.value.includes(index)) {
+        savedRecipes.value.push(index);
+      }
+      axios.post('http://localhost:5000/api/save-recipe', { recipe:serverResponse.value[index] })
+      .then(response => {
+      console.log('Receta guardada:', response.data);
+      })
+      .catch(error => {
+      console.error('Error al guardar la receta:', error);
+      });
+    };
+
     const addCartProduct = (producto) => {
       const existingProduct = cartItems.value.find(item => item.product.product_name === producto.product_name);
       if (existingProduct) {
@@ -301,7 +317,7 @@ export default {
       similarProducts, userText, serverResponse, isLoading,
       submitText, cartTotal, purchaseOrder,totalItemsInCart,
       buttonText,buyIngredients,showSuccessModal,hideRecommendedProducts,
-      addCartProduct, cartItems, removeCartProduct,
+      addCartProduct, cartItems, removeCartProduct,saveRecipe,savedRecipes
       
     };
   }
