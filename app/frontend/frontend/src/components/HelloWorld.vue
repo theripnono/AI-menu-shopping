@@ -61,9 +61,22 @@
                   </v-expansion-panel-title>
 
                   <v-expansion-panel-text>
-                    <v-btn @click="buyIngredients(index)" color="primary" style="margin-bottom: 20px;">
-                      Comprar ingredientes
-                    </v-btn>
+                    <div style="position: relative; height: 80px;">
+                      <!-- Botón de añadir receta a la cesta -->
+                      <v-btn
+                        @click="buyIngredients(index)"
+                        size="large"
+                        color="primary"
+                        style="position: absolute; left: 0; top: 0; margin-bottom: 20px;">
+                        Añadir receta a la cesta
+                      </v-btn>
+
+                      <!-- Botón de guardar receta -->
+                      <v-btn
+                        style="position: absolute; right: 0; top: 0; margin-bottom: 20px;" prepend-icon="mdi-pencil-plus">
+                         Guardar Receta
+                      </v-btn>
+                    </div>
                     <v-expansion-panels multiple>
                       <v-expansion-panel v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
                         <v-expansion-panel-title>
@@ -147,11 +160,8 @@
           <v-card-title class="headline">¡Compra completada!</v-card-title>
           <v-card-text>
             Tu compra se ha realizado con éxito. ¡Gracias por tu compra!
-            <!-- Añadir múltiples combobox para las recetas -->
-          
-          </v-card-text>
-
-          <v-card-actions>
+            </v-card-text>
+            <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="primary" @click="showSuccessModal = false">Cerrar</v-btn>
           </v-card-actions>
