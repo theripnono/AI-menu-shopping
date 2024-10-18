@@ -22,10 +22,10 @@
                 <h2><strong>Productos recomendados para ti:</strong></h2>
               </div>
               <v-col cols="12">
-                <v-carousel hide-delimiters show-arrows="hover" height="300" cycle interval="2000">
+                <v-carousel hide-delimiters show-arrows="hover" height="250" cycle interval="2000">
                   <v-carousel-item v-for="(product, index) in similarProducts" :key="index">
                     <v-card style="background-color: aliceblue; opacity: 0.7;">
-                      <v-img :src="product.img" height="200px"></v-img>
+                      <v-img :src="product.img" height="150"></v-img>
                       <v-card-title>{{ product.product_name }}</v-card-title>
                       <v-card-subtitle>
                         <span v-if="product.product_brand">{{ product.product_brand }}</span>
@@ -79,6 +79,13 @@
                         prepend-icon="mdi-pencil-plus">
                          Guardar Receta
                       </v-btn>
+                      <!-- Aquí se muestra el GIF -->
+                      <img
+                        v-if="showGif"
+                        src="@/assets/gif/agenda.gif"
+                        alt="guardado"
+                        style="position: absolute; right: 0; top: 0; margin-bottom: 50px; width: 50px; height: 50px;"
+                      />
                     </div>
                     <v-expansion-panels multiple>
                       <v-expansion-panel v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
@@ -190,7 +197,7 @@ export default {
     const cartTotal = ref(0);
     const showSuccessModal = ref(false); // Nuevo estado para el modal
     const savedRecipes = ref([]);
-
+    const showGif = ref(false);
     const hideRecommendedProducts = ref(false)
 
     onMounted(() => {
@@ -238,17 +245,24 @@ export default {
     });
 
     const saveRecipe = (index) => {
-      if (!savedRecipes.value.includes(index)) {
-        savedRecipes.value.push(index);
-      }
-      axios.post('http://localhost:5000/api/save-recipe', { recipe:serverResponse.value[index] })
+  if (!savedRecipes.value.includes(index)) {
+    savedRecipes.value.push(index);
+    
+    // Muestra el GIF
+    showGif.value = true; 
+
+    axios.post('http://localhost:5000/api/save-recipe', { recipe: serverResponse.value[index] })
       .then(response => {
-      console.log('Receta guardada:', response.data);
+        console.log('Receta guardada:', response.data);
       })
       .catch(error => {
-      console.error('Error al guardar la receta:', error);
-      });
-    };
+        console.error('Error al guardar la receta:', error);
+      })
+      setTimeout(() => {
+        showGif.value = false; // Oculta el GIF
+      }, 2000); // Ajusta el tiempo según necesites
+        }
+      };
 
     const addCartProduct = (producto) => {
       const existingProduct = cartItems.value.find(item => item.product.product_name === producto.product_name);
@@ -316,7 +330,7 @@ export default {
 
     return {
       similarProducts, userText, serverResponse, isLoading,
-      submitText, cartTotal, purchaseOrder,totalItemsInCart,
+      submitText, cartTotal, purchaseOrder,totalItemsInCart,showGif,
       buttonText,buyIngredients,showSuccessModal,hideRecommendedProducts,
       addCartProduct, cartItems, removeCartProduct,saveRecipe,savedRecipes
       

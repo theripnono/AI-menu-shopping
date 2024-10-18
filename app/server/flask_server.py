@@ -41,11 +41,12 @@ def generate_response():
 
     data = request.json   
     user_text = data.get('text', '').strip() 
-    recipes_json =  procces_recipes(user_text)
+    
+    #recipes_json =  procces_recipes(user_text)
     
     # For testing
     # That is the respond I'm waiting for
-    #recipes_json = test_neo4j()
+    recipes_json = test_neo4j()
     sort_json(recipes_json)
     
     recipes = {"message": recipes_json}
@@ -76,7 +77,7 @@ def save_user_recipe():
         recipe = data.get('recipe',[])
 
         
-        _create_menu_node(user_session="David",recipe=recipe)
+        #_create_menu_node(user_session="David",recipe=recipe)
 
     return jsonify({}), 200
 if __name__ == '__main__':
