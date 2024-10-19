@@ -216,3 +216,31 @@ def _create_menu_node(user_session:str, recipe:dict):
         }
     
     connect2_graph(query, parameters)
+
+
+def _get_user_menu(user_session:str):
+    
+    
+    try:
+        with GraphDatabase.driver(URI, auth=AUTH) as driver:
+            driver.verify_connectivity()
+            # TODO Ahora mismo se está utilizando solo nombres
+            records_df = driver.execute_query(
+                    " MATCH (u:User {name: $user_session})-[:HAS_SAVED]->(m:Menu) RETURN m"
+                , user_session=user_session                  
+                , database_="neo4j"
+                , result_transformer_=neo4j.Result.to_df
+            )
+
+        menus_list = []
+        for _, row in records_df.iterrows():
+            menu_info={
+                'menu_name': row.iloc[0]['menu_name']    
+            }
+            menus_list.append(menu_info)
+        return menus_list
+    
+    except Exception as e:
+        print('Oups! something goes wrong, please check: ')
+        print({e})
+

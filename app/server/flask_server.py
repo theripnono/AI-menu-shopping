@@ -2,7 +2,7 @@ import os
 import sys
 import json
 from .search_products import procces_recipes, sort_json
-from .import2neoj4 import _create_order_node, _create_menu_node, similar_products_node
+from .import2neoj4 import _create_order_node, _create_menu_node, similar_products_node, _get_user_menu
 
 
 # Add the project root to the Python path
@@ -80,5 +80,14 @@ def save_user_recipe():
         #_create_menu_node(user_session="David",recipe=recipe)
 
     return jsonify({}), 200
+
+@app.route('/api/my-recipes',methods=['GET'])
+def get_my_recipes():
+    if request.method=='GET':
+
+        user_menus = _get_user_menu("David")
+
+        return jsonify({"message":user_menus})
+
 if __name__ == '__main__':
     app.run(debug=True)
