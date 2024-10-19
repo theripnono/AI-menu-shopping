@@ -1,185 +1,208 @@
 <template>
-  <v-container>
-    <v-row>
-      <!-- Sección para generar recetas -->
-      <v-col cols="12">
-        <div class="header" style="text-align: center;">
-          <h1 style="text-shadow: 1px 1px whitesmoke;"><strong>Asistente de compra inteligente</strong></h1>
-        </div>
-        <v-row>
-          <v-col cols="12" md="8">
-            <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" 
-              style="max-width: 100%; width: 500px" 
-              placeholder="Ejemplo: Quiero recetas de celiacos">
-            </v-textarea>
-            <v-btn style="margin-top: 20px; margin-bottom: 20px" @click="submitText">
-              {{ buttonText }}
-            </v-btn>
+    <v-layout>
+      <!-- Navigation Drawer -->
+      <v-navigation-drawer expand-on-hover rail app>
+        <v-list>
+          <v-list-item
+            prepend-avatar="https://cdn-icons-png.freepik.com/512/7244/7244486.png?uid=R159003661&ga=GA1.1.1763186972.1717243768"
+            subtitle="dvdrg94@gmail.com"
+            title="David Rosset"
+          ></v-list-item>
+        </v-list>
 
-            <!-- Productos Recomendados -->
-            <v-row v-if="!hideRecommendedProducts && userText === '' && similarProducts.length !== 0 ">
-              <div style="padding-top: 50px; padding-left: 10px;">
-                <h2><strong>Productos recomendados para ti:</strong></h2>
+        <v-divider></v-divider>
+
+        <v-list density="compact" nav>
+          <v-list-item prepend-icon="mdi-silverware-clean"
+                      title="Generar Recetas"
+                      value="CreateRecipes"
+                      @click="$router.push({ name: 'HelloWorld' })">
+                      </v-list-item>
+            <v-list-item prepend-icon="mdi-book-open-page-variant"
+                        title="Mis recetas"
+                        value="misrecetas"
+                        @click="$router.push({ name: 'MyRecipes' })"
+                        ></v-list-item>
+            <v-list-item prepend-icon="mdi-cog" title="Ajustes" value="config"></v-list-item>   
+        </v-list>
+      </v-navigation-drawer>
+
+      <!-- Main Content -->
+      <v-main>
+        <v-container>
+          <v-row>
+            <!-- Sección para generar recetas -->
+            <v-col cols="12">
+              <div class="header" style="text-align: center;">
+                <h1 style="text-shadow: 1px 1px whitesmoke;"><strong>Asistente de compra inteligente</strong></h1>
               </div>
-              <v-col cols="12">
-                <v-carousel hide-delimiters show-arrows="hover" height="250" cycle interval="2000">
-                  <v-carousel-item v-for="(product, index) in similarProducts" :key="index">
-                    <v-card style="background-color: aliceblue; opacity: 0.7;">
-                      <v-img :src="product.img" height="150"></v-img>
-                      <v-card-title>{{ product.product_name }}</v-card-title>
-                      <v-card-subtitle>
-                        <span v-if="product.product_brand">{{ product.product_brand }}</span>
-                        <span v-else>Marca desconocida</span>
-                      </v-card-subtitle>
-                      <v-card-text>
-                        <p>Precio: €{{ product.price.toFixed(2) }}</p>
-                      </v-card-text>
-                    </v-card>
-                  </v-carousel-item>
-                </v-carousel>
-              </v-col>
-            </v-row>
+              <v-row>
+                <v-col cols="12" md="8">
+                  <v-textarea class="fixed-text" variant="solo" auto-grow v-model="userText" 
+                    style="max-width: 100%; width: 500px" 
+                    placeholder="Ejemplo: Quiero recetas de celiacos">
+                  </v-textarea>
+                  <v-btn style="margin-top: 20px; margin-bottom: 20px" @click="submitText">
+                    {{ buttonText }}
+                  </v-btn>
 
-            <div v-if="isLoading">
-              <v-dialog v-model="isLoading" persistent max-width="400">
-                <v-card class="d-flex flex-column align-center pa-4" style="height: 420px;">
-                  <div style="text-align: center">
-                    <h1>¡Dejame pensar en algo súper bueno!</h1>
-                    <v-card-text>
-                      <img src="@/assets/gif/menu.gif" width="150" />
-                    </v-card-text>
-                    <h2>¡Espero que disfrutes cocinando!</h2>
-                  </div>
-                </v-card>
-              </v-dialog>
-            </div>
-
-            <div v-else-if="serverResponse.length > 0">
-              <v-expansion-panels multiple>
-                <v-expansion-panel v-for="(recipe, index) in serverResponse" :key="index">
-                  <v-expansion-panel-title>
-                    <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
-                  </v-expansion-panel-title>
-
-                  <v-expansion-panel-text>
-                    <div style="position: relative; height: 80px;">
-                      <!-- Botón de añadir receta a la cesta -->
-                      <v-btn
-                        @click="buyIngredients(index)"
-                        size="large"
-                        color="primary"
-                        style="position: absolute; left: 0; top: 0; margin-bottom: 20px;">
-                        Añadir receta a la cesta
-                      </v-btn>
-
-                      <!-- Botón de guardar receta -->
-                      <v-btn v-if="!savedRecipes.includes(index)"
-                        @click="saveRecipe(index)"
-                        style="position: absolute; right: 0; top: 0; margin-bottom: 20px;"
-                        prepend-icon="mdi-pencil-plus">
-                         Guardar Receta
-                      </v-btn>
-                      <!-- Aquí se muestra el GIF -->
-                      <img
-                        v-if="showGif"
-                        src="@/assets/gif/agenda.gif"
-                        alt="guardado"
-                        style="position: absolute; right: 0; top: 0; margin-bottom: 50px; width: 50px; height: 50px;"
-                      />
+                  <!-- Productos Recomendados -->
+                  <v-row v-if="!hideRecommendedProducts && userText === '' && similarProducts.length !== 0 ">
+                    <div style="padding-top: 50px; padding-left: 10px;">
+                      <h2><strong>Productos recomendados para ti:</strong></h2>
                     </div>
+                    <v-col cols="12">
+                      <v-carousel hide-delimiters show-arrows="hover" height="250" cycle interval="2000">
+                        <v-carousel-item v-for="(product, index) in similarProducts" :key="index">
+                          <v-card style="background-color: rgb(249, 247, 247); opacity: 0.7;">
+                            <v-img :src="product.img" height="150"></v-img>
+                            <v-card-title>{{ product.product_name }}</v-card-title>
+                            <v-card-subtitle>
+                              <span v-if="product.product_brand">{{ product.product_brand }}</span>
+                              <span v-else>Marca desconocida</span>
+                            </v-card-subtitle>
+                            <v-card-text>
+                              <p>Precio: €{{ product.price.toFixed(2) }}</p>
+                            </v-card-text>
+                          </v-card>
+                        </v-carousel-item>
+                      </v-carousel>
+                    </v-col>
+                  </v-row>
+
+                  <div v-if="isLoading">
+                    <v-dialog v-model="isLoading" persistent max-width="400">
+                      <v-card class="d-flex flex-column align-center pa-4" style="height: 420px;">
+                        <div style="text-align: center">
+                          <h1>¡Dejame pensar en algo súper bueno!</h1>
+                          <v-card-text>
+                            <img src="@/assets/gif/menu.gif" width="150" />
+                          </v-card-text>
+                          <h2>¡Espero que disfrutes cocinando!</h2>
+                        </div>
+                      </v-card>
+                    </v-dialog>
+                  </div>
+
+                  <div v-else-if="serverResponse.length > 0">
                     <v-expansion-panels multiple>
-                      <v-expansion-panel v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
+                      <v-expansion-panel v-for="(recipe, index) in serverResponse" :key="index">
                         <v-expansion-panel-title>
-                          {{ ingrediente.nombre }} - Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}
+                          <h2 style="text-shadow: 1px 1px whitesmoke;">¿Qué te parece: {{ recipe.receta }}?</h2>
                         </v-expansion-panel-title>
                         <v-expansion-panel-text>
-                          <v-carousel height="200" show-arrows="hover" hide-delimiters>
-                            <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
-                              <v-sheet height="100%" tile>
-                                <v-row class="fill-height" align="center" justify="center">
-                                  <v-col cols="12" class="text-center">
-                                    <h4>{{ producto.product_name }}</h4>
-                                    <h4>{{ producto.product_brand }}</h4>
-                                    <img :src="producto.img" :alt="producto.product_name" width="80" height="70">
-                                    <p>{{ producto.price }}€</p>
-                                    <v-btn @click="addCartProduct(producto)" color="primary">
-                                      Añadir
-                                    </v-btn>
-                                  </v-col>
-                                </v-row>
-                              </v-sheet>
-                            </v-carousel-item>
-                          </v-carousel>
+                          <div style="position: relative; height: 80px;">
+                            <!-- Botón de añadir receta a la cesta -->
+                            <v-btn @click="buyIngredients(index)" size="large" color="primary"
+                              style="position: absolute; left: 0; top: 0; margin-bottom: 20px;">
+                              Añadir receta a la cesta
+                            </v-btn>
+
+                            <!-- Botón de guardar receta -->
+                            <v-btn v-if="!savedRecipes.includes(index)"
+                              @click="saveRecipe(index)"
+                              style="position: absolute; right: 0; top: 0; margin-bottom: 20px;"
+                              prepend-icon="mdi-pencil-plus">
+                              Guardar Receta
+                            </v-btn>
+
+                            <!-- Mostrar GIF -->
+                            <img v-if="showGif" src="@/assets/gif/agenda.gif" alt="guardado"
+                              style="position: absolute; right: 0; top: 0; margin-bottom: 50px; width: 50px; height: 50px;" />
+                          </div>
+                          <v-expansion-panels multiple>
+                            <v-expansion-panel v-for="(ingrediente, ingKey) in recipe.ingredientes" :key="ingKey">
+                              <v-expansion-panel-title>
+                                {{ ingrediente.nombre }} - Cantidad: {{ ingrediente.quantity }} {{ ingrediente.unit }}
+                              </v-expansion-panel-title>
+                              <v-expansion-panel-text>
+                                <v-carousel height="200" show-arrows="hover" hide-delimiters>
+                                  <v-carousel-item v-for="(producto, prodIndex) in ingrediente.productos" :key="prodIndex">
+                                    <v-sheet height="100%" tile>
+                                      <v-row class="fill-height" align="center" justify="center">
+                                        <v-col cols="12" class="text-center">
+                                          <h4>{{ producto.product_name }}</h4>
+                                          <h4>{{ producto.product_brand }}</h4>
+                                          <img :src="producto.img" :alt="producto.product_name" width="80" height="70">
+                                          <p>{{ producto.price }}€</p>
+                                          <v-btn @click="addCartProduct(producto)" color="primary">
+                                            Añadir
+                                          </v-btn>
+                                        </v-col>
+                                      </v-row>
+                                    </v-sheet>
+                                  </v-carousel-item>
+                                </v-carousel>
+                              </v-expansion-panel-text>
+                            </v-expansion-panel>
+                          </v-expansion-panels>
                         </v-expansion-panel-text>
                       </v-expansion-panel>
                     </v-expansion-panels>
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels>
-            </div>
-          </v-col>
-
-          <!-- Sección para mostrar el carrito -->
-          <v-col cols="12" md="4">
-            <v-expansion-panels>
-              <v-expansion-panel>
-                <v-expansion-panel-title>
-                  <h2>Cesta ( {{ totalItemsInCart  }} artículos)</h2>
-                </v-expansion-panel-title>
-
-                <v-expansion-panel-text>
-                  <div class="cart-list">
-                    <v-list>
-                      <v-list-item-group>
-                        <v-list-item v-for="(item, index) in cartItems" :key="index">    
-                          <v-list-item-content>
-                            <v-list-item-title style="white-space: normal; word-wrap: break-word; padding: 5px;">
-                              {{ item.product.product_name }} (x{{ item.quantity }})
-                              <v-btn icon small @click="removeCartProduct(index)" style="width: 24px; height: 24px;">
-                                <v-icon color="red" variant="tonal">mdi-minus</v-icon>
-                              </v-btn>
-                            </v-list-item-title>
-                            <v-list-item-subtitle>{{ item.product.product_brand }}</v-list-item-subtitle>
-                            <v-list-item-subtitle>Precio: {{ (item.product.price * item.quantity).toFixed(2) }}€</v-list-item-subtitle>
-                          </v-list-item-content>
-                        </v-list-item>
-                      </v-list-item-group>
-                    </v-list>
-                    <hr>
-                   
                   </div>
-                
-                </v-expansion-panel-text>
-                <div style="text-align: center; padding-bottom: 20px;">
-                  <v-btn  v-if="cartItems.length >= 1"  @click="purchaseOrder">
-                       Comprar: {{ cartTotal.toFixed(2) }}€
-                      <v-icon color="green">mdi-cart-check</v-icon>
-                  </v-btn>
-                </div>
-              </v-expansion-panel>
-            </v-expansion-panels>
+                </v-col>
 
-          </v-col>
+                <!-- Sección para mostrar el carrito -->
+                <v-col cols="12" md="4">
+                  <v-expansion-panels>
+                    <v-expansion-panel>
+                      <v-expansion-panel-title>
+                        <h2>Cesta ( {{ totalItemsInCart  }} artículos)</h2>
+                      </v-expansion-panel-title>
 
-        </v-row>
-      </v-col>
+                      <v-expansion-panel-text>
+                        <div class="cart-list">
+                          <v-list>
+                            <v-list-item-group>
+                              <v-list-item v-for="(item, index) in cartItems" :key="index">    
+                                <v-list-item-content>
+                                  <v-list-item-title style="white-space: normal; word-wrap: break-word; padding: 5px;">
+                                    {{ item.product.product_name }} (x{{ item.quantity }})
+                                    <v-btn icon small @click="removeCartProduct(index)" style="width: 24px; height: 24px;">
+                                      <v-icon color="red" variant="tonal">mdi-minus</v-icon>
+                                    </v-btn>
+                                  </v-list-item-title>
+                                  <v-list-item-subtitle>{{ item.product.product_brand }}</v-list-item-subtitle>
+                                  <v-list-item-subtitle>Precio: {{ (item.product.price * item.quantity).toFixed(2) }}€</v-list-item-subtitle>
+                                </v-list-item-content>
+                              </v-list-item>
+                            </v-list-item-group>
+                          </v-list>
+                          <hr>
+                        </div>
+                        <div style="text-align: center; padding-bottom: 20px;">
+                          <v-btn v-if="cartItems.length >= 1" @click="purchaseOrder">
+                            Comprar: {{ cartTotal.toFixed(2) }}€
+                            <v-icon color="green">mdi-cart-check</v-icon>
+                          </v-btn>
+                        </div>
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                  </v-expansion-panels>
+                </v-col>
+              </v-row>
+            </v-col>
 
-      <!--Succes Dialog-->
-      <v-dialog v-model="showSuccessModal" max-width="400">
-        <v-card>
-          <v-card-title class="headline">¡Compra completada!</v-card-title>
-          <v-card-text>
-            Tu compra se ha realizado con éxito. ¡Gracias por tu compra!
-            </v-card-text>
-            <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="primary" @click="showSuccessModal = false">Cerrar</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-row>
-  </v-container>
+            <!-- Succes Dialog -->
+            <v-dialog v-model="showSuccessModal" max-width="400">
+              <v-card>
+                <v-card-title class="headline">¡Compra completada!</v-card-title>
+                <v-card-text>
+                  Tu compra se ha realizado con éxito. ¡Gracias por tu compra!
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="primary" @click="showSuccessModal = false">Cerrar</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </v-row>
+        </v-container>
+      </v-main>
+    </v-layout>
+ 
 </template>
+
 
 
 <script>
@@ -259,8 +282,8 @@ export default {
         console.error('Error al guardar la receta:', error);
       })
       setTimeout(() => {
-        showGif.value = false; // Oculta el GIF
-      }, 2000); // Ajusta el tiempo según necesites
+        showGif.value = false; 
+      }, 2000); 
         }
       };
 
