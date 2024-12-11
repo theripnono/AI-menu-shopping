@@ -2,7 +2,7 @@
 
 
 This app can create yours menus 🥑🥦🍜 with your prompt and directly it creates the shopping cart 🛒 based on the ingredients of the menu and get the total cost 💰.  
-
+The products are from BM basque supermarket.
 
 ### Prerequisites
 You must have installed docker in your local machine
@@ -21,9 +21,10 @@ Alse a GPT-api key you must have in order to have the menus.
     for dockerization the db
   - [Neo4j]([https://creativecommons.org/](https://neo4j.com/)) - Used db for the app
 
+### Preview
+![smarmarket](https://github.com/user-attachments/assets/fee65695-df30-4ec3-9d69-90716dac5b46)
 
-## Authors
+## Author
 
   - **David Rosset** -
     [LinkedIn](https://www.linkedin.com/feed/)
-![smarmarket](https://github.com/user-attachments/assets/fee65695-df30-4ec3-9d69-90716dac5b46)
