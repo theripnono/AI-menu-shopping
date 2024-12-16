@@ -23,8 +23,3 @@ Alse a GPT-api key you must have in order to have the menus.
 
 ### Preview
 ![smarmarket](https://github.com/user-attachments/assets/fee65695-df30-4ec3-9d69-90716dac5b46)
-
-## Author
-
-  - **David Rosset** -
-    [LinkedIn](https://www.linkedin.com/feed/)
